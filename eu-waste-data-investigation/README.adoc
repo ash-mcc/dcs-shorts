@@ -38,7 +38,7 @@ https://ec.europa.eu/eurostat/web/sdmx-infospace/sdmx-explained/what-and-why/sdm
 approach);
 * a user friendly, intuitive and customisable tabular view of datasets, e.g.:
 
-image::eurostat-tabular.png[aligh="center"]
+image::eurostat-tabular.png[align="center"]
 
 
 
@@ -69,10 +69,12 @@ interactive charts;
 
 == Conclusions
 
-There is something to be learnt from these 3 platforms. Each sets the bar for particular features:
+There is something to be learnt from these 3 platforms.
+Each sets the bar for particular features:
 
-statistics.gov.scot / its contractor Swirrl IT, for open sourcing some of its linked open data modelling approaches and tool chain;
-
-Eurostat for its user friendly navigation over its catalogue of datasets and for its great tabular presentation of a dataset;
-
-EEA for maintaining a large number of datasets as (SPARQL supporting, RDF based) linked open data.
+* statistics.gov.scot / its contractor Swirrl IT,
+for open sourcing some of its linked open data modelling approaches and tool chain;
+* Eurostat for its user friendly navigation over its catalogue of datasets
+and for its great tabular presentation of a dataset;
+* EEA for maintaining a large number of datasets as (SPARQL supporting, RDF based)
+linked open data.
