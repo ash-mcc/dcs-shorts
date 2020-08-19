@@ -1,7 +1,6 @@
 = Having a look at the data about waste on statistics.gov.scot
 
-My https://github.com/data-commons-scotland/dcs-shorts/tree/master/linking-sepa-nrs-data-early-experiment/[previous report]
-showed how the Household Waste dataset from SEPA
+My https://github.com/data-commons-scotland/dcs-shorts/tree/master/linking-sepa-nrs-data-early-experiment/[previous report] showed how the Household Waste dataset from SEPA
 and the Population dataset from NRS,
 could be copied, parsed, consolidated into linked data
 (using a local triplestore),
@@ -9,7 +8,7 @@ and then queried for information that could form the basis on a couple of infogr
 
 
 
-Since then, I’ve been looking at the http://statistics.gov.scot/[statistics.gov.scot] site.
+Since then, I’ve been looking at the http://statistics.gov.scot/[statistics.gov.scot]  site.
 This site makes many useful datasets available as linked open data.
 This includes the datasets from SEPA and NRS that I used last week.
 So, in theory, we ought to be able to achieve the same result as we did last week
@@ -25,7 +24,7 @@ It concludes:
 ** It manages to curate, link and make accessible a sizeable number of datasets from several sources.
 ** Its datasets include some (e.g. 
 https://statistics.gov.scot/data/household-waste[Household Waste] 
-and https://statistics.gov.scot/data/population-estimates-current-geographic-boundaries[Population])
+and  https://statistics.gov.scot/data/population-estimates-current-geographic-boundaries[Population])
 that are core to providing data about waste in Scotland.
 * Its SPARQL interface is powerful and has shown itself to be useful.
 ** However, some care must be taken to ensure that queries against it, are performant.
