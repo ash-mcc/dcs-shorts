@@ -8,7 +8,7 @@ will be a useful learning exercise and will spark interesting ideas…
 
 
 
-==== The steps
+=== The steps
 
 1. Fetch the SEPA's
 https://github.com/data-commons-scotland/dcs-shorts/blob/master/linking-sepa-nrs-data-early-experiment/Household%20Waste%20Data%20Application%20-%20Scottish%20household%20waste%20generation%20and%20management%20(tonnes)%20by%20Local%20Authority.csv[data file about waste tonnes],
@@ -30,7 +30,7 @@ Here is what a query over the triplestore’s facts - for the
 waste tonnage generated per council citizen per year – looks like:
 
 image::triplestore-query.png[align="center"]
-(The details of this step are in the
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(The details of this step are in the
 https://nbviewer.jupyter.org/github/data-commons-scotland/dcs-shorts/blob/master/linking-sepa-nrs-data-early-experiment/plot-info-graphics.ipynb[plot-info-graphics lab book].)
 
 === What was learnt?
