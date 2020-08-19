@@ -1,3 +1,10 @@
 # dcs-shorts
 
 Short investigations, experiments, etc.
+
+1. link:scrap-book-of-prior-work/[A scrapbook of prior work] (an early _literature review_)
+1. link:open-data-about-waste-in-scotland/[A glance at Open Data about Waste in Scotland] (compiled Feb 2020)
+1. link:linking-sepa-nrs-data-early-experiment/[Linking SEPA and NRS data within a triplestore] (an early experiment)
+1. link:stats-gov-scot-waste-data-investigation/[Having a look at the data about waste on statistics.gov.scot]
+1. link:eu-waste-data-investigation/[A look at stats oriented websites in the EU that provide data about waste]
+1. link:stirling-cube-experiment/[Stirling Council’s waste-management dataset as linked open data]
