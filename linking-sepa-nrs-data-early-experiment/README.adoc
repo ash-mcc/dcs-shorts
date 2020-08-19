@@ -15,7 +15,7 @@ https://github.com/data-commons-scotland/dcs-shorts/blob/master/linking-sepa-nrs
 parse it, put it into a simple data structure,
 and write it to the sepa-waste-data CSV file.
 (The details of this step are in the
-https://nbviewer.jupyter.org/github/data-commons-scotland/dcs-shorts/blob/master/linking-sepa-nrs-data-early-experiment/linking-sepa-nrs-data-early-experiment/parse-sepa-waste-data.ipynb[parse-sepa-waste-data lab book].)
+https://nbviewer.jupyter.org/github/data-commons-scotland/dcs-shorts/blob/master/linking-sepa-nrs-data-early-experiment/parse-sepa-waste-data.ipynb[parse-sepa-waste-data lab book].)
 1. Fetch the National Register of Scotland’s
 https://github.com/data-commons-scotland/dcs-shorts/blob/master/linking-sepa-nrs-data-early-experiment/mid-year-pop-est-18-time-series-2.csv[data file about populations],
 parse it, put it into a simple data structure,
