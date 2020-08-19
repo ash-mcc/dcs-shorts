@@ -18,7 +18,7 @@ but with significantly fewer steps since statistic.gov.scot has done that work a
 
 
 The detail of putting that theory to the test can be found in
-https://nbviewer.jupyter.org/github/data-commons-scotland/dcs-shorts/blob/master/stats-gov-scot-waste-data-investigation/fetch.using-sparql.ipynb[this lab notebook].
+https://nbviewer.jupyter.org/github/data-commons-scotland/dcs-shorts/blob/master/stats-gov-scot-waste-data-investigation/fetch-using-sparql.ipynb[this lab notebook].
 It concludes:
 
 * I'm impressed at statistics.gov.scot's platform…
