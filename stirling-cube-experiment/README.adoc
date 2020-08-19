@@ -1,6 +1,6 @@
 = Stirling Council’s waste-management dataset as linked open data
 
-Kudos to Stirling Council for being the https://github.com/data-commons-scotland/dcs-shorts/blob/master/open-data-about-waste-in-scotland/a-glance-at-open-data-about-waste-in-scotland.md[only]
+Kudos to Stirling Council for being the https://github.com/data-commons-scotland/dcs-shorts/blob/master/open-data-about-waste-in-scotland/README.md[only]
 Scottish local authority to have published household waste collection data as open data.
 This data is contained in their https://data.stirling.gov.uk/dataset/waste-management[waste-management] dataset.
 It consists of:
@@ -8,7 +8,7 @@ It consists of:
 * Core data, per year CSV files.
 * Metadata that includes a basic schema for the CSV files, maintenance information and a descriptive narrative.
 
-For that, Stirling Council have attained _3 stars_ on https://5stardata.info/[this] openness measure.
+For that, Stirling Council have attained _3 stars_ on https://5stardata.info/en/[this] openness measure.
 
 To reach 5 stars, that data would have to be turned into _linked open data_,
 i.e. gain the following:
