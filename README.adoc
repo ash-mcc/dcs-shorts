@@ -2,7 +2,7 @@
 
 Short investigations, experiments, etc.
 
-1. link:scrap-book-of-prior-work/[A scrapbook of prior work] (an early _literature review_)
+1. link:scrapbook-of-prior-work/[A scrapbook of prior work] (an early _literature review_)
 1. link:open-data-about-waste-in-scotland/[A glance at Open Data about Waste in Scotland] (compiled Feb 2020)
 1. link:linking-sepa-nrs-data-early-experiment/[Linking SEPA and NRS data within a triplestore] (an early experiment)
 1. link:stats-gov-scot-waste-data-investigation/[Having a look at the data about waste on statistics.gov.scot]
