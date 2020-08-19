@@ -2,7 +2,8 @@
 
 == statistics.gov.scot
 
-We have looked at https://statistics.gov.scot/[statistics.gov.scot]‘s machine-oriented SPARQL interface
+My https://github.com/data-commons-scotland/dcs-shorts/tree/master/stats-gov-scot-waste-data-investigation/[previous report]
+looked at https://statistics.gov.scot/[statistics.gov.scot]‘s machine-oriented SPARQL interface
 and praised them for having curated a sizeable number of dataset into linked open data.
 Their platform also provides a human oriented web page based interface for:
 
