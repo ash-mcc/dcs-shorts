@@ -127,8 +127,7 @@
   	They say they can "help you build and maintain a complete Linked Data solution".
 * [Dsposal](https://dsposal.uk) are a 4 year old start-up who understand both waste management and digital platforms.
 Recently they've been awarded an ODI Stimulus Fund grant
-to [prototype an open standard for Household Waste Recycling Centres](https://github.com/Dsposal/KnoWaste/tree/master/standard/7.%20ODI%20Stimulus%20Fund)
-- standardising data about waste recycling centres in the UK.
+to [prototype an open standard for Household Waste Recycling Centres](https://github.com/Dsposal/KnoWaste/tree/master/standard/7.%20ODI%20Stimulus%20Fund) - standardising data about waste recycling centres in the UK.
 
 # Additional tools
 
