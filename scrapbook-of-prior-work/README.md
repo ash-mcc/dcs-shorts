@@ -45,7 +45,7 @@
 * [Ewan Klein's list of Scottish Open Data catalogues](http://okfnscot.github.io/open-data-scotland/)
 * [Stirling Council's open data portal](https://data.stirling.gov.uk/dataset)
 * [Urban Big Data Centre](http://ubdc.gla.ac.uk)
-* Iceland's [COVID-19 data site](https://www.covid.is/data) is user friendly.
+* Iceland's [COVID-19 data site](https://www.covid.statistics.gov.scot]is/data) is user friendly.
 * [statistics.gov.scot](https://statistics.gov.scot) makes many useful datasets available as linked open data. Its datasets include some (e.g. Household Waste and Population) that are core to providing data about waste in Scotland.
 * [This RDF based platform](https://semantic.eea.europa.eu/) of the European Environment Agency, seems very impressive.
 
@@ -104,6 +104,31 @@
    * [Tidy Data format](http://vita.had.co.nz/papers/tidy-data.pdf)
    * [OpenCube Toolkit](http://opencube-toolkit.eu/)
    * Swirrl's [table2qb](https://github.com/Swirrl/table2qb)
+* A [comparison](https://dataverse.org/blog/comparative-review-various-data-repositories)
+  	of Dataverse vs Figshare, CKAN, etc.
+   * Dataverse: Java, great documentation. Data previewers can be run via cURL (so opportunity to could create our own UI).
+   * Figshare: not open source but it does look nice.
+   * [Data.world](https://data.world/) - "Imagine a tool that’s a kind of Facebook for data inside large organizations. You could build data projects and teams, upload and share data sets, then discuss your raw data and findings with colleagues in a community setting. That’s precisely what Data.world, an Austin startup, released today."
+  	Provides: collaberative analysis, 
+  	publish insights,
+  	discuss,
+  	alerts,
+  	bookmarking,
+  	searches, and
+  	approval workflows.
+   
+# Companies
+
+* [Swirrl IT Limited](https://www.swirrl.com) who have helped [statistics.gov.scot](https://statistics.gov.scot) build its LoD site.
+* [Epimorphics](https://www.epimorphics.com/our-technology/)
+  	has a platform built around RDF
+  	that includes many elements of interest
+  	like the RDF Cube vocab, URI pattern guidance, a CSV->RDF pipeline.
+  	They say they can "help you build and maintain a complete Linked Data solution".
+* [Dsposal](https://dsposal.uk) are a 4 year old start-up who understand both waste management and digital platforms.
+Recently they've been awarded an ODI Stimulus Fund grant
+to [prototype an open standard for Household Waste Recycling Centres](https://github.com/Dsposal/KnoWaste/tree/master/standard/7.%20ODI%20Stimulus%20Fund)
+- standardising data about waste recycling centres in the UK.
 
 # Additional tools
 
