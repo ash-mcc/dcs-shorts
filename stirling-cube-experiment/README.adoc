@@ -21,7 +21,7 @@ identifiers/URIs for dates, waste types and route geographies.
 
 This week I investigated aspects of what would be involved in gaining those extra two stars.
 
-The link:original-data-to-cube.ipynb[origianl-data-to-cube notebook]
+The link:original-data-to-cube.ipynb[original-data-to-cube notebook]
 steps through the nitty-gritty of doing that. The steps include:
 
 1. Mapping the data
