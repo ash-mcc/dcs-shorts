@@ -17,7 +17,7 @@ but with significantly fewer steps since statistic.gov.scot has done that work a
 
 
 The detail of putting that theory to the test can be found in the
-link:fetch-using-sparql.ipynb[fetch-using-sparql notebook].
+link:fetch-using-sparql.ipynb[fetch-using-sparql] executable notebook.
 It concludes:
 
 * I'm impressed at statistics.gov.scot's platform…

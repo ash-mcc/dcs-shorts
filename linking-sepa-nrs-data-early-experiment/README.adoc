@@ -15,25 +15,25 @@ link:Household%20Waste%20Data%20Application%20-%20Scottish%20household%20waste%2
 parse it, put it into a simple data structure,
 and write it to the sepa-waste-data CSV file.
 (The details of this step are in the
-link:parse-sepa-waste-data.ipynb[parse-sepa-waste-data notebook].)
+link:parse-sepa-waste-data.ipynb[parse-sepa-waste-data] executable notebook.)
 1. Fetch the National Register of Scotland’s
 link:mid-year-pop-est-18-time-series-2.csv[data file about populations],
 parse it, put it into a simple data structure,
 and write it to the
 link:nrs-population-data.csv[nrs-population-data CSV file].
 (The details of this step are in the
-link:parse-nrs-population-data.ipynb[parse-nrs-population-data notebook].)
+link:parse-nrs-population-data.ipynb[parse-nrs-population-data] notebook.)
 1. Take the datasets output from steps 1 and 2,
 and add these into a triplestore to make them available as linked data.
 (The details of this step are in the
-link:populate-triplestore.ipynb[populate-triplestore notebook].)
+link:populate-triplestore.ipynb[populate-triplestore] notebook.)
 1. Query the linked data in our triplestore to plot some info-graphics.
 Here is what a query over the triplestore’s facts - for the
 waste tonnage generated per council citizen per year – looks like:
 
 image::triplestore-query.png[align="center"]
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(The details of this step are in the
-link:plot-info-graphics.ipynb[plot-info-graphics notebook].)
+link:plot-info-graphics.ipynb[plot-info-graphics] notebook.)
 
 === What was learnt?
 

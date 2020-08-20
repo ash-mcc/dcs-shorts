@@ -2,7 +2,7 @@
 
 == statistics.gov.scot
 
-My https://github.com/data-commons-scotland/dcs-shorts/tree/master/stats-gov-scot-waste-data-investigation/[previous report] looked
+My link:../stats-gov-scot-waste-data-investigation/[previous report] looked
 at https://statistics.gov.scot/[statistics.gov.scot]‘s machine-oriented SPARQL interface
 and praised them for having curated a sizeable number of dataset into linked open data.
 Their platform also provides a human oriented web page based interface for:
@@ -14,7 +14,7 @@ Their platform also provides a human oriented web page based interface for:
 Feature 1 is intuitive to use.
 Features 2 & 3 require some effort (to understand the data model) to use.
 
-(The link:../stats-gov-scot-waste-data-investigation/size-and-shape.ipynb[size-and-shape experiment] shows
+(The link:../stats-gov-scot-waste-data-investigation/size-and-shape.ipynb[size-and-shape] executable notebook shows
 how they structure each dataset in terms of dimensions, measures and code-lists.)
 
 
@@ -39,7 +39,7 @@ https://ec.europa.eu/eurostat/web/sdmx-infospace/sdmx-explained/what-and-why/sdm
 
 image::eurostat-tabular.png[align="center"]
 
-The link:eurostat-waste-data.ipynb[eurostat-waste-data experiment] investigates
+The link:eurostat-waste-data.ipynb[eurostat-waste-data] executable notebook investigates
 the municipal waste dataset that is shown above.
 At the end of the experiment, the percentage of waste recycled per country per year
 is calculated and graphed.

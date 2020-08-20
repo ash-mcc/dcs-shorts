@@ -1,7 +1,7 @@
 = Stirling Council’s waste-management dataset as linked open data
 
 Kudos to Stirling Council for being the
-https://github.com/data-commons-scotland/dcs-shorts/blob/master/open-data-about-waste-in-scotland/README.md[only] Scottish
+link:../open-data-about-waste-in-scotland/[only] Scottish
 local authority to have published household waste collection data as open data.
 This data is contained in their https://data.stirling.gov.uk/dataset/waste-management[waste-management] dataset.
 It consists of:
@@ -21,7 +21,7 @@ identifiers/URIs for dates, waste types and route geographies.
 
 This week I investigated aspects of what would be involved in gaining those extra two stars.
 
-The link:original-data-to-cube.ipynb[original-data-to-cube notebook]
+The link:original-data-to-cube.ipynb[original-data-to-cube] executable notebook
 steps through the nitty-gritty of doing that. The steps include:
 
 1. Mapping the data
