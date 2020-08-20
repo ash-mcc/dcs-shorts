@@ -1,7 +1,8 @@
 = Stirling Council’s waste-management dataset as linked open data
 
-Kudos to Stirling Council for being the https://github.com/data-commons-scotland/dcs-shorts/blob/master/open-data-about-waste-in-scotland/README.md[only]
-Scottish local authority to have published household waste collection data as open data.
+Kudos to Stirling Council for being the
+https://github.com/data-commons-scotland/dcs-shorts/blob/master/open-data-about-waste-in-scotland/README.md[only] Scottish
+local authority to have published household waste collection data as open data.
 This data is contained in their https://data.stirling.gov.uk/dataset/waste-management[waste-management] dataset.
 It consists of:
 
@@ -15,19 +16,20 @@ i.e. gain the following:
 
 * https://en.wikipedia.org/wiki/Uniform_Resource_Identifier[URI]s denoting things.
 E.g. have a URI for each waste type, each collection route and each measurement.
-* Links to other data to provide context. E.g. reference commonly accepted identifiers/URIs for dates, waste types and route geographies.
+* Links to other data to provide context. E.g. reference commonly accepted
+identifiers/URIs for dates, waste types and route geographies.
 
 This week I investigated aspects of what would be involved in gaining those extra two stars.
 
-https://nbviewer.jupyter.org/github/data-commons-scotland/dcs-shorts/blob/master/stirling-cube-experiment/original-data-to-cube.ipynb[This lab note]
+The link:original-data-to-cube.ipynb[origianl-data-to-cube notebook]
 steps through the nitty-gritty of doing that. The steps include:
 
 1. Mapping the data
-into https://www.w3.org/TR/vocab-data-cube/[the vocabulary for the statistical data cube]
-structure – as defined by the W3C and used by the Scottish government’s statistic office.
+into https://www.w3.org/TR/vocab-data-cube/[the vocabulary for the statistical data cube] structure
+– as defined by the W3C and used by the Scottish government’s statistic office.
 1. Mapping the date values to the
-http://reference.data.gov.uk/[date-time related vocabulary]
-– as defined by the UK government.
+http://reference.data.gov.uk/[date-time related vocabulary] –
+as defined by the UK government.
 1. Defining placeholder vocabularies for waste type and collection routes.
 Future work would be to: map waste types to (possibly “rolled-up” values) in
 a SEPA defined vocabulary; and map collection routes to a suitable geographic vocabulary.

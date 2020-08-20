@@ -2,8 +2,8 @@
 
 == statistics.gov.scot
 
-My https://github.com/data-commons-scotland/dcs-shorts/tree/master/stats-gov-scot-waste-data-investigation/[previous report]
-looked at https://statistics.gov.scot/[statistics.gov.scot]‘s machine-oriented SPARQL interface
+My https://github.com/data-commons-scotland/dcs-shorts/tree/master/stats-gov-scot-waste-data-investigation/[previous report] looked
+at https://statistics.gov.scot/[statistics.gov.scot]‘s machine-oriented SPARQL interface
 and praised them for having curated a sizeable number of dataset into linked open data.
 Their platform also provides a human oriented web page based interface for:
 
@@ -14,9 +14,8 @@ Their platform also provides a human oriented web page based interface for:
 Feature 1 is intuitive to use.
 Features 2 & 3 require some effort (to understand the data model) to use.
 
-(https://nbviewer.jupyter.org/github/data-commons-scotland/dcs-shorts/blob/master/stats-gov-scot-waste-data-investigation/size-and-shape.ipynb[This short lab note]
-shows how they structure each dataset in terms of dimensions,
-measures and code-lists.)
+(The link:../stats-gov-scot-waste-data-investigation/size-and-shape.ipynb[size-and-shape experiment] shows
+how they structure each dataset in terms of dimensions, measures and code-lists.)
 
 
 
@@ -27,28 +26,26 @@ available as open data. It has many nice features including:
 
 * an engaging splash page that informs the user about what’s new,
 what’s trending, focus article, popular datasets and indicators;
-* a nice https://ec.europa.eu/eurostat/data/database[tree-view navigations]
-of the Eurostat datasets;
+* a nice https://ec.europa.eu/eurostat/data/database[tree-view navigations] of
+the Eurostat datasets;
 * some great visualisations (including
-https://ec.europa.eu/eurostat/cache/sankey/energy/sankey.html?geos=EU27_2020&year=2018&unit=KTOE&fuels=TOTAL&highlight=_&nodeDisagg=0101000000000&flowDisagg=false&translateX=0&translateY=0&scale=1&language=EN[Sankey]
-charts that would be great for
+https://ec.europa.eu/eurostat/cache/sankey/energy/sankey.html?geos=EU27_2020&year=2018&unit=KTOE&fuels=TOTAL&highlight=_&nodeDisagg=0101000000000&flowDisagg=false&translateX=0&translateY=0&scale=1&language=EN[Sankey] charts
+that would be great for
 depicting the processing flows of our Scottish waste);
 * a highly useful https://ec.europa.eu/eurostat/help/faq[FAQs] section;
 * making many of the datasets available as linked data (using the pragmatic
-https://ec.europa.eu/eurostat/web/sdmx-infospace/sdmx-explained/what-and-why/sdmx-is-a-business-choice[SDMX]
-approach);
+https://ec.europa.eu/eurostat/web/sdmx-infospace/sdmx-explained/what-and-why/sdmx-is-a-business-choice[SDMX] approach);
 * a user friendly, intuitive and customisable tabular view of datasets, e.g.:
 
 image::eurostat-tabular.png[align="center"]
 
-
-
-https://nbviewer.jupyter.org/github/data-commons-scotland/dcs-shorts/blob/master/eu-waste-data-investigation/eurostat-waste-data.ipynb[This lab note]
-investigates the municipal waste dataset that is shown above.
-At the end of the lab note, the percentage of waste recycled per country per year
+The link:eurostat-waste-data.ipynb[eurostat-waste-data experiment] investigates
+the municipal waste dataset that is shown above.
+At the end of the experiment, the percentage of waste recycled per country per year
 is calculated and graphed.
-https://www.eea.europa.eu/data-and-maps/daviz/municipal-waste-recycled-and-composted-3#tab-chart_3[This graph]
-– from the European Environment Agency (EEA) – is used to help corroborate the figures calculated in the lab note. And the EEA is the subject of the next section.
+https://www.eea.europa.eu/data-and-maps/daviz/municipal-waste-recycled-and-composted-3#tab-chart_3[This graph] –
+from the European Environment Agency (EEA) – is used to help corroborate the figures calculated in the lab note.
+And the EEA is the subject of the next section.
 
 
 
@@ -58,8 +55,7 @@ The https://www.eea.europa.eu/[European Environment Agency] (EEA)
 website provides some of the features of its eurostat sister site.
 In addition to those, its features of note include:
 
-* 596 linked open data datasets (http://semantic.eea.europa.eu/sparql[accessible]
-very a seemingly fast SPARQL engine);
+* 596 linked open data datasets (http://semantic.eea.europa.eu/sparql[accessible] very a seemingly fast SPARQL engine);
 * listed with each dataset is a number of pre-defined, informative charts, e.g.
 
 image::eea-embeddable-charts.png[align="center"]
