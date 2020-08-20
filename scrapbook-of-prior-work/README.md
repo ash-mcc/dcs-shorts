@@ -48,6 +48,10 @@
 * Iceland's [COVID-19 data site](https://www.covid.statistics.gov.scot]is/data) is user friendly.
 * [statistics.gov.scot](https://statistics.gov.scot) makes many useful datasets available as linked open data. Its datasets include some (e.g. Household Waste and Population) that are core to providing data about waste in Scotland.
 * [This RDF based platform](https://semantic.eea.europa.eu/) of the European Environment Agency, seems very impressive.
+* [mySociety](https://www.mysociety.org) - "We help people become active citizens." 
+"Our technology, research and data are used by individual citizens, journalists, and civil society in over 40 countries around the world." 
+Really nice approach to opening up data and code for the common good.
+They store a lot of open data and code in their [GitHub repositories](https://github.com/mysociety).
 
 ## Tools
 
