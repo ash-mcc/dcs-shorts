@@ -34,4 +34,4 @@ to generate 3 choropleths which help visualise the statistically values from the
 against the council-oriented geography of Scotland.
 (The geography data comes from https://github.com/martinjc/UK-GeoJSON[Martin Chorely's good curation work].)
 
-The resulting choropleths can be viewed on the page link:choropleths.html[].
+The resulting choropleths can be viewed on the page https://data-commons-scotland/choropleth-generation/choropleths.html[choropleths.html].
