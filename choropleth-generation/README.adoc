@@ -4,9 +4,11 @@
 [quote, Rory, fictional scenario]
 Which areas in Scotland are reducing their household waste?"
 
+
 .After looking at the chart which visualises waste amounts against geographic areas:
 [quote, Niamh, fictional scenario]
 I wonder why urban populations _seem_ to generated less waste than rural ones?
+
 
 In a step towards supporting the above scenarios,
 this experiment generates https://en.wikipedia.org/wiki/Choropleth_map[choropleth]s to help visualise
