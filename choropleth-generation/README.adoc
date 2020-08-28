@@ -5,7 +5,7 @@
 > Which areas in Scotland are reducing their household waste?"
 
 
-In a step towards supporting the above scenarios,
+In a step towards supporting the above scenario,
 this experiment generates https://en.wikipedia.org/wiki/Choropleth_map[choropleth]s to help visualise
 the variations in the amounts of household-generated waste across geographic areas in Scotland.
 
