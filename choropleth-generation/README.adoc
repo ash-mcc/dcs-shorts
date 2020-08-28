@@ -31,7 +31,7 @@ against the council-oriented geography of Scotland.
 The resulting choropleths can be viewed on >> https://data-commons-scotland.github.io/choropleth-generation/choropleths.html[this page] <<
 
 ._Rory looks at the “2011-2018 trend in tonnage” choropleth, and thinks…_
->It’s good to see that most areas are reducing waste generation but why not some…?
+> It’s good to see that most areas are reducing waste generation but why not some…?
 
 ._Looking at the “2018 tonnage” and 2011-2018 average tonnage” choropleths, Niamh wonders…_
 > I wonder why urban populations _seem_ to generated less waste than rural ones?
