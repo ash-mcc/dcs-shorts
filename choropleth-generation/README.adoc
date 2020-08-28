@@ -1,14 +1,8 @@
 = The geography of household waste generation
 
 
-Working on his human geography homework, Rory asks:
-
+.Working on his human geography homework, Rory asks:
 > Which areas in Scotland are reducing their household waste?"
-
-
-Looking at the chart which visualises waste amounts against geographic areas, Niamh thinks:
-
-> I wonder why urban populations _seem_ to generated less waste than rural ones?
 
 
 In a step towards supporting the above scenarios,
@@ -34,4 +28,10 @@ to generate 3 choropleths which help visualise the statistically values from the
 against the council-oriented geography of Scotland.
 (The geography data comes from https://github.com/martinjc/UK-GeoJSON[Martin Chorely's good curation work].)
 
-The resulting choropleths can be viewed on the page https://data-commons-scotland.github.io/choropleth-generation/choropleths.html[choropleths.html].
+The resulting choropleths can be viewed on >> https://data-commons-scotland.github.io/choropleth-generation/choropleths.html[this page] <<
+
+.Rory looks at the “2011-2018 trend in tonnage” choropleth, and thinks…
+>It’s good to see that most areas are reducing waste generation but why not some…?
+
+.Looking at the “2018 tonnage” and 2011-2018 average tonnage” choropleths, Niamh wonders…
+> I wonder why urban populations _seem_ to generated less waste than rural ones?
