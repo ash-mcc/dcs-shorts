@@ -24,7 +24,7 @@ to find the waste tonnage generated per council citizen per year.
  (Calculated as the gradient of a linear approximation to the tonnage over the years.
  A statistician might well suggest a more appropriate method for computing this _trend_ value.) +
  +
-The derived data can be seen in link:stats-on-tonnage-generated-per-council-citizen.csv[this file].
+The derived values can be seen in link:stats-on-tonnage-generated-per-council-citizen.csv[this file].
 1.  Use https://vega.github.io/vega/[Vega]
 to generate 3 choropleths which help visualise the statistically values from the above step,
 against the council-oriented geography of Scotland.
