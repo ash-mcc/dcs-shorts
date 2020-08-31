@@ -91,6 +91,7 @@ They store a lot of open data and code in their [GitHub repositories](https://gi
    * Other _semantic wiki_ work
       * [KawaWiki](https://ieeexplore.ieee.org/document/4053285) = "aims at providing a scheme where end users, expert users and ontologists seamlessly collaborate to publish semantically consistent RDF and Wiki pages in a Wiki way".
       * [Platypus wiki](http://platypuswiki.sourceforge.net/whatis/documents/platypuswiki.pdf) - "a project to develop an enhanced Wiki Wiki Web with ideas borrowed from the Semantic Web".
+   * Fi Scott's [inspiring presentation](https://www.youtube.com/watch?v=AHFcY6yx4LE) about the development of her platform [Make Works](https://make.works/) that makes public, data about manufacturers.
    * [What Happened to the Semantic Web](http://david.portnoy.us/category/semantic-web/) discusses problems with the "SemWeb", e.g. people prefer natural language framed queries (backed by ML) over SPARQL; SemWeb "too rigid to effectively keep up with today?s rate of data creation and structural evolution"; "ontological silos"; "lack of clear commercial benefits".
    * [CKAN](https://ckan.org/about/)
       * "a tool for making open data websites. [...] helps you manage and publish collections of data"
