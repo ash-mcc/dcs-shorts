@@ -88,6 +88,9 @@ They store a lot of open data and code in their [GitHub repositories](https://gi
       * DBpedia unlies the [BBC's Dynamic Semantic Publishing](https://www.bbc.co.uk/blogs/bbcinternet/2012/04/sports_dynamic_semantic.html)
       * "Why blend logic with data on the web? [...] Machines need the description logic where the data is to be able to integrate it and tie the data silos together."
       * "DBpedia is a fundamental part of the connective tissue of the contextual/semantic Web, a.k.a. the Linked Open Data cloud, a.k.a. the Web of Data. It brings Wikipedia and all the value of its crowdsourced updates to data description. Data description is essential to machine learning.  Machines are dumb, and they need to be told how to retrieve relevant data, process it and deliver it to the place where it's most relevant. Ontologies--descriptions of data domains--help with this kind of handholding."
+   * Other _semantic wiki_ work
+      * [KawaWiki](https://ieeexplore.ieee.org/document/4053285) = "aims at providing a scheme where end users, expert users and ontologists seamlessly collaborate to publish semantically consistent RDF and Wiki pages in a Wiki way".
+      * [Platypus wiki](http://platypuswiki.sourceforge.net/whatis/documents/platypuswiki.pdf) - "a project to develop an enhanced Wiki Wiki Web with ideas borrowed from the Semantic Web".
    * [What Happened to the Semantic Web](http://david.portnoy.us/category/semantic-web/) discusses problems with the "SemWeb", e.g. people prefer natural language framed queries (backed by ML) over SPARQL; SemWeb "too rigid to effectively keep up with today?s rate of data creation and structural evolution"; "ontological silos"; "lack of clear commercial benefits".
    * [CKAN](https://ckan.org/about/)
       * "a tool for making open data websites. [...] helps you manage and publish collections of data"
