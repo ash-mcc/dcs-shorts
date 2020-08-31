@@ -17,7 +17,12 @@
     * Two dimensions: 
       * "The data must be legally open, which means they must be placed in the public domain or under liberal terms of use with minimal restrictions"
       * "The data must be technically open, which means they must be published in electronic formats that are machine readable and non-proprietary"
-
+* [Open standards for government data and technology](https://www.gov.uk/government/collections/open-standards-for-government-data-and-technology#open-standards-for-formatting-and-describing-information)
+    * "use them to make services better for users"
+    * [Persistent resolvable identifiers](https://www.gov.uk/government/publications/open-standards-for-government/persistent-resolvable-identifiers),
+    [Formatting dates and times in data](https://www.gov.uk/government/publications/open-standards-for-government/date-times-and-time-stamps-standard)
+    [Describing RESTful APIs with OpenAPI 3](https://www.gov.uk/government/publications/recommended-open-standards-for-government/describing-restful-apis-with-openapi-3),
+    [Using metadata to describe tabular data for publishing](https://www.gov.uk/government/publications/recommended-open-standards-for-government/using-metadata-to-describe-tabular-data-for-publishing)
 
 ## Case studies and reviews of installations
 
@@ -48,6 +53,10 @@
 * Iceland's [COVID-19 data site](https://www.covid.statistics.gov.scot]is/data) is user friendly.
 * [statistics.gov.scot](https://statistics.gov.scot) makes many useful datasets available as linked open data. Its datasets include some (e.g. Household Waste and Population) that are core to providing data about waste in Scotland.
 * [This RDF based platform](https://semantic.eea.europa.eu/) of the European Environment Agency, seems very impressive.
+* [Data Commons](http://datacommons.org/) - "Linking the world's public datasets".
+    * "is an open knowledge repository that combines data from public datasets".
+    * "We cleaned and processed the data so you don't have to."
+    * "Access and analyze the graph easily using API's in Python, R, or Google Sheets."
 * [mySociety](https://www.mysociety.org) - "We help people become active citizens." 
 "Our technology, research and data are used by individual citizens, journalists, and civil society in over 40 countries around the world." 
 Really nice approach to opening up data and code for the common good.
@@ -158,6 +167,7 @@ to [prototype an open standard for Household Waste Recycling Centres](https://gi
    * Be in a better place for another _sea change_ in waste management a la the one brought about by the 1950s Clean Air Act which resulted in a change of the composition of the household bin ...half the weight but bulkier trash because of 1950s end-of-austerity and the rise of the self-service shop in which goods where packaged.
 * [My Recycling Wales](https://myrecyclingwales.org.uk/) is a pretty site that provides information about how/where Welsh waste is processed. It gets its data from [Waste Data Flow](https://www.wastedataflow.org).
 * [This article](https://resource.co/article/uk-local-authority-league-table-201819-right-track) is from a magazine called _resource.co_ that contains nice data-backed articles about waste. 
+* [CRNS](https://www.crns.org.uk) - " involved in projects [...] to support the third sector, in pursuit of zero waste".
 
 
 ## Opportunities
