@@ -1,0 +1,2475 @@
+population-per-year: scotgov versus wikidata
+
+574 in :scotgov only...
+#{{:code "S12000033",
+   :label "Aberdeen City",
+   :year "2017",
+   :population "228800"}
+  {:code "S12000017",
+   :label "Highland",
+   :year "2006",
+   :population "220780"}
+  {:code "S12000028",
+   :label "South Ayrshire",
+   :year "2003",
+   :population "111550"}
+  {:code "S12000020",
+   :label "Moray",
+   :year "2007",
+   :population "91440"}
+  {:code "S12000049",
+   :label "Glasgow City",
+   :year "2017",
+   :population "621020"}
+  {:code "S12000050",
+   :label "North Lanarkshire",
+   :year "2016",
+   :population "339390"}
+  {:code "S12000050",
+   :label "North Lanarkshire",
+   :year "2004",
+   :population "325400"}
+  {:code "S12000039",
+   :label "West Dunbartonshire",
+   :year "2007",
+   :population "91370"}
+  {:code "S12000047",
+   :label "Fife",
+   :year "2006",
+   :population "357260"}
+  {:code "S12000042",
+   :label "Dundee City",
+   :year "2001",
+   :population "145460"}
+  {:code "S12000050",
+   :label "North Lanarkshire",
+   :year "2011",
+   :population "337720"}
+  {:code "S12000020",
+   :label "Moray",
+   :year "2005",
+   :population "90100"}
+  {:code "S12000030",
+   :label "Stirling",
+   :year "2005",
+   :population "87510"}
+  {:code "S12000033",
+   :label "Aberdeen City",
+   :year "2008",
+   :population "214020"}
+  {:code "S12000036",
+   :label "City of Edinburgh",
+   :year "2002",
+   :population "447500"}
+  {:code "S12000008",
+   :label "East Ayrshire",
+   :year "2012",
+   :population "122730"}
+  {:code "S12000030",
+   :label "Stirling",
+   :year "2004",
+   :population "86920"}
+  {:code "S12000034",
+   :label "Aberdeenshire",
+   :year "2005",
+   :population "237570"}
+  {:code "S12000041",
+   :label "Angus",
+   :year "2005",
+   :population "111340"}
+  {:code "S12000021",
+   :label "North Ayrshire",
+   :year "2004",
+   :population "136500"}
+  {:code "S12000041",
+   :label "Angus",
+   :year "2013",
+   :population "116290"}
+  {:code "S12000013",
+   :label "Outer Hebrides",
+   :year "2003",
+   :population "26430"}
+  {:code "S12000013",
+   :label "Outer Hebrides",
+   :year "2012",
+   :population "27560"}
+  {:code "S12000010",
+   :label "East Lothian",
+   :year "2002",
+   :population "91060"}
+  {:code "S12000035",
+   :label "Argyll and Bute",
+   :year "2004",
+   :population "90580"}
+  {:code "S12000039",
+   :label "West Dunbartonshire",
+   :year "2003",
+   :population "92470"}
+  {:code "S12000021",
+   :label "North Ayrshire",
+   :year "2016",
+   :population "135890"}
+  {:code "S12000050",
+   :label "North Lanarkshire",
+   :year "2005",
+   :population "327140"}
+  {:code "S12000045",
+   :label "East Dunbartonshire",
+   :year "2019",
+   :population "108640"}
+  {:code "S12000008",
+   :label "East Ayrshire",
+   :year "2005",
+   :population "120280"}
+  {:code "S12000035",
+   :label "Argyll and Bute",
+   :year "2013",
+   :population "88050"}
+  {:code "S12000013",
+   :label "Outer Hebrides",
+   :year "2010",
+   :population "27600"}
+  {:code "S12000038",
+   :label "Renfrewshire",
+   :year "2007",
+   :population "171870"}
+  {:code "S12000010",
+   :label "East Lothian",
+   :year "2003",
+   :population "91640"}
+  {:code "S12000047",
+   :label "Fife",
+   :year "2002",
+   :population "350740"}
+  {:code "S12000030",
+   :label "Stirling",
+   :year "2003",
+   :population "87090"}
+  {:code "S12000019",
+   :label "Midlothian",
+   :year "2008",
+   :population "81550"}
+  {:code "S12000050",
+   :label "North Lanarkshire",
+   :year "2015",
+   :population "338260"}
+  {:code "S12000047",
+   :label "Fife",
+   :year "2009",
+   :population "361420"}
+  {:code "S12000027",
+   :label "Shetland Islands",
+   :year "2015",
+   :population "23200"}
+  {:code "S12000039",
+   :label "West Dunbartonshire",
+   :year "2001",
+   :population "93320"}
+  {:code "S12000042",
+   :label "Dundee City",
+   :year "2017",
+   :population "148710"}
+  {:code "S12000006",
+   :label "Dumfries and Galloway",
+   :year "2013",
+   :population "150280"}
+  {:code "S12000038",
+   :label "Renfrewshire",
+   :year "2008",
+   :population "172640"}
+  {:code "S12000013",
+   :label "Outer Hebrides",
+   :year "2007",
+   :population "27210"}
+  {:code "S12000034",
+   :label "Aberdeenshire",
+   :year "2012",
+   :population "255560"}
+  {:code "S12000050",
+   :label "North Lanarkshire",
+   :year "2001",
+   :population "321180"}
+  {:code "S12000045",
+   :label "East Dunbartonshire",
+   :year "2002",
+   :population "107350"}
+  {:code "S12000039",
+   :label "West Dunbartonshire",
+   :year "2011",
+   :population "90610"}
+  {:code "S12000006",
+   :label "Dumfries and Galloway",
+   :year "2010",
+   :population "151100"}
+  {:code "S12000023",
+   :label "Orkney Islands",
+   :year "2001",
+   :population "19220"}
+  {:code "S12000006",
+   :label "Dumfries and Galloway",
+   :year "2002",
+   :population "147670"}
+  {:code "S12000039",
+   :label "West Dunbartonshire",
+   :year "2012",
+   :population "90340"}
+  {:code "S12000026",
+   :label "Scottish Borders",
+   :year "2003",
+   :population "108390"}
+  {:code "S12000038",
+   :label "Renfrewshire",
+   :year "2011",
+   :population "174700"}
+  {:code "S12000047",
+   :label "Fife",
+   :year "2013",
+   :population "366900"}
+  {:code "S12000049",
+   :label "Glasgow City",
+   :year "2002",
+   :population "576450"}
+  {:code "S12000008",
+   :label "East Ayrshire",
+   :year "2011",
+   :population "122690"}
+  {:code "S12000014",
+   :label "Falkirk",
+   :year "2006",
+   :population "151090"}
+  {:code "S12000030",
+   :label "Stirling",
+   :year "2016",
+   :population "93750"}
+  {:code "S12000008",
+   :label "East Ayrshire",
+   :year "2017",
+   :population "121940"}
+  {:code "S12000039",
+   :label "West Dunbartonshire",
+   :year "2017",
+   :population "89610"}
+  {:code "S12000006",
+   :label "Dumfries and Galloway",
+   :year "2004",
+   :population "148700"}
+  {:code "S12000040",
+   :label "West Lothian",
+   :year "2001",
+   :population "159030"}
+  {:code "S12000011",
+   :label "East Renfrewshire",
+   :year "2014",
+   :population "92410"}
+  {:code "S12000034",
+   :label "Aberdeenshire",
+   :year "2019",
+   :population "261210"}
+  {:code "S12000028",
+   :label "South Ayrshire",
+   :year "2002",
+   :population "111690"}
+  {:code "S12000014",
+   :label "Falkirk",
+   :year "2017",
+   :population "160130"}
+  {:code "S12000034",
+   :label "Aberdeenshire",
+   :year "2009",
+   :population "249020"}
+  {:code "S12000005",
+   :label "Clackmannanshire",
+   :year "2015",
+   :population "51360"}
+  {:code "S12000030",
+   :label "Stirling",
+   :year "2013",
+   :population "91230"}
+  {:code "S12000042",
+   :label "Dundee City",
+   :year "2006",
+   :population "143360"}
+  {:code "S12000023",
+   :label "Orkney Islands",
+   :year "2012",
+   :population "21530"}
+  {:code "S12000019",
+   :label "Midlothian",
+   :year "2007",
+   :population "80370"}
+  {:code "S12000034",
+   :label "Aberdeenshire",
+   :year "2015",
+   :population "261960"}
+  {:code "S12000033",
+   :label "Aberdeen City",
+   :year "2005",
+   :population "208690"}
+  {:code "S12000006",
+   :label "Dumfries and Galloway",
+   :year "2009",
+   :population "151160"}
+  {:code "S12000027",
+   :label "Shetland Islands",
+   :year "2013",
+   :population "23200"}
+  {:code "S12000011",
+   :label "East Renfrewshire",
+   :year "2010",
+   :population "90410"}
+  {:code "S12000033",
+   :label "Aberdeen City",
+   :year "2019",
+   :population "228670"}
+  {:code "S12000035",
+   :label "Argyll and Bute",
+   :year "2015",
+   :population "86890"}
+  {:code "S12000034",
+   :label "Aberdeenshire",
+   :year "2010",
+   :population "251430"}
+  {:code "S12000040",
+   :label "West Lothian",
+   :year "2004",
+   :population "163540"}
+  {:code "S12000019",
+   :label "Midlothian",
+   :year "2004",
+   :population "80230"}
+  {:code "S12000018",
+   :label "Inverclyde",
+   :year "2011",
+   :population "81220"}
+  {:code "S12000033",
+   :label "Aberdeen City",
+   :year "2001",
+   :population "211910"}
+  {:code "S12000008",
+   :label "East Ayrshire",
+   :year "2013",
+   :population "122430"}
+  {:code "S12000019",
+   :label "Midlothian",
+   :year "2019",
+   :population "92460"}
+  {:code "S12000018",
+   :label "Inverclyde",
+   :year "2010",
+   :population "81510"}
+  {:code "S12000039",
+   :label "West Dunbartonshire",
+   :year "2006",
+   :population "91410"}
+  {:code "S12000010",
+   :label "East Lothian",
+   :year "2004",
+   :population "92170"}
+  {:code "S12000014",
+   :label "Falkirk",
+   :year "2012",
+   :population "156800"}
+  {:code "S12000039",
+   :label "West Dunbartonshire",
+   :year "2014",
+   :population "89710"}
+  {:code "S12000023",
+   :label "Orkney Islands",
+   :year "2014",
+   :population "21580"}
+  {:code "S12000021",
+   :label "North Ayrshire",
+   :year "2015",
+   :population "136130"}
+  {:code "S12000040",
+   :label "West Lothian",
+   :year "2014",
+   :population "177200"}
+  {:code "S12000049",
+   :label "Glasgow City",
+   :year "2012",
+   :population "595070"}
+  {:code "S12000005",
+   :label "Clackmannanshire",
+   :year "2010",
+   :population "51330"}
+  {:code "S12000020",
+   :label "Moray",
+   :year "2016",
+   :population "96070"}
+  {:code "S12000047",
+   :label "Fife",
+   :year "2015",
+   :population "368080"}
+  {:code "S12000040",
+   :label "West Lothian",
+   :year "2006",
+   :population "167110"}
+  {:code "S12000036",
+   :label "City of Edinburgh",
+   :year "2011",
+   :population "477940"}
+  {:code "S12000038",
+   :label "Renfrewshire",
+   :year "2004",
+   :population "171470"}
+  {:code "S12000048",
+   :label "Perth and Kinross",
+   :year "2005",
+   :population "138060"}
+  {:code "S12000006",
+   :label "Dumfries and Galloway",
+   :year "2008",
+   :population "151010"}
+  {:code "S12000036",
+   :label "City of Edinburgh",
+   :year "2005",
+   :population "449470"}
+  {:code "S12000039",
+   :label "West Dunbartonshire",
+   :year "2009",
+   :population "91080"}
+  {:code "S12000021",
+   :label "North Ayrshire",
+   :year "2006",
+   :population "136790"}
+  {:code "S12000010",
+   :label "East Lothian",
+   :year "2019",
+   :population "107090"}
+  {:code "S12000028",
+   :label "South Ayrshire",
+   :year "2017",
+   :population "112680"}
+  {:code "S12000020",
+   :label "Moray",
+   :year "2017",
+   :population "95780"}
+  {:code "S12000008",
+   :label "East Ayrshire",
+   :year "2008",
+   :population "121600"}
+  {:code "S12000018",
+   :label "Inverclyde",
+   :year "2001",
+   :population "84150"}
+  {:code "S12000026",
+   :label "Scottish Borders",
+   :year "2010",
+   :population "113700"}
+  {:code "S12000026",
+   :label "Scottish Borders",
+   :year "2005",
+   :population "110250"}
+  {:code "S12000038",
+   :label "Renfrewshire",
+   :year "2019",
+   :population "179100"}
+  {:code "S12000006",
+   :label "Dumfries and Galloway",
+   :year "2006",
+   :population "149770"}
+  {:code "S12000042",
+   :label "Dundee City",
+   :year "2004",
+   :population "143100"}
+  {:code "S12000048",
+   :label "Perth and Kinross",
+   :year "2010",
+   :population "145600"}
+  {:code "S12000006",
+   :label "Dumfries and Galloway",
+   :year "2016",
+   :population "149520"}
+  {:code "S12000050",
+   :label "North Lanarkshire",
+   :year "2017",
+   :population "339960"}
+  {:code "S12000023",
+   :label "Orkney Islands",
+   :year "2004",
+   :population "19830"}
+  {:code "S12000039",
+   :label "West Dunbartonshire",
+   :year "2010",
+   :population "90800"}
+  {:code "S12000041",
+   :label "Angus",
+   :year "2011",
+   :population "116200"}
+  {:code "S12000033",
+   :label "Aberdeen City",
+   :year "2006",
+   :population "209630"}
+  {:code "S12000010",
+   :label "East Lothian",
+   :year "2012",
+   :population "100860"}
+  {:code "S12000011",
+   :label "East Renfrewshire",
+   :year "2011",
+   :population "90810"}
+  {:code "S12000034",
+   :label "Aberdeenshire",
+   :year "2014",
+   :population "260530"}
+  {:code "S12000018",
+   :label "Inverclyde",
+   :year "2004",
+   :population "82690"}
+  {:code "S12000019",
+   :label "Midlothian",
+   :year "2016",
+   :population "88610"}
+  {:code "S12000039",
+   :label "West Dunbartonshire",
+   :year "2002",
+   :population "93040"}
+  {:code "S12000045",
+   :label "East Dunbartonshire",
+   :year "2007",
+   :population "105050"}
+  {:code "S12000035",
+   :label "Argyll and Bute",
+   :year "2007",
+   :population "90790"}
+  {:code "S12000035",
+   :label "Argyll and Bute",
+   :year "2016",
+   :population "87130"}
+  {:code "S12000020",
+   :label "Moray",
+   :year "2012",
+   :population "92930"}
+  {:code "S12000013",
+   :label "Outer Hebrides",
+   :year "2002",
+   :population "26350"}
+  {:code "S12000019",
+   :label "Midlothian",
+   :year "2013",
+   :population "84710"}
+  {:code "S12000011",
+   :label "East Renfrewshire",
+   :year "2019",
+   :population "95530"}
+  {:code "S12000050",
+   :label "North Lanarkshire",
+   :year "2009",
+   :population "335160"}
+  {:code "S12000033",
+   :label "Aberdeen City",
+   :year "2014",
+   :population "228920"}
+  {:code "S12000020",
+   :label "Moray",
+   :year "2004",
+   :population "89380"}
+  {:code "S12000047",
+   :label "Fife",
+   :year "2008",
+   :population "360040"}
+  {:code "S12000040",
+   :label "West Lothian",
+   :year "2010",
+   :population "174090"}
+  {:code "S12000047",
+   :label "Fife",
+   :year "2011",
+   :population "365300"}
+  {:code "S12000023",
+   :label "Orkney Islands",
+   :year "2016",
+   :population "21850"}
+  {:code "S12000036",
+   :label "City of Edinburgh",
+   :year "2008",
+   :population "458520"}
+  {:code "S12000011",
+   :label "East Renfrewshire",
+   :year "2012",
+   :population "91040"}
+  {:code "S12000028",
+   :label "South Ayrshire",
+   :year "2001",
+   :population "112160"}
+  {:code "S12000033",
+   :label "Aberdeen City",
+   :year "2012",
+   :population "224910"}
+  {:code "S12000021",
+   :label "North Ayrshire",
+   :year "2011",
+   :population "138090"}
+  {:code "S12000048",
+   :label "Perth and Kinross",
+   :year "2002",
+   :population "135130"}
+  {:code "S12000018",
+   :label "Inverclyde",
+   :year "2013",
+   :population "80340"}
+  {:code "S12000010",
+   :label "East Lothian",
+   :year "2005",
+   :population "92730"}
+  {:code "S12000027",
+   :label "Shetland Islands",
+   :year "2004",
+   :population "22090"}
+  {:code "S12000035",
+   :label "Argyll and Bute",
+   :year "2009",
+   :population "89450"}
+  {:code "S12000006",
+   :label "Dumfries and Galloway",
+   :year "2001",
+   :population "147780"}
+  {:code "S12000041",
+   :label "Angus",
+   :year "2014",
+   :population "116740"}
+  {:code "S12000036",
+   :label "City of Edinburgh",
+   :year "2012",
+   :population "482630"}
+  {:code "S12000005",
+   :label "Clackmannanshire",
+   :year "2002",
+   :population "48140"}
+  {:code "S12000013",
+   :label "Outer Hebrides",
+   :year "2015",
+   :population "27070"}
+  {:code "S12000017",
+   :label "Highland",
+   :year "2007",
+   :population "224000"}
+  {:code "S12000021",
+   :label "North Ayrshire",
+   :year "2012",
+   :population "137570"}
+  {:code "S12000028",
+   :label "South Ayrshire",
+   :year "2004",
+   :population "111840"}
+  {:code "S12000050",
+   :label "North Lanarkshire",
+   :year "2013",
+   :population "337780"}
+  {:code "S12000026",
+   :label "Scottish Borders",
+   :year "2014",
+   :population "114040"}
+  {:code "S12000035",
+   :label "Argyll and Bute",
+   :year "2002",
+   :population "91020"}
+  {:code "S12000008",
+   :label "East Ayrshire",
+   :year "2001",
+   :population "120310"}
+  {:code "S12000042",
+   :label "Dundee City",
+   :year "2011",
+   :population "147200"}
+  {:code "S12000029",
+   :label "South Lanarkshire",
+   :year "2017",
+   :population "318170"}
+  {:code "S12000017",
+   :label "Highland",
+   :year "2001",
+   :population "208920"}
+  {:code "S12000008",
+   :label "East Ayrshire",
+   :year "2002",
+   :population "119920"}
+  {:code "S12000048",
+   :label "Perth and Kinross",
+   :year "2013",
+   :population "147770"}
+  {:code "S12000005",
+   :label "Clackmannanshire",
+   :year "2006",
+   :population "49540"}
+  {:code "S12000013",
+   :label "Outer Hebrides",
+   :year "2017",
+   :population "26950"}
+  {:code "S12000011",
+   :label "East Renfrewshire",
+   :year "2004",
+   :population "89790"}
+  {:code "S12000018",
+   :label "Inverclyde",
+   :year "2003",
+   :population "83300"}
+  {:code "S12000018",
+   :label "Inverclyde",
+   :year "2008",
+   :population "82000"}
+  {:code "S12000041",
+   :label "Angus",
+   :year "2007",
+   :population "113540"}
+  {:code "S12000013",
+   :label "Outer Hebrides",
+   :year "2013",
+   :population "27400"}
+  {:code "S12000030",
+   :label "Stirling",
+   :year "2009",
+   :population "88690"}
+  {:code "S12000017",
+   :label "Highland",
+   :year "2015",
+   :population "234110"}
+  {:code "S12000005",
+   :label "Clackmannanshire",
+   :year "2012",
+   :population "51280"}
+  {:code "S12000029",
+   :label "South Lanarkshire",
+   :year "2001",
+   :population "302340"}
+  {:code "S12000028",
+   :label "South Ayrshire",
+   :year "2011",
+   :population "112980"}
+  {:code "S12000047",
+   :label "Fife",
+   :year "2004",
+   :population "353050"}
+  {:code "S12000010",
+   :label "East Lothian",
+   :year "2010",
+   :population "99140"}
+  {:code "S12000026",
+   :label "Scottish Borders",
+   :year "2009",
+   :population "113590"}
+  {:code "S12000008",
+   :label "East Ayrshire",
+   :year "2015",
+   :population "122060"}
+  {:code "S12000047",
+   :label "Fife",
+   :year "2017",
+   :population "371410"}
+  {:code "S12000019",
+   :label "Midlothian",
+   :year "2010",
+   :population "82360"}
+  {:code "S12000027",
+   :label "Shetland Islands",
+   :year "2005",
+   :population "22250"}
+  {:code "S12000023",
+   :label "Orkney Islands",
+   :year "2017",
+   :population "22000"}
+  {:code "S12000018",
+   :label "Inverclyde",
+   :year "2002",
+   :population "83730"}
+  {:code "S12000036",
+   :label "City of Edinburgh",
+   :year "2013",
+   :population "487460"}
+  {:code "S12000048",
+   :label "Perth and Kinross",
+   :year "2006",
+   :population "139380"}
+  {:code "S12000005",
+   :label "Clackmannanshire",
+   :year "2016",
+   :population "51350"}
+  {:code "S12000023",
+   :label "Orkney Islands",
+   :year "2011",
+   :population "21420"}
+  {:code "S12000045",
+   :label "East Dunbartonshire",
+   :year "2001",
+   :population "108250"}
+  {:code "S12000047",
+   :label "Fife",
+   :year "2019",
+   :population "373550"}
+  {:code "S12000035",
+   :label "Argyll and Bute",
+   :year "2014",
+   :population "87650"}
+  {:code "S12000019",
+   :label "Midlothian",
+   :year "2001",
+   :population "80950"}
+  {:code "S12000017",
+   :label "Highland",
+   :year "2005",
+   :population "218060"}
+  {:code "S12000045",
+   :label "East Dunbartonshire",
+   :year "2012",
+   :population "105880"}
+  {:code "S12000045",
+   :label "East Dunbartonshire",
+   :year "2017",
+   :population "108130"}
+  {:code "S12000026",
+   :label "Scottish Borders",
+   :year "2008",
+   :population "113360"}
+  {:code "S12000045",
+   :label "East Dunbartonshire",
+   :year "2009",
+   :population "104960"}
+  {:code "S12000040",
+   :label "West Lothian",
+   :year "2016",
+   :population "180130"}
+  {:code "S12000008",
+   :label "East Ayrshire",
+   :year "2014",
+   :population "122130"}
+  {:code "S12000048",
+   :label "Perth and Kinross",
+   :year "2001",
+   :population "134950"}
+  {:code "S12000033",
+   :label "Aberdeen City",
+   :year "2013",
+   :population "227070"}
+  {:code "S12000045",
+   :label "East Dunbartonshire",
+   :year "2005",
+   :population "106040"}
+  {:code "S12000034",
+   :label "Aberdeenshire",
+   :year "2011",
+   :population "253650"}
+  {:code "S12000038",
+   :label "Renfrewshire",
+   :year "2009",
+   :population "173020"}
+  {:code "S12000021",
+   :label "North Ayrshire",
+   :year "2003",
+   :population "136310"}
+  {:code "S12000050",
+   :label "North Lanarkshire",
+   :year "2006",
+   :population "328740"}
+  {:code "S12000038",
+   :label "Renfrewshire",
+   :year "2003",
+   :population "171560"}
+  {:code "S12000028",
+   :label "South Ayrshire",
+   :year "2016",
+   :population "112470"}
+  {:code "S12000005",
+   :label "Clackmannanshire",
+   :year "2019",
+   :population "51540"}
+  {:code "S12000006",
+   :label "Dumfries and Galloway",
+   :year "2005",
+   :population "149620"}
+  {:code "S12000036",
+   :label "City of Edinburgh",
+   :year "2010",
+   :population "469930"}
+  {:code "S12000008",
+   :label "East Ayrshire",
+   :year "2003",
+   :population "119850"}
+  {:code "S12000010",
+   :label "East Lothian",
+   :year "2015",
+   :population "103050"}
+  {:code "S12000047",
+   :label "Fife",
+   :year "2014",
+   :population "367250"}
+  {:code "S12000013",
+   :label "Outer Hebrides",
+   :year "2006",
+   :population "27060"}
+  {:code "S12000047",
+   :label "Fife",
+   :year "2010",
+   :population "362610"}
+  {:code "S12000027",
+   :label "Shetland Islands",
+   :year "2007",
+   :population "22350"}
+  {:code "S12000041",
+   :label "Angus",
+   :year "2002",
+   :population "108810"}
+  {:code "S12000027",
+   :label "Shetland Islands",
+   :year "2019",
+   :population "22920"}
+  {:code "S12000021",
+   :label "North Ayrshire",
+   :year "2014",
+   :population "136480"}
+  {:code "S12000023",
+   :label "Orkney Islands",
+   :year "2008",
+   :population "20740"}
+  {:code "S12000021",
+   :label "North Ayrshire",
+   :year "2001",
+   :population "135820"}
+  {:code "S12000048",
+   :label "Perth and Kinross",
+   :year "2016",
+   :population "150680"}
+  {:code "S12000018",
+   :label "Inverclyde",
+   :year "2012",
+   :population "80690"}
+  {:code "S12000030",
+   :label "Stirling",
+   :year "2017",
+   :population "94000"}
+  {:code "S12000035",
+   :label "Argyll and Bute",
+   :year "2011",
+   :population "88930"}
+  {:code "S12000005",
+   :label "Clackmannanshire",
+   :year "2005",
+   :population "49160"}
+  {:code "S12000029",
+   :label "South Lanarkshire",
+   :year "2015",
+   :population "316230"}
+  {:code "S12000049",
+   :label "Glasgow City",
+   :year "2008",
+   :population "576200"}
+  {:code "S12000038",
+   :label "Renfrewshire",
+   :year "2013",
+   :population "173890"}
+  {:code "S12000019",
+   :label "Midlothian",
+   :year "2017",
+   :population "90090"}
+  {:code "S12000040",
+   :label "West Lothian",
+   :year "2005",
+   :population "165010"}
+  {:code "S12000026",
+   :label "Scottish Borders",
+   :year "2004",
+   :population "109450"}
+  {:code "S12000027",
+   :label "Shetland Islands",
+   :year "2001",
+   :population "21960"}
+  {:code "S12000034",
+   :label "Aberdeenshire",
+   :year "2002",
+   :population "228830"}
+  {:code "S12000027",
+   :label "Shetland Islands",
+   :year "2010",
+   :population "23060"}
+  {:code "S12000020",
+   :label "Moray",
+   :year "2006",
+   :population "90780"}
+  {:code "S12000014",
+   :label "Falkirk",
+   :year "2007",
+   :population "152320"}
+  {:code "S12000017",
+   :label "Highland",
+   :year "2008",
+   :population "226970"}
+  {:code "S12000020",
+   :label "Moray",
+   :year "2002",
+   :population "87690"}
+  {:code "S12000028",
+   :label "South Ayrshire",
+   :year "2006",
+   :population "112100"}
+  {:code "S12000030",
+   :label "Stirling",
+   :year "2007",
+   :population "88430"}
+  {:code "S12000030",
+   :label "Stirling",
+   :year "2011",
+   :population "90330"}
+  {:code "S12000030",
+   :label "Stirling",
+   :year "2012",
+   :population "91010"}
+  {:code "S12000014",
+   :label "Falkirk",
+   :year "2005",
+   :population "150130"}
+  {:code "S12000011",
+   :label "East Renfrewshire",
+   :year "2008",
+   :population "89870"}
+  {:code "S12000017",
+   :label "Highland",
+   :year "2013",
+   :population "232930"}
+  {:code "S12000029",
+   :label "South Lanarkshire",
+   :year "2010",
+   :population "313180"}
+  {:code "S12000029",
+   :label "South Lanarkshire",
+   :year "2005",
+   :population "306850"}
+  {:code "S12000018",
+   :label "Inverclyde",
+   :year "2006",
+   :population "82320"}
+  {:code "S12000038",
+   :label "Renfrewshire",
+   :year "2015",
+   :population "174560"}
+  {:code "S12000026",
+   :label "Scottish Borders",
+   :year "2012",
+   :population "113720"}
+  {:code "S12000011",
+   :label "East Renfrewshire",
+   :year "2015",
+   :population "92940"}
+  {:code "S12000041",
+   :label "Angus",
+   :year "2001",
+   :population "108370"}
+  {:code "S12000011",
+   :label "East Renfrewshire",
+   :year "2003",
+   :population "89870"}
+  {:code "S12000020",
+   :label "Moray",
+   :year "2013",
+   :population "94360"}
+  {:code "S12000050",
+   :label "North Lanarkshire",
+   :year "2003",
+   :population "323700"}
+  {:code "S12000023",
+   :label "Orkney Islands",
+   :year "2013",
+   :population "21560"}
+  {:code "S12000026",
+   :label "Scottish Borders",
+   :year "2015",
+   :population "114030"}
+  {:code "S12000006",
+   :label "Dumfries and Galloway",
+   :year "2012",
+   :population "150840"}
+  {:code "S12000041",
+   :label "Angus",
+   :year "2008",
+   :population "114490"}
+  {:code "S12000038",
+   :label "Renfrewshire",
+   :year "2005",
+   :population "171430"}
+  {:code "S12000014",
+   :label "Falkirk",
+   :year "2014",
+   :population "157690"}
+  {:code "S12000006",
+   :label "Dumfries and Galloway",
+   :year "2015",
+   :population "149670"}
+  {:code "S12000041",
+   :label "Angus",
+   :year "2015",
+   :population "116900"}
+  {:code "S12000010",
+   :label "East Lothian",
+   :year "2001",
+   :population "90180"}
+  {:code "S12000006",
+   :label "Dumfries and Galloway",
+   :year "2011",
+   :population "151410"}
+  {:code "S12000049",
+   :label "Glasgow City",
+   :year "2014",
+   :population "599640"}
+  {:code "S12000036",
+   :label "City of Edinburgh",
+   :year "2009",
+   :population "463230"}
+  {:code "S12000048",
+   :label "Perth and Kinross",
+   :year "2014",
+   :population "148930"}
+  {:code "S12000035",
+   :label "Argyll and Bute",
+   :year "2010",
+   :population "88620"}
+  {:code "S12000042",
+   :label "Dundee City",
+   :year "2002",
+   :population "144370"}
+  {:code "S12000033",
+   :label "Aberdeen City",
+   :year "2004",
+   :population "207820"}
+  {:code "S12000011",
+   :label "East Renfrewshire",
+   :year "2017",
+   :population "94760"}
+  {:code "S12000035",
+   :label "Argyll and Bute",
+   :year "2003",
+   :population "90930"}
+  {:code "S12000041",
+   :label "Angus",
+   :year "2017",
+   :population "116280"}
+  {:code "S12000041",
+   :label "Angus",
+   :year "2012",
+   :population "116220"}
+  {:code "S12000029",
+   :label "South Lanarkshire",
+   :year "2014",
+   :population "315300"}
+  {:code "S12000014",
+   :label "Falkirk",
+   :year "2008",
+   :population "153290"}
+  {:code "S12000013",
+   :label "Outer Hebrides",
+   :year "2005",
+   :population "26930"}
+  {:code "S12000023",
+   :label "Orkney Islands",
+   :year "2002",
+   :population "19330"}
+  {:code "S12000019",
+   :label "Midlothian",
+   :year "2005",
+   :population "80050"}
+  {:code "S12000026",
+   :label "Scottish Borders",
+   :year "2017",
+   :population "115020"}
+  {:code "S12000038",
+   :label "Renfrewshire",
+   :year "2006",
+   :population "171270"}
+  {:code "S12000029",
+   :label "South Lanarkshire",
+   :year "2007",
+   :population "310370"}
+  {:code "S12000042",
+   :label "Dundee City",
+   :year "2003",
+   :population "144080"}
+  {:code "S12000042",
+   :label "Dundee City",
+   :year "2013",
+   :population "148100"}
+  {:code "S12000030",
+   :label "Stirling",
+   :year "2002",
+   :population "86630"}
+  {:code "S12000018",
+   :label "Inverclyde",
+   :year "2007",
+   :population "82110"}
+  {:code "S12000028",
+   :label "South Ayrshire",
+   :year "2014",
+   :population "112530"}
+  {:code "S12000028",
+   :label "South Ayrshire",
+   :year "2013",
+   :population "112870"}
+  {:code "S12000005",
+   :label "Clackmannanshire",
+   :year "2003",
+   :population "48140"}
+  {:code "S12000026",
+   :label "Scottish Borders",
+   :year "2019",
+   :population "115510"}
+  {:code "S12000038",
+   :label "Renfrewshire",
+   :year "2012",
+   :population "174300"}
+  {:code "S12000033",
+   :label "Aberdeen City",
+   :year "2016",
+   :population "229840"}
+  {:code "S12000042",
+   :label "Dundee City",
+   :year "2019",
+   :population "149320"}
+  {:code "S12000011",
+   :label "East Renfrewshire",
+   :year "2007",
+   :population "89840"}
+  {:code "S12000023",
+   :label "Orkney Islands",
+   :year "2019",
+   :population "22270"}
+  {:code "S12000021",
+   :label "North Ayrshire",
+   :year "2005",
+   :population "136690"}
+  {:code "S12000047",
+   :label "Fife",
+   :year "2007",
+   :population "358740"}
+  {:code "S12000045",
+   :label "East Dunbartonshire",
+   :year "2016",
+   :population "107540"}
+  {:code "S12000026",
+   :label "Scottish Borders",
+   :year "2006",
+   :population "110860"}
+  {:code "S12000006",
+   :label "Dumfries and Galloway",
+   :year "2014",
+   :population "149960"}
+  {:code "S12000042",
+   :label "Dundee City",
+   :year "2009",
+   :population "145170"}
+  {:code "S12000011",
+   :label "East Renfrewshire",
+   :year "2002",
+   :population "89930"}
+  {:code "S12000029",
+   :label "South Lanarkshire",
+   :year "2004",
+   :population "305660"}
+  {:code "S12000040",
+   :label "West Lothian",
+   :year "2007",
+   :population "169470"}
+  {:code "S12000021",
+   :label "North Ayrshire",
+   :year "2009",
+   :population "137830"}
+  {:code "S12000014",
+   :label "Falkirk",
+   :year "2001",
+   :population "145270"}
+  {:code "S12000048",
+   :label "Perth and Kinross",
+   :year "2019",
+   :population "151950"}
+  {:code "S12000011",
+   :label "East Renfrewshire",
+   :year "2009",
+   :population "89980"}
+  {:code "S12000020",
+   :label "Moray",
+   :year "2008",
+   :population "92840"}
+  {:code "S12000035",
+   :label "Argyll and Bute",
+   :year "2017",
+   :population "86810"}
+  {:code "S12000042",
+   :label "Dundee City",
+   :year "2012",
+   :population "147780"}
+  {:code "S12000027",
+   :label "Shetland Islands",
+   :year "2011",
+   :population "23240"}
+  {:code "S12000011",
+   :label "East Renfrewshire",
+   :year "2016",
+   :population "93810"}
+  {:code "S12000036",
+   :label "City of Edinburgh",
+   :year "2016",
+   :population "507170"}
+  {:code "S12000047",
+   :label "Fife",
+   :year "2016",
+   :population "370330"}
+  {:code "S12000028",
+   :label "South Ayrshire",
+   :year "2009",
+   :population "112490"}
+  {:code "S12000028",
+   :label "South Ayrshire",
+   :year "2010",
+   :population "112600"}
+  {:code "S12000005",
+   :label "Clackmannanshire",
+   :year "2011",
+   :population "51500"}
+  {:code "S12000008",
+   :label "East Ayrshire",
+   :year "2010",
+   :population "122410"}
+  {:code "S12000040",
+   :label "West Lothian",
+   :year "2011",
+   :population "175300"}
+  {:code "S12000036",
+   :label "City of Edinburgh",
+   :year "2006",
+   :population "452040"}
+  {:code "S12000023",
+   :label "Orkney Islands",
+   :year "2009",
+   :population "20940"}
+  {:code "S12000020",
+   :label "Moray",
+   :year "2001",
+   :population "87000"}
+  {:code "S12000045",
+   :label "East Dunbartonshire",
+   :year "2014",
+   :population "106710"}
+  {:code "S12000014",
+   :label "Falkirk",
+   :year "2004",
+   :population "148300"}
+  {:code "S12000047",
+   :label "Fife",
+   :year "2003",
+   :population "351360"}
+  {:code "S12000036",
+   :label "City of Edinburgh",
+   :year "2019",
+   :population "524930"}
+  {:code "S12000048",
+   :label "Perth and Kinross",
+   :year "2012",
+   :population "147740"}
+  {:code "S12000020",
+   :label "Moray",
+   :year "2019",
+   :population "95820"}
+  {:code "S12000049",
+   :label "Glasgow City",
+   :year "2007",
+   :population "571760"}
+  {:code "S12000030",
+   :label "Stirling",
+   :year "2001",
+   :population "86200"}
+  {:code "S12000045",
+   :label "East Dunbartonshire",
+   :year "2004",
+   :population "106540"}
+  {:code "S12000021",
+   :label "North Ayrshire",
+   :year "2013",
+   :population "136940"}
+  {:code "S12000030",
+   :label "Stirling",
+   :year "2019",
+   :population "94210"}
+  {:code "S12000005",
+   :label "Clackmannanshire",
+   :year "2014",
+   :population "51190"}
+  {:code "S12000026",
+   :label "Scottish Borders",
+   :year "2011",
+   :population "113880"}
+  {:code "S12000028",
+   :label "South Ayrshire",
+   :year "2015",
+   :population "112400"}
+  {:code "S12000033",
+   :label "Aberdeen City",
+   :year "2011",
+   :population "222460"}
+  {:code "S12000049",
+   :label "Glasgow City",
+   :year "2016",
+   :population "615070"}
+  {:code "S12000050",
+   :label "North Lanarkshire",
+   :year "2010",
+   :population "336280"}
+  {:code "S12000019",
+   :label "Midlothian",
+   :year "2014",
+   :population "86220"}
+  {:code "S12000027",
+   :label "Shetland Islands",
+   :year "2017",
+   :population "23080"}
+  {:code "S12000023",
+   :label "Orkney Islands",
+   :year "2007",
+   :population "20580"}
+  {:code "S12000011",
+   :label "East Renfrewshire",
+   :year "2013",
+   :population "91530"}
+  {:code "S12000040",
+   :label "West Lothian",
+   :year "2002",
+   :population "160370"}
+  {:code "S12000038",
+   :label "Renfrewshire",
+   :year "2017",
+   :population "176830"}
+  {:code "S12000020",
+   :label "Moray",
+   :year "2014",
+   :population "94770"}
+  {:code "S12000020",
+   :label "Moray",
+   :year "2009",
+   :population "93160"}
+  {:code "S12000029",
+   :label "South Lanarkshire",
+   :year "2006",
+   :population "308450"}
+  {:code "S12000026",
+   :label "Scottish Borders",
+   :year "2007",
+   :population "112200"}
+  {:code "S12000006",
+   :label "Dumfries and Galloway",
+   :year "2003",
+   :population "147860"}
+  {:code "S12000013",
+   :label "Outer Hebrides",
+   :year "2008",
+   :population "27280"}
+  {:code "S12000048",
+   :label "Perth and Kinross",
+   :year "2015",
+   :population "149930"}
+  {:code "S12000020",
+   :label "Moray",
+   :year "2010",
+   :population "93690"}
+  {:code "S12000010",
+   :label "East Lothian",
+   :year "2016",
+   :population "104090"}
+  {:code "S12000019",
+   :label "Midlothian",
+   :year "2009",
+   :population "81900"}
+  {:code "S12000029",
+   :label "South Lanarkshire",
+   :year "2008",
+   :population "311310"}
+  {:code "S12000030",
+   :label "Stirling",
+   :year "2015",
+   :population "92830"}
+  {:code "S12000034",
+   :label "Aberdeenshire",
+   :year "2001",
+   :population "226940"}
+  {:code "S12000006",
+   :label "Dumfries and Galloway",
+   :year "2019",
+   :population "148860"}
+  {:code "S12000014",
+   :label "Falkirk",
+   :year "2011",
+   :population "156250"}
+  {:code "S12000041",
+   :label "Angus",
+   :year "2016",
+   :population "116520"}
+  {:code "S12000028",
+   :label "South Ayrshire",
+   :year "2012",
+   :population "112920"}
+  {:code "S12000027",
+   :label "Shetland Islands",
+   :year "2016",
+   :population "23200"}
+  {:code "S12000049",
+   :label "Glasgow City",
+   :year "2019",
+   :population "633120"}
+  {:code "S12000039",
+   :label "West Dunbartonshire",
+   :year "2004",
+   :population "91960"}
+  {:code "S12000029",
+   :label "South Lanarkshire",
+   :year "2019",
+   :population "320530"}
+  {:code "S12000033",
+   :label "Aberdeen City",
+   :year "2003",
+   :population "209280"}
+  {:code "S12000042",
+   :label "Dundee City",
+   :year "2015",
+   :population "148210"}
+  {:code "S12000027",
+   :label "Shetland Islands",
+   :year "2009",
+   :population "22800"}
+  {:code "S12000026",
+   :label "Scottish Borders",
+   :year "2013",
+   :population "113880"}
+  {:code "S12000033",
+   :label "Aberdeen City",
+   :year "2007",
+   :population "212470"}
+  {:code "S12000041",
+   :label "Angus",
+   :year "2003",
+   :population "108700"}
+  {:code "S12000034",
+   :label "Aberdeenshire",
+   :year "2016",
+   :population "262190"}
+  {:code "S12000034",
+   :label "Aberdeenshire",
+   :year "2003",
+   :population "231250"}
+  {:code "S12000049",
+   :label "Glasgow City",
+   :year "2003",
+   :population "572270"}
+  {:code "S12000021",
+   :label "North Ayrshire",
+   :year "2019",
+   :population "134740"}
+  {:code "S12000049",
+   :label "Glasgow City",
+   :year "2015",
+   :population "606340"}
+  {:code "S12000019",
+   :label "Midlothian",
+   :year "2006",
+   :population "79990"}
+  {:code "S12000023",
+   :label "Orkney Islands",
+   :year "2005",
+   :population "20070"}
+  {:code "S12000023",
+   :label "Orkney Islands",
+   :year "2006",
+   :population "20340"}
+  {:code "S12000019",
+   :label "Midlothian",
+   :year "2003",
+   :population "80280"}
+  {:code "S12000045",
+   :label "East Dunbartonshire",
+   :year "2015",
+   :population "106960"}
+  {:code "S12000017",
+   :label "Highland",
+   :year "2011",
+   :population "232730"}
+  {:code "S12000050",
+   :label "North Lanarkshire",
+   :year "2012",
+   :population "337890"}
+  {:code "S12000008",
+   :label "East Ayrshire",
+   :year "2007",
+   :population "120950"}
+  {:code "S12000040",
+   :label "West Lothian",
+   :year "2017",
+   :population "181310"}
+  {:code "S12000048",
+   :label "Perth and Kinross",
+   :year "2007",
+   :population "141140"}
+  {:code "S12000011",
+   :label "East Renfrewshire",
+   :year "2005",
+   :population "89880"}
+  {:code "S12000041",
+   :label "Angus",
+   :year "2004",
+   :population "110170"}
+  {:code "S12000029",
+   :label "South Lanarkshire",
+   :year "2012",
+   :population "314330"}
+  {:code "S12000036",
+   :label "City of Edinburgh",
+   :year "2017",
+   :population "513210"}
+  {:code "S12000050",
+   :label "North Lanarkshire",
+   :year "2008",
+   :population "333280"}
+  {:code "S12000039",
+   :label "West Dunbartonshire",
+   :year "2016",
+   :population "89860"}
+  {:code "S12000033",
+   :label "Aberdeen City",
+   :year "2015",
+   :population "230350"}
+  {:code "S12000036",
+   :label "City of Edinburgh",
+   :year "2014",
+   :population "492610"}
+  {:code "S12000045",
+   :label "East Dunbartonshire",
+   :year "2011",
+   :population "105000"}
+  {:code "S12000048",
+   :label "Perth and Kinross",
+   :year "2017",
+   :population "151100"}
+  {:code "S12000034",
+   :label "Aberdeenshire",
+   :year "2008",
+   :population "246830"}
+  {:code "S12000018",
+   :label "Inverclyde",
+   :year "2009",
+   :population "81670"}
+  {:code "S12000049",
+   :label "Glasgow City",
+   :year "2006",
+   :population "568460"}
+  {:code "S12000017",
+   :label "Highland",
+   :year "2010",
+   :population "230730"}
+  {:code "S12000018",
+   :label "Inverclyde",
+   :year "2019",
+   :population "77800"}
+  {:code "S12000048",
+   :label "Perth and Kinross",
+   :year "2008",
+   :population "143130"}
+  {:code "S12000011",
+   :label "East Renfrewshire",
+   :year "2006",
+   :population "89750"}
+  {:code "S12000038",
+   :label "Renfrewshire",
+   :year "2001",
+   :population "172850"}
+  {:code "S12000029",
+   :label "South Lanarkshire",
+   :year "2002",
+   :population "302770"}
+  {:code "S12000008",
+   :label "East Ayrshire",
+   :year "2006",
+   :population "120440"}
+  {:code "S12000048",
+   :label "Perth and Kinross",
+   :year "2011",
+   :population "146850"}
+  {:code "S12000048",
+   :label "Perth and Kinross",
+   :year "2003",
+   :population "135960"}
+  {:code "S12000019",
+   :label "Midlothian",
+   :year "2012",
+   :population "84240"}
+  {:code "S12000021",
+   :label "North Ayrshire",
+   :year "2007",
+   :population "137420"}
+  {:code "S12000014",
+   :label "Falkirk",
+   :year "2013",
+   :population "157160"}
+  {:code "S12000030",
+   :label "Stirling",
+   :year "2006",
+   :population "88090"}
+  {:code "S12000038",
+   :label "Renfrewshire",
+   :year "2010",
+   :population "173700"}
+  {:code "S12000040",
+   :label "West Lothian",
+   :year "2008",
+   :population "171390"}
+  {:code "S12000013",
+   :label "Outer Hebrides",
+   :year "2004",
+   :population "26650"}
+  {:code "S12000005",
+   :label "Clackmannanshire",
+   :year "2009",
+   :population "51290"}
+  {:code "S12000035",
+   :label "Argyll and Bute",
+   :year "2005",
+   :population "90340"}
+  {:code "S12000036",
+   :label "City of Edinburgh",
+   :year "2004",
+   :population "445870"}
+  {:code "S12000005",
+   :label "Clackmannanshire",
+   :year "2013",
+   :population "51280"}
+  {:code "S12000036",
+   :label "City of Edinburgh",
+   :year "2003",
+   :population "445300"}
+  {:code "S12000020",
+   :label "Moray",
+   :year "2003",
+   :population "88830"}
+  {:code "S12000035",
+   :label "Argyll and Bute",
+   :year "2006",
+   :population "90860"}
+  {:code "S12000040",
+   :label "West Lothian",
+   :year "2013",
+   :population "176160"}
+  {:code "S12000040",
+   :label "West Lothian",
+   :year "2009",
+   :population "173040"}
+  {:code "S12000026",
+   :label "Scottish Borders",
+   :year "2001",
+   :population "106950"}
+  {:code "S12000026",
+   :label "Scottish Borders",
+   :year "2016",
+   :population "114530"}
+  {:code "S12000020",
+   :label "Moray",
+   :year "2015",
+   :population "95510"}
+  {:code "S12000014",
+   :label "Falkirk",
+   :year "2015",
+   :population "158460"}
+  {:code "S12000039",
+   :label "West Dunbartonshire",
+   :year "2013",
+   :population "89800"}
+  {:code "S12000028",
+   :label "South Ayrshire",
+   :year "2008",
+   :population "112610"}
+  {:code "S12000029",
+   :label "South Lanarkshire",
+   :year "2013",
+   :population "314810"}
+  {:code "S12000040",
+   :label "West Lothian",
+   :year "2015",
+   :population "178550"}
+  {:code "S12000018",
+   :label "Inverclyde",
+   :year "2015",
+   :population "79500"}
+  {:code "S12000035",
+   :label "Argyll and Bute",
+   :year "2001",
+   :population "91300"}
+  {:code "S12000005",
+   :label "Clackmannanshire",
+   :year "2004",
+   :population "48680"}
+  {:code "S12000049",
+   :label "Glasgow City",
+   :year "2005",
+   :population "569250"}
+  {:code "S12000038",
+   :label "Renfrewshire",
+   :year "2002",
+   :population "172300"}
+  {:code "S12000010",
+   :label "East Lothian",
+   :year "2017",
+   :population "104840"}
+  {:code "S12000042",
+   :label "Dundee City",
+   :year "2016",
+   :population "148270"}
+  {:code "S12000050",
+   :label "North Lanarkshire",
+   :year "2014",
+   :population "338000"}
+  {:code "S12000039",
+   :label "West Dunbartonshire",
+   :year "2005",
+   :population "91530"}
+  {:code "S12000014",
+   :label "Falkirk",
+   :year "2002",
+   :population "145920"}
+  {:code "S12000014",
+   :label "Falkirk",
+   :year "2010",
+   :population "155130"}
+  {:code "S12000017",
+   :label "Highland",
+   :year "2012",
+   :population "232890"}
+  {:code "S12000017",
+   :label "Highland",
+   :year "2017",
+   :population "235180"}
+  {:code "S12000049",
+   :label "Glasgow City",
+   :year "2011",
+   :population "593060"}
+  {:code "S12000042",
+   :label "Dundee City",
+   :year "2010",
+   :population "146060"}
+  {:code "S12000041",
+   :label "Angus",
+   :year "2019",
+   :population "116200"}
+  {:code "S12000020",
+   :label "Moray",
+   :year "2011",
+   :population "93470"}
+  {:code "S12000045",
+   :label "East Dunbartonshire",
+   :year "2008",
+   :population "104940"}
+  {:code "S12000029",
+   :label "South Lanarkshire",
+   :year "2009",
+   :population "312180"}
+  {:code "S12000042",
+   :label "Dundee City",
+   :year "2008",
+   :population "144290"}
+  {:code "S12000013",
+   :label "Outer Hebrides",
+   :year "2019",
+   :population "26720"}
+  {:code "S12000013",
+   :label "Outer Hebrides",
+   :year "2001",
+   :population "26450"}
+  {:code "S12000048",
+   :label "Perth and Kinross",
+   :year "2009",
+   :population "144370"}
+  {:code "S12000033",
+   :label "Aberdeen City",
+   :year "2002",
+   :population "210680"}
+  {:code "S12000018",
+   :label "Inverclyde",
+   :year "2014",
+   :population "79890"}
+  {:code "S12000033",
+   :label "Aberdeen City",
+   :year "2010",
+   :population "219730"}
+  {:code "S12000049",
+   :label "Glasgow City",
+   :year "2013",
+   :population "596520"}
+  {:code "S12000005",
+   :label "Clackmannanshire",
+   :year "2017",
+   :population "51450"}
+  {:code "S12000045",
+   :label "East Dunbartonshire",
+   :year "2006",
+   :population "105590"}
+  {:code "S12000006",
+   :label "Dumfries and Galloway",
+   :year "2007",
+   :population "150370"}
+  {:code "S12000040",
+   :label "West Lothian",
+   :year "2019",
+   :population "183100"}
+  {:code "S12000023",
+   :label "Orkney Islands",
+   :year "2015",
+   :population "21670"}
+  {:code "S12000021",
+   :label "North Ayrshire",
+   :year "2010",
+   :population "137800"}
+  {:code "S12000019",
+   :label "Midlothian",
+   :year "2015",
+   :population "87390"}
+  {:code "S12000047",
+   :label "Fife",
+   :year "2001",
+   :population "349770"}
+  {:code "S12000045",
+   :label "East Dunbartonshire",
+   :year "2003",
+   :population "107000"}
+  {:code "S12000034",
+   :label "Aberdeenshire",
+   :year "2013",
+   :population "257770"}
+  {:code "S12000035",
+   :label "Argyll and Bute",
+   :year "2012",
+   :population "86910"}
+  {:code "S12000045",
+   :label "East Dunbartonshire",
+   :year "2010",
+   :population "104920"}
+  {:code "S12000041",
+   :label "Angus",
+   :year "2009",
+   :population "114830"}
+  {:code "S12000023",
+   :label "Orkney Islands",
+   :year "2010",
+   :population "21220"}
+  {:code "S12000010",
+   :label "East Lothian",
+   :year "2008",
+   :population "97480"}
+  {:code "S12000011",
+   :label "East Renfrewshire",
+   :year "2001",
+   :population "89410"}
+  {:code "S12000040",
+   :label "West Lothian",
+   :year "2012",
+   :population "176010"}
+  {:code "S12000050",
+   :label "North Lanarkshire",
+   :year "2019",
+   :population "341370"}
+  {:code "S12000027",
+   :label "Shetland Islands",
+   :year "2008",
+   :population "22480"}
+  {:code "S12000034",
+   :label "Aberdeenshire",
+   :year "2004",
+   :population "234690"}
+  {:code "S12000029",
+   :label "South Lanarkshire",
+   :year "2016",
+   :population "317100"}
+  {:code "S12000034",
+   :label "Aberdeenshire",
+   :year "2007",
+   :population "244390"}
+  {:code "S12000048",
+   :label "Perth and Kinross",
+   :year "2004",
+   :population "136900"}
+  {:code "S12000017",
+   :label "Highland",
+   :year "2004",
+   :population "214560"}
+  {:code "S12000027",
+   :label "Shetland Islands",
+   :year "2002",
+   :population "22000"}
+  {:code "S12000019",
+   :label "Midlothian",
+   :year "2002",
+   :population "80880"}
+  {:code "S12000017",
+   :label "Highland",
+   :year "2009",
+   :population "228750"}
+  {:code "S12000042",
+   :label "Dundee City",
+   :year "2005",
+   :population "143600"}
+  {:code "S12000026",
+   :label "Scottish Borders",
+   :year "2002",
+   :population "107530"}
+  {:code "S12000036",
+   :label "City of Edinburgh",
+   :year "2015",
+   :population "498810"}
+  {:code "S12000021",
+   :label "North Ayrshire",
+   :year "2002",
+   :population "135890"}
+  {:code "S12000038",
+   :label "Renfrewshire",
+   :year "2016",
+   :population "175930"}
+  {:code "S12000018",
+   :label "Inverclyde",
+   :year "2017",
+   :population "78760"}
+  {:code "S12000034",
+   :label "Aberdeenshire",
+   :year "2006",
+   :population "241180"}
+  {:code "S12000039",
+   :label "West Dunbartonshire",
+   :year "2008",
+   :population "91190"}
+  {:code "S12000005",
+   :label "Clackmannanshire",
+   :year "2001",
+   :population "48070"}
+  {:code "S12000036",
+   :label "City of Edinburgh",
+   :year "2007",
+   :population "456040"}
+  {:code "S12000040",
+   :label "West Lothian",
+   :year "2003",
+   :population "161690"}
+  {:code "S12000006",
+   :label "Dumfries and Galloway",
+   :year "2017",
+   :population "149200"}
+  {:code "S12000008",
+   :label "East Ayrshire",
+   :year "2016",
+   :population "122200"}
+  {:code "S12000028",
+   :label "South Ayrshire",
+   :year "2019",
+   :population "112610"}
+  {:code "S12000014",
+   :label "Falkirk",
+   :year "2016",
+   :population "159380"}
+  {:code "S12000005",
+   :label "Clackmannanshire",
+   :year "2008",
+   :population "51190"}
+  {:code "S12000035",
+   :label "Argyll and Bute",
+   :year "2008",
+   :population "89910"}
+  {:code "S12000050",
+   :label "North Lanarkshire",
+   :year "2007",
+   :population "331160"}
+  {:code "S12000030",
+   :label "Stirling",
+   :year "2008",
+   :population "88540"}
+  {:code "S12000049",
+   :label "Glasgow City",
+   :year "2009",
+   :population "581620"}
+  {:code "S12000049",
+   :label "Glasgow City",
+   :year "2010",
+   :population "586500"}
+  {:code "S12000019",
+   :label "Midlothian",
+   :year "2011",
+   :population "83450"}
+  {:code "S12000010",
+   :label "East Lothian",
+   :year "2014",
+   :population "102090"}
+  {:code "S12000013",
+   :label "Outer Hebrides",
+   :year "2016",
+   :population "26900"}
+  {:code "S12000013",
+   :label "Outer Hebrides",
+   :year "2009",
+   :population "27420"}
+  {:code "S12000028",
+   :label "South Ayrshire",
+   :year "2005",
+   :population "112030"}
+  {:code "S12000033",
+   :label "Aberdeen City",
+   :year "2009",
+   :population "217020"}
+  {:code "S12000049",
+   :label "Glasgow City",
+   :year "2001",
+   :population "578710"}
+  {:code "S12000010",
+   :label "East Lothian",
+   :year "2013",
+   :population "101390"}
+  {:code "S12000017",
+   :label "Highland",
+   :year "2003",
+   :population "211640"}
+  {:code "S12000008",
+   :label "East Ayrshire",
+   :year "2019",
+   :population "122010"}
+  {:code "S12000010",
+   :label "East Lothian",
+   :year "2007",
+   :population "95570"}
+  {:code "S12000028",
+   :label "South Ayrshire",
+   :year "2007",
+   :population "112380"}
+  {:code "S12000023",
+   :label "Orkney Islands",
+   :year "2003",
+   :population "19540"}
+  {:code "S12000047",
+   :label "Fife",
+   :year "2012",
+   :population "366210"}
+  {:code "S12000018",
+   :label "Inverclyde",
+   :year "2005",
+   :population "82680"}
+  {:code "S12000049",
+   :label "Glasgow City",
+   :year "2004",
+   :population "569560"}
+  {:code "S12000050",
+   :label "North Lanarkshire",
+   :year "2002",
+   :population "322520"}
+  {:code "S12000013",
+   :label "Outer Hebrides",
+   :year "2011",
+   :population "27690"}
+  {:code "S12000014",
+   :label "Falkirk",
+   :year "2009",
+   :population "154210"}
+  {:code "S12000036",
+   :label "City of Edinburgh",
+   :year "2001",
+   :population "449020"}
+  {:code "S12000014",
+   :label "Falkirk",
+   :year "2019",
+   :population "160890"}
+  {:code "S12000045",
+   :label "East Dunbartonshire",
+   :year "2013",
+   :population "105840"}
+  {:code "S12000027",
+   :label "Shetland Islands",
+   :year "2003",
+   :population "21950"}
+  {:code "S12000042",
+   :label "Dundee City",
+   :year "2014",
+   :population "148130"}
+  {:code "S12000035",
+   :label "Argyll and Bute",
+   :year "2019",
+   :population "85870"}
+  {:code "S12000029",
+   :label "South Lanarkshire",
+   :year "2003",
+   :population "303480"}
+  {:code "S12000008",
+   :label "East Ayrshire",
+   :year "2009",
+   :population "122110"}
+  {:code "S12000010",
+   :label "East Lothian",
+   :year "2006",
+   :population "93850"}
+  {:code "S12000030",
+   :label "Stirling",
+   :year "2010",
+   :population "89550"}
+  {:code "S12000008",
+   :label "East Ayrshire",
+   :year "2004",
+   :population "120210"}
+  {:code "S12000013",
+   :label "Outer Hebrides",
+   :year "2014",
+   :population "27250"}
+  {:code "S12000005",
+   :label "Clackmannanshire",
+   :year "2007",
+   :population "50600"}
+  {:code "S12000039",
+   :label "West Dunbartonshire",
+   :year "2015",
+   :population "89590"}
+  {:code "S12000041",
+   :label "Angus",
+   :year "2006",
+   :population "112500"}
+  {:code "S12000047",
+   :label "Fife",
+   :year "2005",
+   :population "355460"}
+  {:code "S12000021",
+   :label "North Ayrshire",
+   :year "2008",
+   :population "137910"}
+  {:code "S12000018",
+   :label "Inverclyde",
+   :year "2016",
+   :population "79160"}
+  {:code "S12000029",
+   :label "South Lanarkshire",
+   :year "2011",
+   :population "313900"}
+  {:code "S12000017",
+   :label "Highland",
+   :year "2014",
+   :population "233080"}
+  {:code "S12000027",
+   :label "Shetland Islands",
+   :year "2014",
+   :population "23220"}
+  {:code "S12000017",
+   :label "Highland",
+   :year "2016",
+   :population "234770"}
+  {:code "S12000042",
+   :label "Dundee City",
+   :year "2007",
+   :population "143700"}
+  {:code "S12000041",
+   :label "Angus",
+   :year "2010",
+   :population "115410"}
+  {:code "S12000010",
+   :label "East Lothian",
+   :year "2009",
+   :population "98340"}
+  {:code "S12000017",
+   :label "Highland",
+   :year "2019",
+   :population "235830"}
+  {:code "S12000017",
+   :label "Highland",
+   :year "2002",
+   :population "209760"}
+  {:code "S12000021",
+   :label "North Ayrshire",
+   :year "2017",
+   :population "135790"}
+  {:code "S12000030",
+   :label "Stirling",
+   :year "2014",
+   :population "91520"}
+  {:code "S12000027",
+   :label "Shetland Islands",
+   :year "2006",
+   :population "22210"}
+  {:code "S12000010",
+   :label "East Lothian",
+   :year "2011",
+   :population "99920"}
+  {:code "S12000038",
+   :label "Renfrewshire",
+   :year "2014",
+   :population "174230"}
+  {:code "S12000039",
+   :label "West Dunbartonshire",
+   :year "2019",
+   :population "88930"}
+  {:code "S12000014",
+   :label "Falkirk",
+   :year "2003",
+   :population "146800"}}
+
+9 in :wikidata only...
+#{{:code "S12000038",
+   :year "2017",
+   :population "176800",
+   :label "Renfrewshire"}
+  {:code "S12000014",
+   :year "2017",
+   :population "160100",
+   :label "Falkirk"}
+  {:code "S12000040",
+   :year "2017",
+   :population "181300",
+   :label "West Lothian"}
+  {:code "S12000013",
+   :year "2011",
+   :population "27684",
+   :label "Outer Hebrides"}
+  {:code "S12000023",
+   :year "2011",
+   :population "21349",
+   :label "Orkney Islands"}
+  {:code "S12000017",
+   :year "2017",
+   :population "235200",
+   :label "Highland"}
+  {:code "S12000050",
+   :year "2017",
+   :population "340000",
+   :label "North Lanarkshire"}
+  {:code "S12000047",
+   :year "2017",
+   :population "371400",
+   :label "Fife"}
+  {:code "S12000039",
+   :year "2017",
+   :population "89600",
+   :label "West Dunbartonshire"}}
+
+34 in both...
+#{{:code "S12000006",
+   :year "2018",
+   :population "148790",
+   :label "Dumfries and Galloway"}
+  {:code "S12000010",
+   :year "2018",
+   :population "105790",
+   :label "East Lothian"}
+  {:code "S12000034",
+   :year "2017",
+   :population "261800",
+   :label "Aberdeenshire"}
+  {:code "S12000014",
+   :year "2018",
+   :population "160340",
+   :label "Falkirk"}
+  {:code "S12000038",
+   :year "2018",
+   :population "177790",
+   :label "Renfrewshire"}
+  {:code "S12000027",
+   :year "2018",
+   :population "22990",
+   :label "Shetland Islands"}
+  {:code "S12000029",
+   :year "2018",
+   :population "319020",
+   :label "South Lanarkshire"}
+  {:code "S12000021",
+   :year "2018",
+   :population "135280",
+   :label "North Ayrshire"}
+  {:code "S12000013",
+   :year "2018",
+   :population "26830",
+   :label "Outer Hebrides"}
+  {:code "S12000036",
+   :year "2018",
+   :population "518500",
+   :label "City of Edinburgh"}
+  {:code "S12000045",
+   :year "2018",
+   :population "108330",
+   :label "East Dunbartonshire"}
+  {:code "S12000017",
+   :year "2018",
+   :population "235540",
+   :label "Highland"}
+  {:code "S12000049",
+   :year "2018",
+   :population "626410",
+   :label "Glasgow City"}
+  {:code "S12000050",
+   :year "2018",
+   :population "340180",
+   :label "North Lanarkshire"}
+  {:code "S12000035",
+   :year "2018",
+   :population "86260",
+   :label "Argyll and Bute"}
+  {:code "S12000023",
+   :year "2018",
+   :population "22190",
+   :label "Orkney Islands"}
+  {:code "S12000030",
+   :year "2018",
+   :population "94330",
+   :label "Stirling"}
+  {:code "S12000020",
+   :year "2018",
+   :population "95520",
+   :label "Moray"}
+  {:code "S12000039",
+   :year "2018",
+   :population "89130",
+   :label "West Dunbartonshire"}
+  {:code "S12000008",
+   :year "2018",
+   :population "121840",
+   :label "East Ayrshire"}
+  {:code "S12000034",
+   :year "2018",
+   :population "261470",
+   :label "Aberdeenshire"}
+  {:code "S12000018",
+   :year "2018",
+   :population "78150",
+   :label "Inverclyde"}
+  {:code "S12000041",
+   :year "2018",
+   :population "116040",
+   :label "Angus"}
+  {:code "S12000047",
+   :year "2018",
+   :population "371910",
+   :label "Fife"}
+  {:code "S12000027",
+   :year "2012",
+   :population "23210",
+   :label "Shetland Islands"}
+  {:code "S12000033",
+   :year "2018",
+   :population "227560",
+   :label "Aberdeen City"}
+  {:code "S12000019",
+   :year "2018",
+   :population "91340",
+   :label "Midlothian"}
+  {:code "S12000048",
+   :year "2018",
+   :population "151290",
+   :label "Perth and Kinross"}
+  {:code "S12000028",
+   :year "2018",
+   :population "112550",
+   :label "South Ayrshire"}
+  {:code "S12000011",
+   :year "2018",
+   :population "95170",
+   :label "East Renfrewshire"}
+  {:code "S12000042",
+   :year "2018",
+   :population "148750",
+   :label "Dundee City"}
+  {:code "S12000005",
+   :year "2018",
+   :population "51400",
+   :label "Clackmannanshire"}
+  {:code "S12000040",
+   :year "2018",
+   :population "182140",
+   :label "West Lothian"}
+  {:code "S12000026",
+   :year "2018",
+   :population "115270",
+   :label "Scottish Borders"}}

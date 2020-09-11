@@ -81,6 +81,14 @@ They store a lot of open data and code in their [GitHub repositories](https://gi
             * [OpenCube Project and OpenCube Toolkit: slides and recordings](https://lists.w3.org/Archives/Public/public-lod/2015Oct/0016.html) 
          * [RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework)
             * "Part of the vision of Linked Data is for the Internet to become a global database"
+      * [Learning WikiBase](Learning Wikibase)
+         * [...an interview with its author](https://medium.com/read-write-participate/learning-wikibase-boost-your-project-with-linked-data-dc1d2c53bd00)
+      * Good examples of sites based on WikiBase
+         * [A presentation](https://upload.wikimedia.org/wikipedia/commons/0/0c/WikidataCon_2019_David_Fichtmueller_-_Using_Wikibase_as_a_Platform_to_Develop_a_Semantic_Biodiversity_Standard.pdf) about how WikiData forms the semantic platform underlying the [Botanical Garden & Botanical Museum Berlin](https://www.visitberlin.de/en/botanic-garden-and-botanical-museum)
+         * [Rhizome](https://en.wikipedia.org/wiki/Rhizome_(organization)) "arts organization in New York City, is an early adopter of Wikibase"
+         * [Factgrid](https://blog.factgrid.de/) "for historians about cataloguing humanities research"
+         * [PersonalDataIO](http://wiki.personaldata.io/) "using wikibase to map how companies use personal data online"
+      * [Reasonator](https://reasonator.toolforge.org/) is a Javascript app that presents Wikidata items in a morehuman readable manner.
    * [SPARQL query service](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help)
       * [Ian's plaques in Aberdeen blog](https://codethecity.org/2020/01/13/aberdeen-plaques-part-two/)
       * [SQARQL Cheatsheet](http://www.iro.umontreal.ca/~lapalme/ift6281/sparql-1_1-cheat-sheet.pdf)
@@ -89,9 +97,11 @@ They store a lot of open data and code in their [GitHub repositories](https://gi
       * "Why blend logic with data on the web? [...] Machines need the description logic where the data is to be able to integrate it and tie the data silos together."
       * "DBpedia is a fundamental part of the connective tissue of the contextual/semantic Web, a.k.a. the Linked Open Data cloud, a.k.a. the Web of Data. It brings Wikipedia and all the value of its crowdsourced updates to data description. Data description is essential to machine learning.  Machines are dumb, and they need to be told how to retrieve relevant data, process it and deliver it to the place where it's most relevant. Ontologies--descriptions of data domains--help with this kind of handholding."
    * Other _semantic wiki_ work
+      * [LinkedWiki](https://linkedwiki.com/) - a user can create a page (a 'query') that shows a chart and tabular data, that is based on a SPARQL query against LoD sources.
       * [KawaWiki](https://ieeexplore.ieee.org/document/4053285) = "aims at providing a scheme where end users, expert users and ontologists seamlessly collaborate to publish semantically consistent RDF and Wiki pages in a Wiki way".
       * [Platypus wiki](http://platypuswiki.sourceforge.net/whatis/documents/platypuswiki.pdf) - "a project to develop an enhanced Wiki Wiki Web with ideas borrowed from the Semantic Web".
       * [Data-gov Wiki](http://tw.rpi.edu/media/2013/09/23/140c2/linkedai-2010-datagov.pdf) - "attempts to integrate the datasets published at Data.gov into [LoD]".
+      * [OntoWiki](https://www.semantic-mediawiki.org/wiki/SMWCon_Fall_2012/OntoWiki_-_A_Linked_Data_Wiki) - "human users, OntoWiki allows to create different views on data, such as tabular representations or maps".
    * Fi Scott's [inspiring presentation](https://www.youtube.com/watch?v=AHFcY6yx4LE) about the development of her platform [Make Works](https://make.works/) that makes public, data about manufacturers.
    * [What Happened to the Semantic Web](http://david.portnoy.us/category/semantic-web/) discusses problems with the "SemWeb", e.g. people prefer natural language framed queries (backed by ML) over SPARQL; SemWeb "too rigid to effectively keep up with today?s rate of data creation and structural evolution"; "ontological silos"; "lack of clear commercial benefits".
    * [CKAN](https://ckan.org/about/)
