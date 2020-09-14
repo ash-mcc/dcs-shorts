@@ -13,25 +13,26 @@ data cube from statistics.gov.scot. This slice provides: _the population per Sco
 
 An link:dataset-into-wikidata.ipynb[executable notebook] steps through the detail. The main steps are:
 
-. Establish how to identity the council area entities in both statistics.gov.scot and Wikidata.
-.. statistics.gov.scot identifies council areas by 9-character codes.
+. Reconcile the population records in Wikidata with those from statistics.gov.scot.
+** Establish how to identity the council area entities in both statistics.gov.scot and Wikidata.
+** statistics.gov.scot identifies council areas by 9-character codes.
 E.g. http://statistics.gov.scot/id/statistical-geography/S12000030[S12000030]
 identifies the Stirling council area.
-.. Happily, the same codes can also be used to identify the Scottish council areas in Wikidata.
-. Compare Wikidata's council area codes against statistics.gov.scot's.
-.. When this comparison was first executed it discovered that Wikidata's code
+** Happily, the same codes can also be used to identify the Scottish council areas in Wikidata.
+** Compare Wikidata's council area codes against statistics.gov.scot's.
+** When this comparison was first executed it discovered that Wikidata's code
 for https://www.wikidata.org/wiki/Q207111[North Lanarkshire]
 was incorrect, so I amended it directly via editing its web page.
-. Reconcile the population values in Wikidata with those from statistics.gov.scot.
-.. SPARQL queries are used to fetch population values from statistics.gov.scot and Wikidata
+. Reconcile the population records in Wikidata with those from statistics.gov.scot.
+** SPARQL queries are used to fetch population values from statistics.gov.scot and Wikidata
 and these are compared.
-.. When this comparison was first executed it discovered 583 differences:
+** When this comparison was first executed it discovered 583 differences:
 574 were population records that didn't exist in Wikidata;
 9 were population records those Wikidata values differed from those from statistics.gov.scot.
-I manually edited Wikidata to fix a few of those differences.
+** I manually edited Wikidata to fix a few of those differences.
 However, this was laborious, so I decided to introduce some automation by
 using https://quickstatements.toolforge.org/[QuickSatements].
-QuickStatements accepts CSV input - representing edits to be applied to Wikidata.
+** QuickStatements accepts CSV input - representing edits to be applied to Wikidata.
 I generated the quickStatements CSV input using a script.
 The link:population-values-quickstatements-2020-09-09T11_20GMT.csv[resulting CSV file]
 specified 2232 individual edits to Wikidata. These were successfully executed (taking about 30 mins)
@@ -71,9 +72,9 @@ for the population dataset - to support per council area/per citizen statistics 
 Appropriate https://www.wikidata.org/wiki/Q18616576[properties] do not yet exist in Wikidata
 for the description of such data about waste, so new ones would need to be ratified by the Wikidata community.
 
-Should datasets actually be uploaded into Wikidata?
-These are small datasets and they seem to fit well enough into Wikidata's information graph.
-Uploading them into Wikidata may make them easier to access and help enrich Wikidata's information graph.
-But then, of course, there is the keeping it up-to-date issue to deal with.
-Alternatively, those datasets could be pulled directly from statistics.gov.scot, into Wikipedia
+Should such datasets actually be uploaded into Wikidata?...
+These are small datasets and they seem to fit well enough into Wikidata's knowledge graph.
+Uploading them into Wikidata may make them easier to access and help enrich Wikidata's knowledge graph.
+But then, of course, there is the _keeping it up-to-date_ issue to solve with.
+Alternatively, those datasets could be pulled directly from statistics.gov.scot into Wikipedia
 articles with the help of some new MediaWiki https://www.mediawiki.org/wiki/Category:Extensions[extensions].
