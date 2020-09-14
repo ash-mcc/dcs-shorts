@@ -13,7 +13,7 @@ data cube from statistics.gov.scot. This slice provides: _the population per Sco
 
 An link:dataset-into-wikidata.ipynb[executable notebook] steps through the detail. The main steps are:
 
-. Reconcile the population records in Wikidata with those from statistics.gov.scot.
+. Reconcile the Scottish council area records in Wikidata with those from statistics.gov.scot.
 ** Establish how to identity the council area entities in both statistics.gov.scot and Wikidata.
 ** statistics.gov.scot identifies council areas by 9-character codes.
 E.g. http://statistics.gov.scot/id/statistical-geography/S12000030[S12000030]
@@ -37,19 +37,19 @@ I generated the quickStatements CSV input using a script.
 The link:population-values-quickstatements-2020-09-09T11_20GMT.csv[resulting CSV file]
 specified 2232 individual edits to Wikidata. These were successfully executed (taking about 30 mins)
 against Wikidata by QuickStatements. (Unfortunately QuickStatements does not yet
-support a means to set the rank of a _triple_ so I had to individually edit the 32 council
-area pages to mark, in each, its 2019 population value as the Preferred rank population value -
-indicating that it is the most up-to-date population value.)
+support a means to set the `rank` of a _triple_ so I had to individually edit the 32 council
+area pages to mark, in each, its 2019 population value as the `Preferred rank` population value
+...indicating that it is the most up-to-date population value.)
 
 == The usefulness of the uploaded dataset
 
 The uploaded dataset can be pulled (dynamically de-referenced) into Wikipedia articles and other web pages.
 
 === Embedding dataset values into Wikipedia articles
-For example, I edited the Wikipedia article
-https://simple.wikipedia.org/wiki/Council_areas_of_Scotland[Council areas of Scotland] to its main table,
+As an example, I edited the Wikipedia article
+https://simple.wikipedia.org/wiki/Council_areas_of_Scotland[Council areas of Scotland] to insert into its main table,
 the new column "_Number of people (latest estimate)_" whose values are pulled
-(each time the page is rendered) directly from the data that we have uploaded into Wikidata.
+(each time the page is rendered) directly from the data that I uploaded into Wikidata.
 
 image::screenshot-wikipedia-council-areas-article.png[align="center"]
 
