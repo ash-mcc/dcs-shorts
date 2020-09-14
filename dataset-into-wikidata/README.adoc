@@ -1,0 +1,40 @@
+= An exploration of uploading a dataset into Wikidata
+
+This is a short exploration of the steps involved in, and the usefulness of,
+uploading a dataset into Wikidata.
+
+The dataset that is to be uploaded is a slice of http://statistics.gov.scot/[statistics.gov.scot]'s
+http://statistics.gov.scot/data/population-estimates-current-geographic-boundaries[Population Estimates]
+data cube: population per council area per year.
+
+The link:dataset-into-wikidata.ipynb[dataset-into-wikidata] executable notebook
+steps through the nitty-gritty. The steps include:
+
+. Establishing how to identity the Scottish council areas in both statistics.gov.scot and Wikidata.
+.. statistics.gov.scot identifies council areas by 9-character codes.
+E.g. http://statistics.gov.scot/id/statistical-geography/S12000030[S12000030]
+identifies the Stirling council area.
+.. Happily, the same codes can also be used to identify the Scottish council areas in Wikidata.
+..
+
+1. For each council area, derive the 3 values:
+* `recent` - 2018's tonnage of waste generated per council citizen.
+* `average` - 2011-2018's average tonnage of waste generated per council citizen.
+ (Calculated as the _mean_.)
+* `trend` - 2011-2018's trend in tonnage of waste generated per council citizen.
+ (Calculated as the gradient of a linear approximation to the tonnage over the years.
+ A statistician might well suggest a more appropriate method for computing this _trend_ value.) +
+ +
+The derived values can be seen in link:stats-on-tonnage-generated-per-council-citizen.csv[this file].
+1.  Use https://vega.github.io/vega/[Vega]
+to generate 3 choropleths which help visualise the statistically values from the above step,
+against the council-oriented geography of Scotland.
+(The geography data comes from https://github.com/martinjc/UK-GeoJSON[Martin Chorely's good curation work].)
+
+The resulting choropleths can be viewed on >> https://data-commons-scotland.github.io/choropleth-generation/choropleths.html[this page] <<
+
+._Rory looks at the “2011-2018 trend in tonnage” choropleth, and thinks…_
+> It’s good to see that most areas are reducing waste generation but why not some…?
+
+._Looking at the “2018 tonnage” and 2011-2018 average tonnage” choropleths, Niamh wonders…_
+> I wonder why urban populations _seem_ to generated less waste than rural ones?
