@@ -1,40 +1,79 @@
 = An exploration of uploading a dataset into Wikidata
 
-This is a short exploration of the steps involved in, and the usefulness of,
-uploading a dataset into Wikidata.
+This is a short exploration of the steps involved in uploading a dataset into Wikidata
+and the usefulness of this.
 
-The dataset that is to be uploaded is a slice of http://statistics.gov.scot/[statistics.gov.scot]'s
+== About the dataset
+
+The dataset to be uploaded is a slice of the
 http://statistics.gov.scot/data/population-estimates-current-geographic-boundaries[Population Estimates]
-data cube: population per council area per year.
+data cube from statistics.gov.scot. This slice provides: _the population per Scottish council area per year_.
 
-The link:dataset-into-wikidata.ipynb[dataset-into-wikidata] executable notebook
-steps through the nitty-gritty. The steps include:
+== Uploading the datset
 
-. Establishing how to identity the Scottish council areas in both statistics.gov.scot and Wikidata.
+An link:dataset-into-wikidata.ipynb[executable notebook] steps through the detail. The main steps are:
+
+. Establish how to identity the council area entities in both statistics.gov.scot and Wikidata.
 .. statistics.gov.scot identifies council areas by 9-character codes.
 E.g. http://statistics.gov.scot/id/statistical-geography/S12000030[S12000030]
 identifies the Stirling council area.
 .. Happily, the same codes can also be used to identify the Scottish council areas in Wikidata.
-..
+. Compare Wikidata's council area codes against statistics.gov.scot's.
+.. When this comparison was first executed it discovered that Wikidata's code
+for https://www.wikidata.org/wiki/Q207111[North Lanarkshire]
+was incorrect, so I amended it directly via editing its web page.
+. Reconcile the population values in Wikidata with those from statistics.gov.scot.
+.. SPARQL queries are used to fetch population values from statistics.gov.scot and Wikidata
+and these are compared.
+.. When this comparison was first executed it discovered 583 differences:
+574 were population records that didn't exist in Wikidata;
+9 were population records those Wikidata values differed from those from statistics.gov.scot.
+I manually edited Wikidata to fix a few of those differences.
+However, this was laborious, so I decided to introduce some automation by
+using https://quickstatements.toolforge.org/[QuickSatements].
+QuickStatements accepts CSV input - representing edits to be applied to Wikidata.
+I generated the quickStatements CSV input using a script.
+The link:population-values-quickstatements-2020-09-09T11_20GMT.csv[resulting CSV file]
+specified 2232 individual edits to Wikidata. These were successfully executed (taking about 30 mins)
+against Wikidata by QuickStatements. (Unfortunately QuickStatements does not yet
+support a means to set the rank of a _triple_ so I had to individually edit the 32 council
+area pages to mark, in each, its 2019 population value as the Preferred rank population value -
+indicating that it is the most up-to-date population value.)
 
-1. For each council area, derive the 3 values:
-* `recent` - 2018's tonnage of waste generated per council citizen.
-* `average` - 2011-2018's average tonnage of waste generated per council citizen.
- (Calculated as the _mean_.)
-* `trend` - 2011-2018's trend in tonnage of waste generated per council citizen.
- (Calculated as the gradient of a linear approximation to the tonnage over the years.
- A statistician might well suggest a more appropriate method for computing this _trend_ value.) +
- +
-The derived values can be seen in link:stats-on-tonnage-generated-per-council-citizen.csv[this file].
-1.  Use https://vega.github.io/vega/[Vega]
-to generate 3 choropleths which help visualise the statistically values from the above step,
-against the council-oriented geography of Scotland.
-(The geography data comes from https://github.com/martinjc/UK-GeoJSON[Martin Chorely's good curation work].)
+== The usefulness of the uploaded dataset
 
-The resulting choropleths can be viewed on >> https://data-commons-scotland.github.io/choropleth-generation/choropleths.html[this page] <<
+The uploaded dataset can be pulled (dynamically de-referenced) into Wikipedia articles and other web pages.
 
-._Rory looks at the “2011-2018 trend in tonnage” choropleth, and thinks…_
-> It’s good to see that most areas are reducing waste generation but why not some…?
+=== Embedding dataset values into Wikipedia articles
+For example, I edited the Wikipedia article
+https://simple.wikipedia.org/wiki/Council_areas_of_Scotland[Council areas of Scotland] to its main table,
+the new column "_Number of people (latest estimate)_" whose values are pulled
+(each time the page is rendered) directly from the data that we have uploaded into Wikidata.
 
-._Looking at the “2018 tonnage” and 2011-2018 average tonnage” choropleths, Niamh wonders…_
-> I wonder why urban populations _seem_ to generated less waste than rural ones?
+image::screenshot-wikipedia-council-areas-article.png[align="center"]
+
+=== Embedding dataset based graphs into web pages
+And >>https://query.wikidata.org/embed.html#%23defaultView%3ALineChart%0ASELECT%20%0A%20%20%3FcouncilArea%0A%20%20(str(YEAR(%3FpopulationWhen))%20as%20%3Fyear%20)%0A%20%20%3Fpopulation%0A%20%20%3FcouncilAreaLabel%0AWHERE%20%7B%0A%20%20%3FcouncilArea%20wdt%3AP31%20wd%3AQ15060255%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20p%3AP1082%20%3FpopulationEntity%20.%0A%20%20%3FpopulationEntity%20ps%3AP1082%20%3Fpopulation%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20pq%3AP585%20%3FpopulationWhen%20.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%27%5BAUTO_LANGUAGE%5D%2Cen%27%20.%20%7D%0A%7D[here]<<
+is a line graph, dynamically generated from the new Wikidata data, that can be embedded in any web page.
+
+=== Concerns, next steps, alternative approaches
+Interestingly, there is https://en.wikipedia.org/wiki/Wikipedia:Requests_for_comment/Wikidata_Phase_2[some discussion]
+about the pros & cons of inserting Wikidata values into Wikipedia articles.
+The main argument (by some) against is the immaturity of Wikidata's structure:
+therefore a concern about the permanence of references to data within its structure.
+But those for it, point out that early use & evolution might be the best path to maturity.
+
+The case study for our Data Commons Scotland project, is _open data about waste in Scotland_.
+So a next step for the project might be to upload into Wikidata, datasets that describe the
+amounts of household waste generated & recycled, and 'carbon impact' figures.
+These could also be linked to https://www.wikidata.org/wiki/Q15060255[council areas] - as we have done
+for the population dataset - to support per council area/per citizen statistics and visualisations.
+Appropriate https://www.wikidata.org/wiki/Q18616576[properties] do not yet exist in Wikidata
+for the description of such data about waste, so new ones would need to be ratified by the Wikidata community.
+
+Should datasets actually be uploaded into Wikidata?
+These are small datasets and they seem to fit well enough into Wikidata's information graph.
+Uploading them into Wikidata may make them easier to access and help enrich Wikidata's information graph.
+But then, of course, there is the keeping it up-to-date issue to deal with.
+Alternatively, those datasets could be pulled directly from statistics.gov.scot, into Wikipedia
+articles with the help of some new MediaWiki https://www.mediawiki.org/wiki/Category:Extensions[extensions].
