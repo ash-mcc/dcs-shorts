@@ -9,3 +9,4 @@ Short investigations, experiments, etc.
 1. link:eu-waste-data-investigation/[A look at stats oriented websites in the EU that provide data about waste]
 1. link:stirling-cube-experiment/[Stirling Council’s waste-management dataset as linked open data]
 1. link:choropleth-generation/[The geography of household waste generation]
+1. link:dataset-into-wikidata/[An exploration of uploading a dataset into Wikidata]
