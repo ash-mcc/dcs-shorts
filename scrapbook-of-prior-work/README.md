@@ -144,12 +144,16 @@ They store a lot of open data and code in their [GitHub repositories](https://gi
   	bookmarking,
   	searches, and
   	approval workflows.
-* Data cube visualisation tools
-  * [Polaris](https://graphics.stanford.edu/papers/polaris/polaris.pdf) - older Standford uni work on a data cube visualiser.
-  * [LDVM](https://link.springer.com/chapter/10.1007/978-3-319-11955-7_50) - Linked Data Visualisation Model. 
-  * [D4](https://d4.js.org/) - React flavoured D3.
-  * [CubeViz.js](https://github.com/AKSW/cubevizjs) - the JS successor to CubeViz.
-   
+* Visualisation tools
+  * For data cubes
+    * [Polaris](https://graphics.stanford.edu/papers/polaris/polaris.pdf) - older Standford uni work on a data cube visualiser.
+    * [LDVM](https://link.springer.com/chapter/10.1007/978-3-319-11955-7_50) - Linked Data Visualisation Model. 
+    * [D4](https://d4.js.org/) - React flavoured D3.
+    * [CubeViz.js](https://github.com/AKSW/cubevizjs) - the JS successor to CubeViz.
+  * General chart/graph drawing
+    * [Vega](https://vega.github.io/vega/), the [Data Voyager](https://data-voyager.gitbook.io/voyager/) drag-n-drop tool for Vega
+* Google's [Dataset Search](https://datasetsearch.research.google.com/)
+
 # Companies
 
 * [Swirrl IT Limited](https://www.swirrl.com) who have helped [statistics.gov.scot](https://statistics.gov.scot) build its LoD site.
