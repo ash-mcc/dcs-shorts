@@ -62,6 +62,7 @@
 Really nice approach to opening up data and code for the common good.
 They store a lot of open data and code in their [GitHub repositories](https://github.com/mysociety).
 * [WikiRate](https://wikirate.org) - "an open, collaborative tool for asking and answering" metrics (amounts & dates) questions about companies.
+    * It has a nice _tag-line_ to market its approach: "To act and know you need engaging, open, structure, interconnected, navigable, verifiable, integrate, comparable data".
 
 ## Tools
 
