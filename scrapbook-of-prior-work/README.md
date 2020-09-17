@@ -61,6 +61,7 @@
 "Our technology, research and data are used by individual citizens, journalists, and civil society in over 40 countries around the world." 
 Really nice approach to opening up data and code for the common good.
 They store a lot of open data and code in their [GitHub repositories](https://github.com/mysociety).
+* [WikiRate](https://wikirate.org) - "an open, collaborative tool for asking and answering" metrics (amounts & dates) questions about companies.
 
 ## Tools
 
@@ -152,6 +153,7 @@ They store a lot of open data and code in their [GitHub repositories](https://gi
     * [CubeViz.js](https://github.com/AKSW/cubevizjs) - the JS successor to CubeViz.
   * General chart/graph drawing
     * [Vega](https://vega.github.io/vega/), the [Data Voyager](https://data-voyager.gitbook.io/voyager/) drag-n-drop tool for Vega
+    * [Streamlit](https://www.streamlit.io) that makes it easy to script interactive charts in Python and deploy them (Heroku style) to a web service.
 * Google's [Dataset Search](https://datasetsearch.research.google.com/)
 
 # Companies
