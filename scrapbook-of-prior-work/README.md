@@ -57,6 +57,7 @@
     * "is an open knowledge repository that combines data from public datasets".
     * "We cleaned and processed the data so you don't have to."
     * "Access and analyze the graph easily using API's in Python, R, or Google Sheets."
+* The [Open Data Scotland wiki](https://opendatascot.org) that [Ian Watt](https://github.com/watty62) started, prompted by suggestions during the [Scottish Open Data Unconference 2020](https://codethecity.org/scottish-open-data-unconference-2020/).
 * [mySociety](https://www.mysociety.org) - "We help people become active citizens." 
 "Our technology, research and data are used by individual citizens, journalists, and civil society in over 40 countries around the world." 
 Really nice approach to opening up data and code for the common good.
@@ -190,7 +191,10 @@ to [prototype an open standard for Household Waste Recycling Centres](https://gi
 * [My Recycling Wales](https://myrecyclingwales.org.uk/) is a pretty site that provides information about how/where Welsh waste is processed. It gets its data from [Waste Data Flow](https://www.wastedataflow.org).
 * [This article](https://resource.co/article/uk-local-authority-league-table-201819-right-track) is from a magazine called _resource.co_ that contains nice data-backed articles about waste. 
 * [CRNS](https://www.crns.org.uk) - " involved in projects [...] to support the third sector, in pursuit of zero waste".
-
+* Structuring _waste management_: 
+   * The Scottish government document [Applying the waste hierarchy: guidance](http://www.gov.scot/publications/guidance-applying-waste-hierarchy/) includes categorisations.
+   * Wikipedia's [Waste Management](https://en.wikipedia.org/wiki/Waste_management) article provides a basic structure for the knowledge.
+   * SEPA's page on [Reporting definitions and terms](https://www.sepa.org.uk/environment/waste/waste-data/waste-data-reporting/reporting-definitions-and-terms/) for waste management.
 
 ## Opportunities
 
