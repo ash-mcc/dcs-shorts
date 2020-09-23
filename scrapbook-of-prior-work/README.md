@@ -92,6 +92,8 @@ They store a lot of open data and code in their [GitHub repositories](https://gi
          * [Factgrid](https://blog.factgrid.de/) "for historians about cataloguing humanities research"
          * [PersonalDataIO](http://wiki.personaldata.io/) "using wikibase to map how companies use personal data online"
       * [Reasonator](https://reasonator.toolforge.org/) is a Javascript app that presents Wikidata items in a morehuman readable manner.
+      * [Semantic MediaWiki](http://semantic-mediawiki.org) was a precursor to Wikidata, and adds semantic linking to MediaWiki.
+         * The [Open Semantic Data Association](http://opensemanticdata.org) emerged fro the Semantic MediaWiki project, and has the aim to support education and free access to information through the use of open semantic data.
    * [SPARQL query service](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help)
       * [Ian's plaques in Aberdeen blog](https://codethecity.org/2020/01/13/aberdeen-plaques-part-two/)
       * [SQARQL Cheatsheet](http://www.iro.umontreal.ca/~lapalme/ift6281/sparql-1_1-cheat-sheet.pdf)
@@ -195,6 +197,7 @@ to [prototype an open standard for Household Waste Recycling Centres](https://gi
    * The Scottish government document [Applying the waste hierarchy: guidance](http://www.gov.scot/publications/guidance-applying-waste-hierarchy/) includes categorisations.
    * Wikipedia's [Waste Management](https://en.wikipedia.org/wiki/Waste_management) article provides a basic structure for the knowledge.
    * SEPA's page on [Reporting definitions and terms](https://www.sepa.org.uk/environment/waste/waste-data/waste-data-reporting/reporting-definitions-and-terms/) for waste management.
+* SEPA's [2018 commentary on Scottish household waste](https://www.sepa.org.uk/media/469650/2018-household-waste-commentary.pdf).
 
 ## Opportunities
 
