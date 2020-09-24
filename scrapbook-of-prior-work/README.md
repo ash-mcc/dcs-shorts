@@ -156,7 +156,11 @@ They store a lot of open data and code in their [GitHub repositories](https://gi
     * [D4](https://d4.js.org/) - React flavoured D3.
     * [CubeViz.js](https://github.com/AKSW/cubevizjs) - the JS successor to CubeViz.
   * General chart/graph drawing
-    * [Vega](https://vega.github.io/vega/), the [Data Voyager](https://data-voyager.gitbook.io/voyager/) drag-n-drop tool for Vega
+    * [Vega](https://vega.github.io/vega/) (VG)
+       * the [Data Voyager](https://data-voyager.gitbook.io/voyager/) drag-n-drop tool for Vega
+       * the [Vega-Lite](https://vega.github.io/vega-lite/) (VGL) abstraction over Vega
+       * [Oz](https://github.com/metasoarous/oz) is a Clojure _wrapper_ over VG/VGL
+       * [Hanami](https://github.com/jsa-aerial/hanami) is analogous to [Shiny](https://shiny.rstudio.com) or [Dash](https://pypi.org/project/dash/)
     * [Streamlit](https://www.streamlit.io) that makes it easy to script interactive charts in Python and deploy them (Heroku style) to a web service.
 * Google's [Dataset Search](https://datasetsearch.research.google.com/)
 
