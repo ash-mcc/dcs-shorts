@@ -1,0 +1,265 @@
+CO2e-values: SEPA versus Wikidata
+
+64 in SEPA only...
+#{{:council "Scottish Borders",
+   :year "2017",
+   :amount "134667.13",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Dumfries and Galloway",
+   :year "2018",
+   :amount "227001.47",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "City of Edinburgh",
+   :year "2018",
+   :amount "492831.56",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "East Lothian",
+   :year "2018",
+   :amount "110685.64",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Falkirk",
+   :year "2017",
+   :amount "149869.8",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "South Lanarkshire",
+   :year "2018",
+   :amount "361237.96",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Scottish Borders",
+   :year "2018",
+   :amount "134139.86",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Moray",
+   :year "2018",
+   :amount "91661.48",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Argyll and Bute",
+   :year "2017",
+   :amount "127000.14",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Shetland Islands",
+   :year "2017",
+   :amount "31975.2",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "South Ayrshire",
+   :year "2017",
+   :amount "126083.62",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Fife",
+   :year "2018",
+   :amount "339866.83",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Outer Hebrides",
+   :year "2017",
+   :amount "38652.3",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Angus",
+   :year "2018",
+   :amount "112134.41",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Highland",
+   :year "2017",
+   :amount "321198.11",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Orkney Islands",
+   :year "2017",
+   :amount "29072.83",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Glasgow City",
+   :year "2018",
+   :amount "733950.37",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "East Renfrewshire",
+   :year "2017",
+   :amount "95975.6",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Inverclyde",
+   :year "2018",
+   :amount "57553.87",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Aberdeen City",
+   :year "2018",
+   :amount "198518.12",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Renfrewshire",
+   :year "2017",
+   :amount "195536.05",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Angus",
+   :year "2017",
+   :amount "115899.85",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "City of Edinburgh",
+   :year "2017",
+   :amount "507553.12",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "North Lanarkshire",
+   :year "2018",
+   :amount "353976.81",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "West Lothian",
+   :year "2018",
+   :amount "152069.47",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Aberdeen City",
+   :year "2017",
+   :amount "198579.67",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "East Renfrewshire",
+   :year "2018",
+   :amount "89067.54",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "South Lanarkshire",
+   :year "2017",
+   :amount "370821.4",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "West Lothian",
+   :year "2017",
+   :amount "145934.84",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Dundee City",
+   :year "2017",
+   :amount "154653.39",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Moray",
+   :year "2017",
+   :amount "97535.97",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Fife",
+   :year "2017",
+   :amount "349262.91",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Midlothian",
+   :year "2018",
+   :amount "91869.83",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Orkney Islands",
+   :year "2018",
+   :amount "27127.63",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Highland",
+   :year "2018",
+   :amount "317213.88",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "East Dunbartonshire",
+   :year "2018",
+   :amount "111395.06",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Shetland Islands",
+   :year "2018",
+   :amount "31049.37",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Midlothian",
+   :year "2017",
+   :amount "98306.32",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Dumfries and Galloway",
+   :year "2017",
+   :amount "220021.95",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "South Ayrshire",
+   :year "2018",
+   :amount "124771.51",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "North Lanarkshire",
+   :year "2017",
+   :amount "406736.57",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Dundee City",
+   :year "2018",
+   :amount "148298.68",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Perth and Kinross",
+   :year "2017",
+   :amount "141123.72",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Aberdeenshire",
+   :year "2017",
+   :amount "325282.92",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Glasgow City",
+   :year "2017",
+   :amount "680071.26",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Argyll and Bute",
+   :year "2018",
+   :amount "119149.28",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "West Dunbartonshire",
+   :year "2017",
+   :amount "104857.75",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Perth and Kinross",
+   :year "2018",
+   :amount "140239.45",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Stirling",
+   :year "2017",
+   :amount "84605.22",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Stirling",
+   :year "2018",
+   :amount "88172.71",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "East Ayrshire",
+   :year "2018",
+   :amount "118086.94",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Inverclyde",
+   :year "2017",
+   :amount "56720.49",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Clackmannanshire",
+   :year "2018",
+   :amount "53570.86",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "North Ayrshire",
+   :year "2018",
+   :amount "141057.01",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Clackmannanshire",
+   :year "2017",
+   :amount "55348.62",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Outer Hebrides",
+   :year "2018",
+   :amount "37897.05",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Renfrewshire",
+   :year "2018",
+   :amount "189505.22",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "North Ayrshire",
+   :year "2017",
+   :amount "137512.34",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "East Dunbartonshire",
+   :year "2017",
+   :amount "130754.58",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "East Ayrshire",
+   :year "2017",
+   :amount "119535.95",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "West Dunbartonshire",
+   :year "2018",
+   :amount "102739.24",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "East Lothian",
+   :year "2017",
+   :amount "112099.24",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Aberdeenshire",
+   :year "2018",
+   :amount "308192.95",
+   :unit "tonne of carbon dioxide equivalent"}
+  {:council "Falkirk",
+   :year "2018",
+   :amount "154954.43",
+   :unit "tonne of carbon dioxide equivalent"}}
+
+0 in Wikidata only...
+nil
+
+1 in both...
+nil
