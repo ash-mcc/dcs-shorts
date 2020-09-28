@@ -83,5 +83,5 @@ articles with the help of some new MediaWiki https://www.mediawiki.org/wiki/Cate
 ---
 
 ==== Addendum
-A link:dataset-into-wikidata.ipynb[subsequent] executable notebook explores adding a CO2e dataset into Wikidata,
+A link:dataset-CO2e-into-wikidata.ipynb[subsequent] executable notebook explores adding a CO2e dataset into Wikidata,
 and then makes use of both the uploaded population and CO2e datasets.
