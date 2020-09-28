@@ -79,3 +79,9 @@ and help enrich Wikidata's knowledge graph.
 But then, of course, there is the _keeping it up-to-date_ issue to solve.
 Alternatively, those datasets could be pulled dynamically and directly from statistics.gov.scot into Wikipedia
 articles with the help of some new MediaWiki https://www.mediawiki.org/wiki/Category:Extensions[extensions].
+
+---
+
+==== Addendum
+A link:dataset-into-wikidata.ipynb[subsequent] executable notebook explores adding a CO2e dataset into Wikidata,
+and then makes use of both the uploaded population and CO2e datasets.
