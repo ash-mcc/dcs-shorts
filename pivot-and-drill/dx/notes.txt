@@ -1,0 +1,14 @@
+To prep the data for te devextreem, JavaScript based app...
+
+	conda activate clojupyter
+	jupyter notebook			# and, in the web browser, navigate to prep-data.ipynb and run its cells
+
+
+To run the devextreme, JavaScript based app...
+
+	npm install # probably just the first time 
+	npm start   # to run a dev instance at localhost:3000 and open a web browser to it
+
+
+
+
