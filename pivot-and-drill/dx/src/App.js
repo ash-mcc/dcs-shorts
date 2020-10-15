@@ -268,7 +268,7 @@ const dataSource =
     }
   }],
   store: createStore({
-    loadUrl: 'http://localhost:3000/dx-data.json'
+    loadUrl: '/dx-data.json'
   })
 });
 
