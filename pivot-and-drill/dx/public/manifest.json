@@ -1,10 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "prototype-1",
+  "name": "DCS pivot-and-drill prototype-1",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "192x192",
+      "src": "dcs.ico",
       "type": "image/png"
     }
   ],

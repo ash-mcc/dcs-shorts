@@ -1,6 +1,6 @@
 {
-  "name": "Drill Down - DevExtreme Pivot Grid",
-  "description": "Drill-down support within the PivotGrid widget allows you to retrieve the list of records used to calculate a specific summary value. To see drill downs in action, click a summary cell and view the records that formed the basis of the summary value.\n",
+  "name": "DCS pivot-and-drill prototype-1",
+  "description": "Demos a multi dimension data table that supports pivot, drilldown & export functionality, with a supporting chart.\n",
   "dependencies": {
     "react-dom": "16",
     "react": "16",
