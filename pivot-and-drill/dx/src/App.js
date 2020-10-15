@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
   PivotGrid,
   FieldChooser,
@@ -10,9 +11,9 @@ import { Popup } from 'devextreme-react/popup';
 import PivotGridDataSource from 'devextreme/ui/pivot_grid/data_source';
 import { createStore } from 'devextreme-aspnet-data-nojquery';
 
-
 import Chart, {
   AdaptiveLayout,
+  Legend,
   CommonSeriesSettings,
   Point,
   Size,
@@ -41,6 +42,39 @@ class App extends React.Component {
     this.resetZoom = () => {
       this._chart.resetVisualRange();
     };
+
+    this.preset1 = () => {
+      /*
+      dataSource.collapseAll('area');
+      */
+
+      //dataSource.field("area", { filterValues: ["Aberdeen City", "Dundee City"]});
+      //dataSource.load();
+      /*
+      dataSource.filter(
+        [
+          ['area', '=', 'Stirling'], 
+          'and', 
+          ['year', '=', '2013']
+        ]
+      );
+      */
+
+      /*
+      var state = dataSource.state();
+      console.log(state);
+      state.rowExpandedPaths.push(["&[1]"]);
+      state.rowExpandedPaths.push(["&[1]", "&[2]"]);
+      dataSource.state(state);
+      */
+
+      /* partially works but can throw an error
+      dataSource.expandHeaderItem("row", ["Angus"]);
+      setTimeout(() => {
+        dataSource.expandHeaderItem("row", ["Angus", "Landfilled"]);
+      });
+      */
+    };
   }
 
   componentDidMount() {
@@ -62,12 +96,16 @@ class App extends React.Component {
             palette="Harmony Light"
             title="Household waste in Scotland"
         >
-          <Size height={350} />
+          <Size height={500} />
           <Tooltip enabled={true} customizeTooltip={customizeTooltip} />
+          <Legend
+            verticalAlignment="center"
+            horizontalAlignment="right"
+          />
           <CommonSeriesSettings type="line" width="1">
             <Point size="6" />
           </CommonSeriesSettings>
-          <AdaptiveLayout width={400} />
+          <AdaptiveLayout  width={0} height={0} />
           <Margin bottom={10} />
           <ChartExport enabled={true} fileName="household-waste" />
           <ZoomAndPan
@@ -81,8 +119,8 @@ class App extends React.Component {
         <div className='block centre'>
           <div className='buttonAreaMargins'>
             <Button
-              id="reset-zoom"
-              text="Unzoom"
+              id="reset-chart-zoom"
+              text="Unzoom chart"
               onClick={this.resetZoom}
             ></Button>
           </div>
@@ -202,14 +240,14 @@ const dataSource =
     filterType: 'exclude',
     filterValues: [ 2011, 2012, 2013 ]
   }, {
-    caption: 'Tonnes',
+    caption: 'Tonnes of solids',
     dataField: 'tonnes',
     dataType: 'number',
     summaryType: 'sum',
     format: 'decimal'
   },
   {
-    caption: 'Tonnes per citizen',
+    caption: 'Tonnes of solids per citizen',
     dataField: 'tonnesPerCitizen',
     dataType: 'number',
     summaryType: 'sum',
@@ -220,7 +258,7 @@ const dataSource =
     area: 'data'
   },
   {
-    caption: 'Tonnes per household',
+    caption: 'Tonnes of solids per household',
     dataField: 'tonnesPerHousehold',
     dataType: 'number',
     summaryType: 'sum',
