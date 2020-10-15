@@ -9,20 +9,19 @@ import { DataGrid, Column } from 'devextreme-react/data-grid';
 import { Popup } from 'devextreme-react/popup';
 import PivotGridDataSource from 'devextreme/ui/pivot_grid/data_source';
 import { createStore } from 'devextreme-aspnet-data-nojquery';
-//import CustomStore from 'devextreme/data/custom_store';
 
-/*
+
 import Chart, {
   AdaptiveLayout,
   CommonSeriesSettings,
+  Point,
   Size,
-  Tooltip
+  Margin,
+  ZoomAndPan,
+  Tooltip,
+  Export as ChartExport
 } from 'devextreme-react/chart';
-*/
-
-//import { wasteData } from './data.js';
-
-//var dataSource = null;
+import Button from 'devextreme-react/button';
 
 class App extends React.Component {
 
@@ -33,25 +32,17 @@ class App extends React.Component {
       popupTitle: '',
       drillDownDataSource: null,
       popupVisible: false
-      //wasteData: null
     };
     this.onCellClick = this.onCellClick.bind(this);
     this.onHiding = this.onHiding.bind(this);
     this.onShown = this.onShown.bind(this);
     this.getDataGridInstance = this.getDataGridInstance.bind(this);
 
-    /*
-    fetch('http://localhost:3000/dx-data.json')
-      .then(resp => resp.json())
-      .then(data => {
-        console.log("data has been fetched");
-        this.setState({wasteData: data});
-        console.log("wasteData[0].area=" + this.state.wasteData[0].area);
-      });
-    */
+    this.resetZoom = () => {
+      this._chart.resetVisualRange();
+    };
   }
 
-/*
   componentDidMount() {
     // this will fail because the Chart & PivotGrid aren't available when this is called
       this._pivotGrid.bindChart(this._chart, {
@@ -59,35 +50,44 @@ class App extends React.Component {
         alternateDataFields: false
       });
   }
-*/
 
   render() {
-    /*
-    if (this.state.wasteData==null) {
-      return "loading...";
-    }
-
-    if (dataSource==null) {
-      dataSource = buildDataSource(this.state.wasteData);
-    }
-    */
-
     let { drillDownDataSource, popupTitle, popupVisible } = this.state;
-
-    /*
-      To be put between <React.Fragment> and <PivotGrid> once ready for it!...
-        see:  https://js.devexpress.com/Demos/WidgetsGallery/Demo/PivotGrid/Overview/React/SoftBlue/
-
-        <Chart ref={(ref) => this._chart = ref.instance}>
-          <Size height={300} />
-          <Tooltip enabled={true} />
-          <CommonSeriesSettings type="line" />
-          <AdaptiveLayout width={500} />
-        </Chart>
-    */
 
     return (
       <React.Fragment>
+
+        <Chart 
+            ref={(ref) => this._chart = ref.instance}
+            palette="Harmony Light"
+            title="Household waste in Scotland"
+        >
+          <Size height={350} />
+          <Tooltip enabled={true} customizeTooltip={customizeTooltip} />
+          <CommonSeriesSettings type="line" width="1">
+            <Point size="6" />
+          </CommonSeriesSettings>
+          <AdaptiveLayout width={400} />
+          <Margin bottom={10} />
+          <ChartExport enabled={true} fileName="household-waste" />
+          <ZoomAndPan
+            valueAxis="both"
+            argumentAxis="both"
+            dragToZoom={true}
+            allowMouseWheel={true}
+            panKey="shift" />
+        </Chart>
+
+        <div className='block centre'>
+          <div className='buttonAreaMargins'>
+            <Button
+              id="reset-zoom"
+              text="Unzoom"
+              onClick={this.resetZoom}
+            ></Button>
+          </div>
+        </div>
+
         <PivotGrid
           id="pivotGrid"
           allowSortingBySummary={true}
@@ -102,12 +102,13 @@ class App extends React.Component {
           showRowGrandTotals={false}
           //rowHeaderLayout={"tree"}
           //hideEmptySummaryCells={true}
-          //ref={(ref) => this._pivotGrid = ref.instance}
+          ref={(ref) => this._pivotGrid = ref.instance}
         >
           <FieldChooser enabled={true} />
           <Scrolling mode="virtual" />
-          <Export enabled={true} allowExportSelectedData={true} fileName="waste-data" />
+          <Export enabled={true} allowExportSelectedData={true} fileName="household-waste" />
         </PivotGrid>
+
         <Popup
           visible={popupVisible}
           title={popupTitle}
@@ -127,6 +128,7 @@ class App extends React.Component {
             <Column dataField="tonnesPerHousehold" dataType="number" format="decimal" />
           </DataGrid>
         </Popup>
+
       </React.Fragment>
     );
   }
@@ -160,76 +162,6 @@ class App extends React.Component {
   }
 }
 
-/* no longer used, loading via the createStore fn instead
-function buildDataSource(data) {
-  return new PivotGridDataSource({
-  fields: [{
-    caption: 'Area',
-    width: 90,
-    dataField: 'area',
-    area: 'row',
-    filterType: 'exclude',
-    filterValues: [
-      'Scotland'
-    ]
-  },
-  {
-    caption: 'End state',
-    width: 90,
-    dataField: 'endState',
-    area: 'row',
-    filterType: 'exclude',
-    filterValues: [
-      'Waste Generated',
-      'Other Diversion (pre 2014 method)', 
-      'Recycled (pre 2014 method)'
-    ]
-  }, {
-    caption: 'Material',
-    dataField: 'material',
-    width: 90,
-    area: 'row',
-    filterType: 'exclude',
-    filterValues: [
-      'Total Waste'
-    ]
-  }, {
-    dataField: 'year',
-    dataType: 'year',
-    area: 'column'
-  }, {
-    caption: 'Tonnes',
-    dataField: 'tonnes',
-    dataType: 'number',
-    summaryType: 'sum',
-    format: 'decimal'
-  },
-  {
-    caption: 'Tonnes per citizen',
-    dataField: 'tonnesPerCitizen',
-    dataType: 'number',
-    summaryType: 'sum',
-    format: {
-      precision: 6,
-      type: "fixedPoint"           
-    },
-    area: 'data'
-  },
-  {
-    caption: 'Tonnes per household',
-    dataField: 'tonnesPerHousehold',
-    dataType: 'number',
-    summaryType: 'sum',
-    format: {
-      precision: 6,
-      type: "fixedPoint"           
-    },
-    area: 'data'
-  }],
-  store: data
-});
-}
-*/
 
 const dataSource =
   new PivotGridDataSource({
@@ -266,7 +198,9 @@ const dataSource =
   }, {
     dataField: 'year',
     dataType: 'year',
-    area: 'column'
+    area: 'column',
+    filterType: 'exclude',
+    filterValues: [ 2011, 2012, 2013 ]
   }, {
     caption: 'Tonnes',
     dataField: 'tonnes',
@@ -280,7 +214,7 @@ const dataSource =
     dataType: 'number',
     summaryType: 'sum',
     format: {
-      precision: 6,
+      precision: 5,
       type: "fixedPoint"           
     },
     area: 'data'
@@ -291,16 +225,20 @@ const dataSource =
     dataType: 'number',
     summaryType: 'sum',
     format: {
-      precision: 6,
+      precision: 5,
       type: "fixedPoint"           
-    },
-    area: 'data'
+    }
   }],
   store: createStore({
     loadUrl: 'http://localhost:3000/dx-data.json'
   })
 });
 
+function customizeTooltip(arg) {
+  return {
+    html: `${arg.argumentText}<br/>${arg.seriesName}<br/>${arg.valueText}`
+  };
+}
 
 export default App;
 
