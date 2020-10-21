@@ -102,7 +102,7 @@ class App extends React.Component {
             verticalAlignment="center"
             horizontalAlignment="right"
           />
-          <CommonSeriesSettings type="line" width="1">
+          <CommonSeriesSettings type={chartType} width="1">
             <Point size="6" />
           </CommonSeriesSettings>
           <AdaptiveLayout  width={0} height={0} />
@@ -159,7 +159,7 @@ class App extends React.Component {
           >
             <Column dataField="year" dataType="year" />
             <Column dataField="area" />
-            <Column dataField="endstate" />
+            <Column dataField="endState" />
             <Column dataField="material" />
             <Column dataField="tonnes" dataType="number" format="decimal" />
             <Column dataField="tonnesPerCitizen" dataType="number" format="decimal" />
@@ -200,73 +200,130 @@ class App extends React.Component {
   }
 }
 
+var fieldsConfig = [{
+                 caption: 'Area',
+                 width: 90,
+                 dataField: 'area',
+                 area: 'row',
+                 filterType: 'exclude',
+                 filterValues: [
+                   'Scotland'
+                 ]
+               },
+               {
+                 caption: 'End state',
+                 width: 90,
+                 dataField: 'endState',
+                 area: 'row',
+                 filterType: 'exclude',
+                 filterValues: [
+                   'Waste Generated',
+                   'Other Diversion (pre 2014 method)',
+                   'Recycled (pre 2014 method)'
+                 ]
+               }, {
+                 caption: 'Material',
+                 dataField: 'material',
+                 width: 90,
+                 area: 'row',
+                 filterType: 'exclude',
+                 filterValues: [
+                   'Total Waste'
+                 ]
+               }, {
+                 dataField: 'year',
+                 dataType: 'year',
+                 area: 'column',
+                 filterType: 'exclude',
+                 filterValues: [ 2011, 2012, 2013 ]
+               }, {
+                 caption: 'Tonnes of solids',
+                 dataField: 'tonnes',
+                 dataType: 'number',
+                 summaryType: 'sum',
+                 format: 'decimal'
+               },
+               {
+                 caption: 'Tonnes of solids per citizen',
+                 dataField: 'tonnesPerCitizen',
+                 dataType: 'number',
+                 summaryType: 'sum',
+                 format: {
+                   precision: 5,
+                   type: "fixedPoint"
+                 },
+                 area: 'data'
+               },
+               {
+                 caption: 'Tonnes of solids per household',
+                 dataField: 'tonnesPerHousehold',
+                 dataType: 'number',
+                 summaryType: 'sum',
+                 format: {
+                   precision: 5,
+                   type: "fixedPoint"
+                 }
+               }];
 
-const dataSource =
-  new PivotGridDataSource({
-  fields: [{
-    caption: 'Area',
-    width: 90,
-    dataField: 'area',
-    area: 'row',
-    filterType: 'exclude',
-    filterValues: [
-      'Scotland'
-    ]
-  },
-  {
-    caption: 'End state',
-    width: 90,
-    dataField: 'endState',
-    area: 'row',
-    filterType: 'exclude',
-    filterValues: [
-      'Waste Generated',
-      'Other Diversion (pre 2014 method)', 
-      'Recycled (pre 2014 method)'
-    ]
-  }, {
-    caption: 'Material',
-    dataField: 'material',
-    width: 90,
-    area: 'row',
-    filterType: 'exclude',
-    filterValues: [
-      'Total Waste'
-    ]
-  }, {
-    dataField: 'year',
-    dataType: 'year',
-    area: 'column',
-    filterType: 'exclude',
-    filterValues: [ 2011, 2012, 2013 ]
-  }, {
-    caption: 'Tonnes of solids',
-    dataField: 'tonnes',
-    dataType: 'number',
-    summaryType: 'sum',
-    format: 'decimal'
-  },
-  {
-    caption: 'Tonnes of solids per citizen',
-    dataField: 'tonnesPerCitizen',
-    dataType: 'number',
-    summaryType: 'sum',
-    format: {
-      precision: 5,
-      type: "fixedPoint"           
-    },
-    area: 'data'
-  },
-  {
-    caption: 'Tonnes of solids per household',
-    dataField: 'tonnesPerHousehold',
-    dataType: 'number',
-    summaryType: 'sum',
-    format: {
-      precision: 5,
-      type: "fixedPoint"           
-    }
-  }],
+var chartType = "line";
+
+switch(window.location.pathname){
+    case("/preset1"): // compare tonnes landfilled per Aberdeen City/Dundee/Scottish citizen per year
+        fieldsConfig = fieldsConfig
+            .map(o => {
+                if (o.dataField==="area") {
+                    o.filterType = 'include'
+                    o.filterValues = ['Aberdeen City', 'Dundee City', 'Scotland'];
+                    o.expanded = true;
+                }
+                return o; })
+            .map(o => {
+                if (o.dataField==="endState") {
+                    o.filterType = 'include'
+                    o.filterValues = ['Landfilled'];
+                }
+                return o; });
+        break;
+    case("/preset2"): // tonnes per end-state per material for Stirling in 2018
+            fieldsConfig = fieldsConfig
+                .map(o => {
+                    if (o.dataField==="tonnes") {
+                        o.area = "data";
+                    }
+                    return o; })
+                .map(o => {
+                    if (o.dataField==="tonnesPerCitizen") {
+                        o.area = null;
+                    }
+                    return o; })
+                .map(o => {
+                    if (o.dataField==="area") {
+                        o.filterType = 'include'
+                        o.filterValues = ['Stirling'];
+                        o.expanded = true;
+                    }
+                    return o; })
+                .map(o => {
+                    if (o.dataField==="endState") {
+                        o.filterType = 'include'
+                        o.filterValues = ['Recycled', 'Other Diversion', 'Landfilled'];
+                        o.expanded = true;
+                    }
+                    return o; })
+                .map(o => {
+                    if (o.dataField==="year") {
+                        o.filterType = 'include'
+                        o.filterValues = [2018];
+                     }
+                     return o; });
+            chartType = "bar";
+            break;
+    default:
+        // no op
+}
+
+const dataSource = new PivotGridDataSource({
+  fields: fieldsConfig,
   store: createStore({
     loadUrl: '/dx-data.json'
   })
