@@ -162,6 +162,8 @@ They store a lot of open data and code in their [GitHub repositories](https://gi
        * [Oz](https://github.com/metasoarous/oz) is a Clojure _wrapper_ over VG/VGL
        * [Hanami](https://github.com/jsa-aerial/hanami) is analogous to [Shiny](https://shiny.rstudio.com) or [Dash](https://pypi.org/project/dash/)
     * [Streamlit](https://www.streamlit.io) that makes it easy to script interactive charts in Python and deploy them (Heroku style) to a web service.
+  * For 'playing' with data
+    * [CODAP](https://codap.concord.org/) provides a web friendly, "data-base games"-like experience.
 * Google's [Dataset Search](https://datasetsearch.research.google.com/)
 
 # Companies
