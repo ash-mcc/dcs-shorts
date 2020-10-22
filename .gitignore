@@ -9,7 +9,7 @@ dataset-into-wikidata/population-per-scottish-council-area-per-year-iframe.html
 dataset-into-wikidata/population-values-diff.txt
 dataset-into-wikidata/population-values-quickstatements.csv
 dcs-shorts.iml
-pivot-drill-plot/build/
-pivot-drill-plot/node_modules/
-pivot-drill-plot/package-lock.json
+pivot-drilldown-and-plot/build/
+pivot-drilldown-and-plot/node_modules/
+pivot-drilldown-and-plot/package-lock.json
 
