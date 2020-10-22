@@ -22,6 +22,7 @@ import Chart, {
   Tooltip,
   Export as ChartExport
 } from 'devextreme-react/chart';
+
 import Button from 'devextreme-react/button';
 
 class App extends React.Component {
@@ -42,47 +43,41 @@ class App extends React.Component {
     this.resetZoom = () => {
       this._chart.resetVisualRange();
     };
-
-    this.preset1 = () => {
-      /*
-      dataSource.collapseAll('area');
-      */
-
-      //dataSource.field("area", { filterValues: ["Aberdeen City", "Dundee City"]});
-      //dataSource.load();
-      /*
-      dataSource.filter(
-        [
-          ['area', '=', 'Stirling'], 
-          'and', 
-          ['year', '=', '2013']
-        ]
-      );
-      */
-
-      /*
-      var state = dataSource.state();
-      console.log(state);
-      state.rowExpandedPaths.push(["&[1]"]);
-      state.rowExpandedPaths.push(["&[1]", "&[2]"]);
-      dataSource.state(state);
-      */
-
-      /* partially works but can throw an error
-      dataSource.expandHeaderItem("row", ["Angus"]);
-      setTimeout(() => {
-        dataSource.expandHeaderItem("row", ["Angus", "Landfilled"]);
-      });
-      */
-    };
   }
 
   componentDidMount() {
-    // this will fail because the Chart & PivotGrid aren't available when this is called
       this._pivotGrid.bindChart(this._chart, {
         dataFieldsDisplayMode: 'splitPanes',
         alternateDataFields: false
       });
+  }
+
+
+  chart() {
+    return(<Chart
+              ref={(ref) => this._chart = ref.instance}
+              palette="Harmony Light"
+              title="Household waste in Scotland"
+           >
+                    <Size height={500} />
+                    <Tooltip enabled={true} customizeTooltip={customizeTooltip} />
+                    <Legend
+                      verticalAlignment="center"
+                      horizontalAlignment="right"
+                    />
+                    <CommonSeriesSettings type={chartType} width="1">
+                      <Point size="6" />
+                    </CommonSeriesSettings>
+                    <AdaptiveLayout  width={0} height={0} />
+                    <Margin bottom={10} />
+                    <ChartExport enabled={true} fileName="household-waste" />
+                    <ZoomAndPan
+                      valueAxis="both"
+                      argumentAxis="both"
+                      dragToZoom={true}
+                      allowMouseWheel={true}
+                      panKey="shift" />
+                  </Chart>);
   }
 
   render() {
@@ -91,30 +86,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
 
-        <Chart 
-            ref={(ref) => this._chart = ref.instance}
-            palette="Harmony Light"
-            title="Household waste in Scotland"
-        >
-          <Size height={500} />
-          <Tooltip enabled={true} customizeTooltip={customizeTooltip} />
-          <Legend
-            verticalAlignment="center"
-            horizontalAlignment="right"
-          />
-          <CommonSeriesSettings type={chartType} width="1">
-            <Point size="6" />
-          </CommonSeriesSettings>
-          <AdaptiveLayout  width={0} height={0} />
-          <Margin bottom={10} />
-          <ChartExport enabled={true} fileName="household-waste" />
-          <ZoomAndPan
-            valueAxis="both"
-            argumentAxis="both"
-            dragToZoom={true}
-            allowMouseWheel={true}
-            panKey="shift" />
-        </Chart>
+        {this.chart()}
 
         <div className='block centre'>
           <div className='buttonAreaMargins'>
