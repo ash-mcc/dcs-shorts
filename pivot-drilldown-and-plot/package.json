@@ -1,6 +1,7 @@
 {
-  "name": "yus5r",
-  "description": "Drill-down support within the PivotGrid widget allows you to retrieve the list of records used to calculate a specific summary value. To see drill downs in action, click a summary cell and view the records that formed the basis of the summary value.\n",
+  "name": "wcs-prototype-2",
+  "description": "Demos a multi dimension data table that supports pivot, drilldown & export functionality, with a supporting chart.\n",
+  "homepage": "./",
   "dependencies": {
     "devexpress-diagram": "1.0.14",
     "devexpress-gantt": "1.0.7",

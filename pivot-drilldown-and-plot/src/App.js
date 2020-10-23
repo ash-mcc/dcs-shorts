@@ -25,6 +25,15 @@ import Chart, {
 
 import Button from 'devextreme-react/button';
 
+const ctxPath = window.location.pathname;
+const ctxParent = ctxPath.substring(0, ctxPath.lastIndexOf("/")+1);
+//console.log("ctxParent=" + ctxParent);
+const searchStr = window.location.search;
+//console.log("searchStr=" + searchStr);
+var preset = null;
+if (searchStr.includes("preset1")) preset = "preset1";
+else if (searchStr.includes("preset2")) preset = "preset2"
+
 class App extends React.Component {
 
   constructor(props) {
@@ -57,7 +66,6 @@ class App extends React.Component {
     return(<Chart
               ref={(ref) => this._chart = ref.instance}
               palette="Harmony Light"
-              title="Household waste in Scotland"
            >
                     <Size height={500} />
                     <Tooltip enabled={true} customizeTooltip={customizeTooltip} />
@@ -70,7 +78,7 @@ class App extends React.Component {
                     </CommonSeriesSettings>
                     <AdaptiveLayout  width={0} height={0} />
                     <Margin bottom={10} />
-                    <ChartExport enabled={true} fileName="household-waste" />
+                    <ChartExport enabled={true} fileName="household-waste" margin={3} />
                     <ZoomAndPan
                       valueAxis="both"
                       argumentAxis="both"
@@ -85,6 +93,12 @@ class App extends React.Component {
 
     return (
       <React.Fragment>
+
+        <center>
+            <h4>Waste Commons Scotland</h4>
+            <h1>Household waste</h1>
+            {description}
+        </center>
 
         {this.chart()}
 
@@ -237,10 +251,12 @@ var fieldsConfig = [{
                  }
                }];
 
+var description = "";
+
 var chartType = "line";
 
-switch(window.location.pathname){
-    case("/preset1"): // compare tonnes landfilled per Aberdeen City/Dundee/Scottish citizen per year
+switch(preset){
+    case("preset1"): // compare tonnes landfilled per Aberdeen City/Dundee/Scottish citizen per year
         fieldsConfig = fieldsConfig
             .map(o => {
                 if (o.dataField==="area") {
@@ -255,8 +271,9 @@ switch(window.location.pathname){
                     o.filterValues = ['Landfilled'];
                 }
                 return o; });
+        description = "Comparing the amounts landfilled per citizen for Aberdeen City, Dundee and Scotland as a whole.";
         break;
-    case("/preset2"): // tonnes per end-state per material for Stirling in 2018
+    case("preset2"): // tonnes per end-state per material for Stirling in 2018
             fieldsConfig = fieldsConfig
                 .map(o => {
                     if (o.dataField==="tonnes") {
@@ -289,6 +306,7 @@ switch(window.location.pathname){
                      }
                      return o; });
             chartType = "bar";
+            description = "Showing the amounts per end-state and material for Stirling in 2018.";
             break;
     default:
         // no op
@@ -297,7 +315,7 @@ switch(window.location.pathname){
 const dataSource = new PivotGridDataSource({
   fields: fieldsConfig,
   store: createStore({
-    loadUrl: '/dx-data.json'
+    loadUrl: ctxParent + "dx-data.json"
   })
 });
 
