@@ -8,3 +8,8 @@
 .buttonAreaMargins {
 	margin: 10px;
 }
+
+.title {
+  text-align: center;
+  line-height: 60%;
+}

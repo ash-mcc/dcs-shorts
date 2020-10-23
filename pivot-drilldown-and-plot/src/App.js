@@ -94,11 +94,11 @@ class App extends React.Component {
     return (
       <React.Fragment>
 
-        <center>
-            <h4>Waste Commons Scotland</h4>
-            <h1>Household waste</h1>
+        <div className="block title">
+            <h5>Waste Commons Scotland</h5>
+            <h1>Household waste in Scotland</h1>
             {description}
-        </center>
+        </div>
 
         {this.chart()}
 
@@ -271,7 +271,7 @@ switch(preset){
                     o.filterValues = ['Landfilled'];
                 }
                 return o; });
-        description = "Comparing the amounts landfilled per citizen for Aberdeen City, Dundee and Scotland as a whole.";
+        description = "How does Aberdeen City compare with Dundee (and Scotland as a whole) for the amounts of household waste per citizen that it landfills?";
         break;
     case("preset2"): // tonnes per end-state per material for Stirling in 2018
             fieldsConfig = fieldsConfig
@@ -306,7 +306,7 @@ switch(preset){
                      }
                      return o; });
             chartType = "bar";
-            description = "Showing the amounts per end-state and material for Stirling in 2018.";
+            description = "How many tonnes of each household waste material ended up recycled, landfilled, etc. in Stirling in 2018?";
             break;
     default:
         // no op
