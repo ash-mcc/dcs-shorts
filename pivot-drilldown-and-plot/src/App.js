@@ -33,6 +33,8 @@ const searchStr = window.location.search;
 var preset = null;
 if (searchStr.includes("preset1")) preset = "preset1";
 else if (searchStr.includes("preset2")) preset = "preset2"
+else if (searchStr.includes("preset3")) preset = "preset3"
+else if (searchStr.includes("preset4")) preset = "preset4"
 
 class App extends React.Component {
 
@@ -61,7 +63,6 @@ class App extends React.Component {
       });
   }
 
-
   chart() {
     return(<Chart
               ref={(ref) => this._chart = ref.instance}
@@ -73,7 +74,7 @@ class App extends React.Component {
                       verticalAlignment="center"
                       horizontalAlignment="right"
                     />
-                    <CommonSeriesSettings type={chartType} width="1">
+                    <CommonSeriesSettings type={chartType} width="1" >
                       <Point size="6" />
                     </CommonSeriesSettings>
                     <AdaptiveLayout  width={0} height={0} />
@@ -88,6 +89,24 @@ class App extends React.Component {
                   </Chart>);
   }
 
+/*
+    chartBubble() { // work in progress
+      return(<Chart
+                ref={(ref) => this._chart = ref.instance}
+             >
+                      <Size height={500} />
+                      <CommonSeriesSettings type={chartType}
+                          tagField="area"
+                          valueField="tonnes"
+                          sizeField="tonnes" >
+                      </CommonSeriesSettings>
+                      <AdaptiveLayout  width={0} height={0} />
+                      <Margin bottom={10} />
+                      <ChartExport enabled={true} fileName="household-waste" margin={3} />
+                    </Chart>);
+    }
+ */
+
   render() {
     let { drillDownDataSource, popupTitle, popupVisible } = this.state;
 
@@ -97,8 +116,8 @@ class App extends React.Component {
         <div className="block title">
             <h5>Waste Commons Scotland</h5>
             <h1>Household waste in Scotland</h1>
-            {description}
         </div>
+        <center>{description}</center>
 
         {this.chart()}
 
@@ -249,6 +268,33 @@ var fieldsConfig = [{
                    precision: 5,
                    type: "fixedPoint"
                  }
+               },
+               {
+                 caption: 'Tonnes of CO2e',
+                 dataField: 'co2e',
+                 dataType: 'number',
+                 summaryType: 'sum',
+                 format: 'decimal'
+               },
+               {
+                 caption: 'Tonnes of CO2e per citizen',
+                 dataField: 'co2ePerCitizen',
+                 dataType: 'number',
+                 summaryType: 'sum',
+                 format: {
+                   precision: 5,
+                   type: "fixedPoint"
+                 }
+               },
+               {
+                 caption: 'Tonnes of CO2e per household',
+                 dataField: 'co2ePerHousehold',
+                 dataType: 'number',
+                 summaryType: 'sum',
+                 format: {
+                   precision: 5,
+                   type: "fixedPoint"
+                 }
                }];
 
 var description = "";
@@ -307,6 +353,62 @@ switch(preset){
                      return o; });
             chartType = "bar";
             description = "How many tonnes of each household waste material ended up recycled, landfilled, etc. in Stirling in 2018?";
+            break;
+    case("preset3"): // proportion per end-state for Edinburgh
+            fieldsConfig = fieldsConfig
+                .map(o => {
+                    if (o.dataField==="tonnes") {
+                        o.area = "data";
+                    }
+                    return o; })
+                .map(o => {
+                    if (o.dataField==="tonnesPerCitizen") {
+                        o.area = null;
+                    }
+                    return o; })
+                .map(o => {
+                    if (o.dataField==="area") {
+                        o.filterType = 'include'
+                        o.filterValues = ['City of Edinburgh'];
+                        o.expanded = true;
+                    }
+                    return o; })
+                .map(o => {
+                    if (o.dataField==="endState") {
+                        o.filterType = 'include'
+                        o.filterValues = ['Recycled', 'Other Diversion', 'Landfilled'];
+                    }
+                    return o; })
+                .map(o => {
+                    if (o.dataField==="year") {
+                        o.filterType = 'exclude'
+                        o.filterValues = [];
+                     }
+                     return o; });
+            chartType = "fullstackedbar";
+            description = "What proportion of a tonne of household waste has ended up recycled, landfilled, etc. in Edinburgh through the years?";
+            break;
+    case("preset4"): // correlations between solids and carbon impact
+            fieldsConfig = fieldsConfig
+                .map(o => {
+                    if (o.dataField==="co2ePerCitizen") {
+                        o.area = 'data';
+                    }
+                    return o; })
+                .map(o => {
+                    if (o.dataField==="area") {
+                        o.filterType = 'include'
+                        o.filterValues = ['Scotland'];
+                    }
+                    return o; })
+                .map(o => {
+                    if (o.dataField==="year") {
+                        o.filterType = 'include'
+                        o.filterValues = [2017, 2018];
+                     }
+                     return o; });
+            chartType="area";
+            description = "What does the correlation look like between the amounts of household waste solids and their calculated carbon impacts?";
             break;
     default:
         // no op

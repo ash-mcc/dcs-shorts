@@ -169,6 +169,7 @@ They store a lot of open data and code in their [GitHub repositories](https://gi
 # Companies
 
 * [Swirrl IT Limited](https://www.swirrl.com) who have helped [statistics.gov.scot](https://statistics.gov.scot) build its LoD site.
+  * And some somewhat related [Clojure software for graph data](https://github.com/simongray/clj-graph-resources)
 * [Epimorphics](https://www.epimorphics.com/our-technology/)
   	has a platform built around RDF
   	that includes many elements of interest
