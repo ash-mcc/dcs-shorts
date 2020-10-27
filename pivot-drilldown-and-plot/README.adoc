@@ -19,9 +19,9 @@ The prototype pulls together 4 datasets:
 .. "Mid-Year Household Estimates" (NRS).
 
 The datasets are fetched from statistics.gov.scot and Wikidata, using SPARQL;
-then matched; and per-citizen and per-household values calculated.
+then matched; and finally, the per-citizen and per-household values are calculated.
 
-The result is 50,00 data _facts_.
+The result is 50,000 data _facts_.
 
 === The build
 
