@@ -40,7 +40,7 @@ in https://github.com/data-commons-scotland[the project's GitHub repositories,wi
 The prototype's web page contains a graph and a configurable data grid.
 The graph automatically reflects the data selected in the data grid.
 
-image::screenshot-graph-and-grid.png[600,600,align="center"]
+image::screenshot-graph-and-grid.png[700,700,align="center"]
 
 Detailed information about a graph's data point is shown when the user hovers over it with the cursor.
 
@@ -69,7 +69,7 @@ image::screenshot-grid-excel-icon.png[50,50,align="center"]
 The resulting Excel files are nice because the export functionality
 preserves user-friendly fixed headers and some other formatting.
 
-image::screenshot-grid-excel-example.png[650,650,align="center"]
+image::screenshot-grid-excel-example.png[700,700,align="center"]
 
 Finally, the prototype operates well on phones and tablets (although there is
 a sizing issue with pop-up panels that I haven't investigated).
@@ -84,19 +84,21 @@ So, might (a production-class version of) such a tool,
 help our users to explore and understand open data about waste?
 Well, we won't know until we have user tested it, but my guess is that:
 
-a. users with no data analysis experience
+[loweralpha]
+. users with no data analysis experience
 will find its configurability difficult to navigate.
-a. users with low-to-medium data analysis experience
+. users with low-to-medium data analysis experience
 may find it a useful as a single tool containing multiple datasets.
-a. users with medium-to-high data analysis experience
+. users with medium-to-high data analysis experience
 will prefer to use their own tools.
 
 A _presets_ feature has been added to the tool
 so that users can go to a particular configuration & data selection
 by simply clicking on a hyperlink.
-This supports an _easy-access_ route to the tool for _a_-users,
+This supports an _easy-access_ route to the tool for users with no data analysis experience,
 by answering their potential questions through presets such as:
 
+[arabic]
 . https://data-commons-scotland.github.io/pivot-drilldown-and-plot/index.html?preset1[How does Aberdeen City compare with Dundee (and Scotland as a whole) for the amounts of household waste per citizen that it landfills?]
 . https://data-commons-scotland.github.io/pivot-drilldown-and-plot/index.html?preset2[How many tonnes of each household waste material ended up recycled, landfilled, etc. in Stirling in 2018?]
 . https://data-commons-scotland.github.io/pivot-drilldown-and-plot/index.html?preset3[What proportion of a tonne of household waste has ended up recycled, landfilled, etc. in Edinburgh through the years?]
