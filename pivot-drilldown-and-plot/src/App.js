@@ -172,6 +172,69 @@ class App extends React.Component {
           </DataGrid>
         </Popup>
 
+        <div>
+        <h5>Sources</h5>
+            <ol>
+                <li>
+                "Generation and Management of Household Waste",
+                created by SEPA on 31st August 2020,
+                downloaded from <a
+                    href="http://statistics.gov.scot/data/household-waste"
+                    target="_blank">http://statistics.gov.scot/data/household-waste</a> on
+                    26th October 2020.
+                </li>
+                <li>
+                "Carbon footprint",
+                created by SEPA in 2019,
+                downloaded from  Wikidata (property P5991 on instances of Q15060255) on 26th October 2020.
+                </li>
+                <li>
+                "Population Estimates (Current Geographic Boundaries)",
+                created by NRS on 1st May 2020,
+                downloaded from <a
+                    href="http://statistics.gov.scot/data/population-estimates-current-geographic-boundaries"
+                    target="_blank">http://statistics.gov.scot/data/population-estimates-current-geographic-boundaries</a> on
+                    26th October 2020.
+                </li>
+                <li>
+                "Mid-Year Household Estimates",
+                created by NRS on 23rd June 2020,
+                downloaded from <a
+                    href="http://statistics.gov.scot/data/mid-year-household-estimates"
+                    target="_blank">http://statistics.gov.scot/data/mid-year-household-estimates</a> on
+                    26th October 2020.
+                </li>
+            </ol>
+        <h5>"Presets"</h5>
+        <ol start="0">
+            <li>
+                <a href="index.html">
+                No preset
+                </a>
+            </li>
+            <li>
+                <a href="index.html?preset1">
+                How does Aberdeen City compare with Dundee (and Scotland as a whole) for the amounts of household waste per citizen that it landfills?
+                </a>
+            </li>
+            <li>
+                <a href="index.html?preset2">
+                How many tonnes of each household waste material ended up recycled, landfilled, etc. in Stirling in 2018?
+                </a>
+            </li>
+            <li>
+                <a href="index.html?preset3">
+                What proportion of a tonne of household waste has ended up recycled, landfilled, etc. in Edinburgh through the years?
+                </a>
+            </li>
+            <li>
+                <a href="index.html?preset4">
+                What does the correlation look like between the amounts of household waste solids and their calculated carbon impacts?
+                </a>
+            </li>
+        </ol>
+        </div>
+
       </React.Fragment>
     );
   }
@@ -180,7 +243,9 @@ class App extends React.Component {
     this.dataGrid = ref.instance;
   }
 
+
   onCellClick(e) {
+    /*  Commented out (for now) this hook-in of the drilldown popup because it seems to have stopped working ...maybe when I added the chart.
     if (e.area === 'data') {
       var pivotGridDataSource = e.component.getDataSource(),
         rowPathLength = e.cell.rowPath.length,
@@ -192,7 +257,9 @@ class App extends React.Component {
         popupVisible: true
       });
     }
+    */
   }
+
 
   onHiding() {
     this.setState({
