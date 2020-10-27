@@ -14,7 +14,7 @@ The working prototype can be accessed via https://data-commons-scotland.github.i
 The prototype pulls together 4 datasets:
 [arabic]
 .. "Generation and Management of Household Waste" (SEPA).
-.. "Carbon footprint" (SEPA)..
+.. "Carbon footprint [CO2e]" (SEPA)..
 .. "Population Estimates (Current Geographic Boundaries)" (NRS).
 .. "Mid-Year Household Estimates" (NRS).
 
@@ -96,7 +96,7 @@ A _presets_ feature has been added to the tool
 so that users can go to a particular configuration & data selection
 by simply clicking on a hyperlink.
 This supports an _easy-access_ route to the tool for users with no data analysis experience,
-by answering their potential questions through presets such as:
+by answering their potential questions through _presets_ such as:
 
 [arabic]
 . https://data-commons-scotland.github.io/pivot-drilldown-and-plot/index.html?preset1[How does Aberdeen City compare with Dundee (and Scotland as a whole) for the amounts of household waste per citizen that it landfills?]
