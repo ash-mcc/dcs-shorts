@@ -131,12 +131,7 @@ They store a lot of open data and code in their [GitHub repositories](https://gi
    * "the beneficial ownership standard needs to be able to identify legal entities and help users to identify natural persons"
 * [Idra](https://www.slideshare.net/FI-WARE/fiware-global-summit-idra-a-solution-for-open-data-interoperability)
    * "Idra is a web application able to federate existing Open Data Management Systems (ODMS) based on different technologies providing a unique access point to search and discover open datasets coming from heterogeneous sources. Idra uniforms representation of collected open datasets, thanks to the adoption of international standards (DCAT-AP) and provides a set of RESTful APIs to be used by third party applications.
-
      Idra supports natively ODMS based on CKAN, DKAN, Socrata, Orion Context Broker (NGSI v2) and many other technologies: Idra provides also a set of APIs to federate ODMS not natively supported. In addition, it is possible to federate generic open data portals, that don't expose an API, using the web scraping functionality or providing a dump file of the datasets in DCAT-AP format. Moreover Idra provides a SPARQL endpoint in order to perform queries on 5 stars RDF linked open data collected from federated ODMS and allows to easily create charts based on federated open datasets."
-   * [Google's public data explorer](https://www.google.com/publicdata/explore?ds=ltjib1m1uf3pf_&ctype=l&met_y=waste_t1a#!ctype=l&strail=false&bcs=d&nselm=h&met_y=waste_t1a&scale_y=lin&ind_y=false&rdim=country_group&idim=country_group:oecd:non-oecd&idim=country:GBR:CHE:CHN:USA&ifdim=country_group&hl=en_US&dl=en_US&ind=false)
-   * [Tidy Data format](http://vita.had.co.nz/papers/tidy-data.pdf)
-   * [OpenCube Toolkit](http://opencube-toolkit.eu/)
-   * Swirrl's [table2qb](https://github.com/Swirrl/table2qb)
 * A [comparison](https://dataverse.org/blog/comparative-review-various-data-repositories)
   	of Dataverse vs Figshare, CKAN, etc.
    * Dataverse: Java, great documentation. Data previewers can be run via cURL (so opportunity to could create our own UI).
@@ -164,6 +159,12 @@ They store a lot of open data and code in their [GitHub repositories](https://gi
     * [Streamlit](https://www.streamlit.io) that makes it easy to script interactive charts in Python and deploy them (Heroku style) to a web service.
   * For 'playing' with data
     * [CODAP](https://codap.concord.org/) provides a web friendly, "data-base games"-like experience.
+* Tools for operating over structured data
+   * [Google's public data explorer](https://www.google.com/publicdata/explore?ds=ltjib1m1uf3pf_&ctype=l&met_y=waste_t1a#!ctype=l&strail=false&bcs=d&nselm=h&met_y=waste_t1a&scale_y=lin&ind_y=false&rdim=country_group&idim=country_group:oecd:non-oecd&idim=country:GBR:CHE:CHN:USA&ifdim=country_group&hl=en_US&dl=en_US&ind=false)
+   * [Tidy Data format](http://vita.had.co.nz/papers/tidy-data.pdf)
+   * [OpenCube Toolkit](http://opencube-toolkit.eu/)
+   * Swirrl's [table2qb](https://github.com/Swirrl/table2qb)
+   * Simon Gray's nice list of such [Clojure based tools](https://github.com/simongray/clj-graph-resources)
 * Google's [Dataset Search](https://datasetsearch.research.google.com/)
 
 # Companies
