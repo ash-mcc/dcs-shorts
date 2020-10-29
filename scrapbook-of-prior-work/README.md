@@ -84,7 +84,7 @@ They store a lot of open data and code in their [GitHub repositories](https://gi
             * [OpenCube Project and OpenCube Toolkit: slides and recordings](https://lists.w3.org/Archives/Public/public-lod/2015Oct/0016.html) 
          * [RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework)
             * "Part of the vision of Linked Data is for the Internet to become a global database"
-      * [Learning WikiBase](Learning Wikibase)
+      * [Learning WikiBase](Learning Wikibase) ...Wikidata is an instance of [WikiBase](https://wikiba.se/) 
          * [...an interview with its author](https://medium.com/read-write-participate/learning-wikibase-boost-your-project-with-linked-data-dc1d2c53bd00)
       * Good examples of sites based on WikiBase
          * [A presentation](https://upload.wikimedia.org/wikipedia/commons/0/0c/WikidataCon_2019_David_Fichtmueller_-_Using_Wikibase_as_a_Platform_to_Develop_a_Semantic_Biodiversity_Standard.pdf) about how WikiData forms the semantic platform underlying the [Botanical Garden & Botanical Museum Berlin](https://www.visitberlin.de/en/botanic-garden-and-botanical-museum)
@@ -97,6 +97,7 @@ They store a lot of open data and code in their [GitHub repositories](https://gi
    * [SPARQL query service](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help)
       * [Ian's plaques in Aberdeen blog](https://codethecity.org/2020/01/13/aberdeen-plaques-part-two/)
       * [SQARQL Cheatsheet](http://www.iro.umontreal.ca/~lapalme/ift6281/sparql-1_1-cheat-sheet.pdf)
+      * [SPARQL Web Pages](https://uispin.org/ui.html) - "HTML \[...] that may contain SPARQL queries to dynamically insert data-driven content".
    * [What is the difference between Wikidata and DBpedia?](https://www.quora.com/What-is-the-difference-between-Wikidata-and-DBpedia)
       * DBpedia unlies the [BBC's Dynamic Semantic Publishing](https://www.bbc.co.uk/blogs/bbcinternet/2012/04/sports_dynamic_semantic.html)
       * "Why blend logic with data on the web? [...] Machines need the description logic where the data is to be able to integrate it and tie the data silos together."
