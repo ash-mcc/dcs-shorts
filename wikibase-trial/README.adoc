@@ -2,13 +2,15 @@
 
 == Introduction
 
-An architectural proposal for our
+The architectural proposal for our
 https://campuspress.stir.ac.uk/datacommonsscotland/2020/09/22/what-might-a-waste-commons-scotland-platform-look-like-initial-ideas-in-our-design-scenarios/[WCS platform],
 contains a *data layer* for collecting, linking, caching and making accessible the source datasets...
 
 image::bilayered-architecture.png[align="center"]
 
-NOTE: Our assumption is that, in the near-term, https://en.wikipedia.org/wiki/Linked_data[linked data] is the most useful data foundation.
+NOTE: Our assumption is that for our near-term aims,
+https://en.wikipedia.org/wiki/Linked_data[linked data]
+provides the most useful foundation.
 
 The idea that we're trialling here, is to use https://wikiba.se/[Wikibase] as the core component in our data layer...
 
@@ -29,8 +31,8 @@ So why not just use Wikidata? (Wikidata is Wikibase’s common, public instance.
 
 * Our domain specifics aren’t supported in Wikidata. 
 ** E.g. Wikidata doesn’t (yet) have a full vocabulary to describe waste management.
-** We want to experiment and move fast. Wikidata is sensibly cautious about change, therefore too slow for us.
-* We can still make use of Wikidata for some aspects of our work by referencing its data, using its vocabulary, and using it to store very general data.
+** We want to experiment and move fast. Wikidata is sensibly cautious about change, therefore too slow for us.
+* We can still make use of Wikidata for some aspects of our work by referencing its data, using its vocabulary, and using it to store very general data.
 
 *Novelty*...
 The use of a customised Wikibase instance is not novel 
@@ -66,7 +68,7 @@ image::screenshot-wcs-wikibase.png[align="center"]
 
 === The datasets
 
-We want to populate our Wikibase with 4 datasets:
+In this trial, we want to populate our Wikibase with 4 datasets:
 
 1. `area` - _reference_ data describing administrative areas
 1. `population` - _reference_ data describing populations
@@ -92,12 +94,14 @@ image::screenshot-population-statements-wikidata.png[align="center"]
 
 The problem with this approach is that it can result in an unwieldy amount of _statements_ per single _item_.
 
-For our Wikibase, we represent each of those records as an _item_ in its own right.
+The alternative approach we've taken for out Wikibase, is to represent each of those records as an _item_ in its own right.
 So the that first record is represented as the Wikibase _item_...
 
 image::screenshot-popAc2018-wikibase.png[align="center"]
 
 ==== Use common predicates and dimensions to link and structure the data
+
+Some predicates and dimensions are common, they are used across most of the datasets.
 
 * _Common_ predicates:
 ** https://waste-commons-scotland.wiki.opencura.com/wiki/Property:P5[has quantity]
@@ -117,8 +121,9 @@ is used only to describe the `household waste` dataset.
 
 === Loading the data
 
-I've hacked together a software script (TODO `dcs-wdt`) which writes the datasets into our Wikibase.
-It is very rough'n'ready but it might contain a seed for something more generic for automatically (re)loading our datasets of interest.
+I've hacked together a software script - https://github.com/data-commons-scotland/dcs-wdt[`dcs-wdt`] - which writes the datasets into our Wikibase.
+It is very rough'n'ready
+(however, it might be the seed of something more generic for automatically re-loading our datasets of interest).
 Its outline is:
 
 [source,C]
@@ -136,28 +141,28 @@ for each dataset in [base, area, population, household-waste, co2e]
 
 === _Pros_
 
-* The bundled-with #SPARQL# query service and UI work well.
+* The bundled *SPARQL* query service and UI work well.
 +
 Example: https://tinyurl.com/yxgleq38[query for the tonnes of CO2e (from household waste) per citizen per area per year].
 +
 There is an oddity w.r.t. implicit prefixes but this can be worked around by explicitly declaring the prefixes.
-* It has straight out-of-the-box #search# functionality which automatically indexes content,
-and provides a search feature (with completion suggestion).
+* It has straight out-of-the-box *search* functionality which automatically indexes content,
+and provides a search feature (with 'completion-suggestion').
 +
 image::screenshot-search-wikibase.png[align="center"]
 +
-It is primarily configured for searching _items_ by their _labels_ but it does fallback to
-providing a more search-all-text ability.
-* It has a baked-in #API# (in addition to the programmatically accessible SPARQL query service)
+It is primarily configured for searching _items_ by their _labels_ but it does fall-through to
+providing a more _full-text_ type search capability.
+* It has a baked-in *API* (in addition to the programmatically accessible SPARQL query service)
 which  provides a very full and well https://www.mediawiki.org/wiki/API:Main_page[documented HTTP-based API]
 for reading & writing data.
 +
 (The `dcs-wdt` script makes use of both its SPARQL query service and API.)
-* Its human-oriented web pages (#UI#) are sort of nice - making it easy to explore the data, and to perform data management tasks.
+* Its human-oriented web pages (*UI*) are sort of nice - making it easy to explore the data, and to perform data management tasks.
 * It comes with a raft of features for supporting community-contributed content, including:
 https://waste-commons-scotland.wiki.opencura.com/wiki/Special:SpecialPages[user accounts and permissions],
 discussion forums, and easy-ish to use bulk data uploads via
-https://waste-commons-scotland.wiki.opencura.com/tools/quickstatements/#/[QuickStatements]).
+https://waste-commons-scotland.wiki.opencura.com/tools/quickstatements/#/[QuickStatements].
 I haven't explored these in any depth, but they are potentially useful
 if the project decides that supporting user content on the WCS platform, is in-scope.
 
@@ -174,28 +179,28 @@ the LinkedWiki extension and its transitive dependencies need to be installed;
 the relevant templates imported;
 OpenStreetMap etc. access keys must be configured.
 +
-Those bells'n'whistles are not supported by WBStack and they're installation would take some expertise.
+Those bells'n'whistles are not supported by WBStack and the installation of them would take some expertise.
 * WbStack's service has been running for one year now but, as a free _alpha_, it provides no guarantees.
 +
-For example, a recent update of some of its software stack
-has caused a short outage and an ongoing label rendering issue on our Wikibase instance.
+For example, a recent update of some of its software stack caused a short outage
+and an ongoing problem with label rendering on our Wikibase instance.
 
 === Conclusions
 
 For the project, the main reason for using Wikibase is two-fold:
 
 [loweralpha]
-. Out-of-the-box support for a simple linked data model that can be SPARQL-ed.
-. The use of the wiki's data table, graphing & mapping widgets for the rapid prototyping of
-and inclusion in, WCS web pages.
+. Out-of-the-box support for a simple linked data model that can be _SPARQL-ed_.
+. The use of the wiki's data-table, graphing & mapping widgets for the rapid prototyping of
+and inclusion in WCS web pages.
 
-The WBStack Wikibase is useful for (a) but not (b).
+As it stands, the WBStack Wikibase is useful for (a) but not (b).
 
 I'm thinking that we should _keep it on the back burner_ for now - while we find out what the front-end needs.
 Its support of (a) might turn out to be a good enough reason to use it,
-although there are alternatives (including use of a standalone triple store;
-or, while just a few datasets, building our own linking and file store).
-No (b) means extra work for us to build/configure widgets for graphing, mapping, etc.
+although there are alternatives - including use of a standalone triple store;
+or, if we have just a few datasets, building our own linking software and file-based store.
+Not having (b) means extra work for us to build/configure widgets for graphing, mapping, etc.
 
 
 
