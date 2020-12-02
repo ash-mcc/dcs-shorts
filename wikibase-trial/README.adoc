@@ -8,7 +8,7 @@ contains a *data layer* for collecting, linking, caching and making accessible t
 
 image::bilayered-architecture.png[align="center"]
 
-NOTE: Our assumption is that for our near-term aims,
+NOTE: Our assumption is that, for our near-term aims,
 https://en.wikipedia.org/wiki/Linked_data[linked data]
 provides the most useful foundation.
 
@@ -95,7 +95,7 @@ image::screenshot-population-statements-wikidata.png[align="center"]
 The problem with this approach is that it can result in an unwieldy amount of _statements_ per single _item_.
 
 The alternative approach we've taken for out Wikibase, is to represent each of those records as an _item_ in its own right.
-So the that first record is represented as the Wikibase _item_...
+So that first record is represented as the Wikibase _item_...
 
 image::screenshot-popAc2018-wikibase.png[align="center"]
 
