@@ -12,3 +12,4 @@ Short investigations, experiments, etc.
 1. link:dataset-into-wikidata/[An exploration of uploading a dataset into Wikidata]
 1. link:pivot-drilldown-and-plot/[A prototype data grid & graph over data about waste]
 1. link:wikibase-trial/[Trialling Wikibase for our data layer]
+1. link:waste-quants-thru-time-on-a-map/[Waste quantities through time, on a map]

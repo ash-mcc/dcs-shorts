@@ -1,0 +1,30 @@
+= Waste quantities through time, on a map
+
+== Introduction
+
+Shortly before the end of 2020, I attended the CTC21 event whose breakout groups
+explored ideas around putting open data onto geographic maps (see James' stuff). 
+This got me thinking about new ways to depict the information that is bound up
+in the data about waste.
+
+In particular, a means to convey at-a-glance, to the lay person, how councils areas
+compare through time in respect of the amounts of (household solid) waste that they
+process. Now, the grid & graph prototype that we built a couple of months back,
+depicts conveys that same information very well (and with a greater fidelity than we
+will mange in this work) but, it isn't attention grabbing for the lay person - like me!
+I like seeing something with movement and with features that I can relate to.
+...ie animated charts and a geo map  
+
+image::screenshot-wcs-wikibase.png[align="center"]   
+
+== Closing thoughts
+
+* Considered alternative metrics (such as ratios), alternative charts (such as bar and polar) 
+and alernative statistics (such as deviation and trend)
+but went with the 'most straightforward' (user testing might indicate that an alternatives is 'better').
+* Generalise to other geo-mappable Scottish data.
+
+
+
+
+
