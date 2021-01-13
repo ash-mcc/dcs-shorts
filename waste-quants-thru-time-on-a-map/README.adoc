@@ -78,15 +78,16 @@ A 'live' instance of this webapp can be accessed https://data-commons-scotland.g
 
 == Closing thoughts
 
-Being a prototype, this webapp is a little rough around the edges however,
-I think that it manges to convey the salient information (from the data) in a _catchy_ and easy to understand way.
-Of course, it is low fidelity compared to graphs & spreadsheets
-but the idea s to appeal to the person in the street.
+I haven't seen these datasets about waste shown in this way before,
+and I think that it usefully conveys aspects of the datasets
+in a _catchy_ and easy to understand way.
+It is low fidelity when compared to a full data grid with graph solution,
+but the idea is to hold the attention of the average person in the street.
 
-* Considered alternative metrics (such as ratios), alternative charts (such as bar and polar) 
-and alernative statistics (such as deviation and trend)
-but went with the 'most straightforward' (user testing might indicate that an alternatives is 'better').
-* Generalise to other geo-mappable Scottish data.
+Future work could integrate additional waste-relevant datasets that have geography and time dimensions.
+Also we should consider alternative metrics (such as ratios),
+alternative charts (such as bar or polar) and alternative statistics (such as deviation or trend).
+I went with the 'most straightforward' but user-testing might indicate that an alternative is better.
 
 
 
