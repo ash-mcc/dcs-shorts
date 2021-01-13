@@ -1,7 +1,5 @@
 = Waste quantities through time, on a map
 
-WARNING: A work-in-progress.
-
 == Preface
 
 Shortly before the end of 2020, I attended the
@@ -14,16 +12,16 @@ Its idea is to tell an evidence-backed _story-through-the-years_,
 involving interactive data displays against a map.
 James Littlejohn introduces it in https://youtu.be/C0OSjIu3ZT4[this YouTube video].
 
-This got me thinking about new ways to depict the information that is bound up
+This got me thinking about new ways to depict the information that is _bound up_
 in the data about waste...
 
-In particular, about a means to convey _at-a-glance_, to the lay person, how councils areas
+In particular, thinking about a means to convey _at-a-glance_, to the lay person, how councils areas
 compare through time in respect of the amounts of (household solid) waste that they
 process. Now, the
 https://github.com/data-commons-scotland/dcs-shorts/blob/master/pivot-drilldown-and-plot/README.adoc[grid & graph prototype]
 that we built a couple of months back,
 conveys that same information very well (and with a greater fidelity than we
-will mange in this work) but, it isn't attention grabbing for the lay person - like me.
+will mange in this work) but, to the lay parson like me, it isn't attention grabbing.
 I like seeing something with movement and with features that I can relate to,
 such as animated charts and a geographical map.
 
@@ -31,16 +29,16 @@ such as animated charts and a geographical map.
 
 Leveraging what I learnt at the Code the City 21 _hack weekend_,
 I hacked together a prototype webapp
-that shows how waste quantity change through time, on a geographic map.
+that shows how waste quantities change through time, on a geographic map.
 
-The below, animated image of the webapp, shows it conveying that
-landfilled-waste has reduced over time while total-waste has remained _fairly_ constant.
+The below, animated image of the webapp, it conveys that
+landfilled-waste is reducing over time whilst total-waste is remaining _fairly_ constant.
 
 image::map-mgmt.gif["Managed solid waste, through time", align="center"]
 
 === UI controls
 
-* Choose the _dataset of interest_ using the image:dropdown.png[dropdown] control, either:
+* The _dataset of interest_ is chosen through the image:dropdown.png[dropdown] control, either:
 [lowerroman]
 . Tonnes of managed solid household waste per person per year.
 . Tonnes of C0~2~ equivalent from household waste per person per year.
@@ -54,9 +52,9 @@ image::map-mgmt.gif["Managed solid waste, through time", align="center"]
 
 * The open source https://leafletjs.com/[Leaflet] and https://antares.rte-france.com/[Minichart]
 libraries take care of most of the _heavy lifting_ (interactive graphics).
-* The map's base layer comes from https://esri.maps.arcgis.com/home/[Esri ArcGIS].
-(The images in this document, contain a https://stadiamaps.com/[Stadia Maps] base layer
-but this can't be used at runtime without an account.)
+* The map's base layer comes from https://esri.maps.arcgis.com/home/[Esri ArcGIS]
+(although the images in this document, contain a https://stadiamaps.com/[Stadia Maps] base layer,
+but that can't be used in a runtime without a licence.)
 * The map's council area boundary data originates from the http://geoportal.statistics.gov.uk/[ONS],
 and has been curated by https://github.com/martinjc/UK-GeoJSON[Martin Chorely].
 * The datasets for the pie charts, are:
