@@ -53,8 +53,8 @@ image::map-mgmt.gif["Managed solid waste, through time", align="center"]
 * The open source https://leafletjs.com/[Leaflet] and https://antares.rte-france.com/[Minichart]
 libraries take care of most of the _heavy lifting_ (interactive graphics).
 * The map's base layer comes from https://esri.maps.arcgis.com/home/[Esri ArcGIS]
-(although the images in this document, contain a https://stadiamaps.com/[Stadia Maps] base layer,
-but that can't be used in a runtime without a licence.)
+(although the images in this document contain a https://stadiamaps.com/[Stadia Maps] base layer -
+but this can't be used in a runtime without a licence.)
 * The map's council area boundary data originates from the http://geoportal.statistics.gov.uk/[ONS],
 and has been curated by https://github.com/martinjc/UK-GeoJSON[Martin Chorely].
 * The datasets for the pie charts, are:
@@ -79,8 +79,9 @@ A 'live' instance of this webapp can be accessed https://data-commons-scotland.g
 I haven't seen these datasets about waste shown in this way before,
 and I think that it usefully conveys aspects of the datasets
 in a _catchy_ and easy to understand way.
-It is low fidelity when compared to a full data grid with graph solution,
-but the idea is to hold the attention of the average person in the street.
+It is low fidelity when compared to a full
+https://github.com/data-commons-scotland/dcs-shorts/blob/master/pivot-drilldown-and-plot/README.adoc[data grid with graph]
+solution, but the idea is to hold the attention of the average person in the street.
 
 Future work could integrate additional waste-relevant datasets that have geography and time dimensions.
 Also we should consider alternative metrics (such as ratios),
