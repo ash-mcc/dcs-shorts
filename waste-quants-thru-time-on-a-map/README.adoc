@@ -36,7 +36,7 @@ that shows how waste quantity change through time, on a geographic map.
 The below, animated image of the webapp, shows it conveying that
 landfilled-waste has reduced over time while total-waste has remained _fairly_ constant.
 
-image::map-mgmt.gif[align="center"]
+image::map-mgmt.gif["Managed solid waste, through time", align="center"]
 
 === UI controls
 
@@ -44,24 +44,33 @@ image::map-mgmt.gif[align="center"]
 [lowerroman]
 . Tonnes of managed solid household waste per person per year.
 . Tonnes of C0~2~ equivalent from household waste per person per year.
-* Use the image:slider.png[slider] control to _travel through time_.
-* Each image:pie.png[pie] chart depicts the waste-related quantities for a council area.
+* Use the image:slider.png["slider"] control to _travel through time_.
+* Each image:pie.png["pie"] chart depicts the waste-related quantities for a council area.
 ** The sizes of its slices and its overall size, are related to the quantities that it depicts.
-* Hover over a council area to see detailed metrics in the image:detail.png[detail] panel.
+* Hover over a council area to see detailed metrics in the image:detail.png["detail", width=130] panel.
 * The usual map zoom and pan controls are supported.
 
 === Software and datasets
 
 * The open source https://leafletjs.com/[Leaflet] and https://antares.rte-france.com/[Minichart]
-libraries do most of the heavy lifting.
+libraries take care of most of the _heavy lifting_ (interactive graphics).
 * The map's base layer comes from https://esri.maps.arcgis.com/home/[Esri ArcGIS].
 (The images in this document, contain a https://stadiamaps.com/[Stadia Maps] base layer
 but this can't be used at runtime without an account.)
 * The map's council area boundary data originates from the http://geoportal.statistics.gov.uk/[ONS],
 and has been curated by https://github.com/martinjc/UK-GeoJSON[Martin Chorely].
-* The datasets....
+* The datasets for the pie charts, are:
+[lowerroman]
+. http://statistics.gov.scot/data/population-estimates-current-geographic-boundaries["Population Estimates (Current Geographic Boundaries)"]
+curated in the Scottish government's linked-data store,
+and authored by https://www.nrscotland.gov.uk/[NRS] in 2020.
+. http://statistics.gov.scot/data/household-waste["Generation and Management of Household Waste"]
+curated in the Scottish government's linked-data store,
+and authored by https://www.sepa.org.uk/[SEPA] in 2020.
+. https://www.sepa.org.uk/media/532206/2019-household-waste-data-tables.xlsx["Carbon footprint"]
+authored by https://www.sepa.org.uk/[SEPA] in 2020.
 
-image::map-co2e.png[align="center"]
+image::map-co2e.png["CO2 equivalent", align="center"]
 
 === 'Live' instance
 
