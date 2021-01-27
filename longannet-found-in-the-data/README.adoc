@@ -1,7 +1,7 @@
 = How I chanced on Longannet in the data
 
-I've added a "Household vs business waste" time-series to our map-oriented webapp from last week.
-The business data was parsed from SEPA's https://www.sepa.org.uk/environment/waste/waste-data/waste-data-reporting/business-waste-data/[Business Waste Data Tables].
+I've added a "Household vs business waste" _time-series_ to our map-oriented webapp from last week.
+The business data was parsed from SEPA's https://www.sepa.org.uk/environment/waste/waste-data/waste-data-reporting/business-waste-data/[Business Waste Data Tables,window=_blank].
 
 When I watched the waste quantities change through time data on this map, Fife's quantities really stood out...
 
@@ -25,7 +25,7 @@ Fife's combustion waste stands out from the average.
 
 Secondly, I filtered the data grid to show me:
 the business combustion waste quantities by sector
-^https://data-commons-scotland.github.io/longannet-found-in-the-data/index.html?preset1[link,window=_blank]^.
+^https://data-commons-scotland.github.io/longannet-found-in-the-data/index.html?preset2[link,window=_blank]^.
 
 image::grid-preset2.png["Business combustion wastes by sector", align="center", width="75%"]
 
@@ -40,11 +40,11 @@ image::longannet.jpg["Longannet power station (courtesy of Scottish Power)", ali
 According to Wikipedia, Longannet power station
 https://en.wikipedia.org/wiki/Longannet_power_station[was the 21st most polluting in Europe when it closed,window=_blank],
 so no wonder that its signature in the data is so obvious!
-It was closed on 24th March 2016, which correlates with Fife's combustion wastes graph line's
-sharp return to near the average through 2016.
+It was closed on 24th March 2016, which correlates with
+the sharp return towards the average in 2016, of combustion wastes graph line for Fife.
 
-Of course this isn't a real discovery - SEPA, Scottish Power and the people who lived around the power station
-will be very familiar with this data anomaly and its cause.
-But, I think that its mildly interesting that a data lay person like me could discover this from
+Of course this isn't a real discovery; SEPA, Scottish Power and the people who lived around the power station
+will be very familiar with this data _anomaly_ and its cause.
+But I think that its mildly interesting that a data lay person like me could discover this from
 looking at these simple data visualisations.
 
