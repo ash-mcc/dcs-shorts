@@ -1,7 +1,10 @@
-= How I chanced on Longannet in the data
+= How I chanced upon Longannet in the data
 
-I've added a "Household vs business waste" _time-series_ to our map-oriented webapp from last week.
-The business data was parsed from SEPA's https://www.sepa.org.uk/environment/waste/waste-data/waste-data-reporting/business-waste-data/[Business Waste Data Tables,window=_blank].
+I've added a "Household vs business waste" _time-series_ to our
+https://data-commons-scotland.github.io/waste-quants-thru-time-on-a-map/index.html[map-oriented webapp]
+from last week.
+The business data was parsed from SEPA's
+https://www.sepa.org.uk/environment/waste/waste-data/waste-data-reporting/business-waste-data/[Business Waste Data Tables,window=_blank].
 
 When I watched the waste amounts change through time on this map, Fife's amounts really stood out...
 

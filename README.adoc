@@ -13,4 +13,4 @@ Short investigations, experiments, etc.
 1. link:pivot-drilldown-and-plot/[A prototype data grid & graph over data about waste]
 1. link:wikibase-trial/[Trialling Wikibase for our data layer]
 1. link:waste-quants-thru-time-on-a-map/[Waste quantities through time, on a map]
-1. link:longannet-found-in-the-data/[How I chanced on Longannet in the data]
+1. link:longannet-found-in-the-data/[How I chanced upon Longannet in the data]
