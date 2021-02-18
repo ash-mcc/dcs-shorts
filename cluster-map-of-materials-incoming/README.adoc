@@ -96,14 +96,14 @@ We think that it could help pique interest in the differences in the
 amounts & types of waste materials that are being disposed in different areas of the country.
 For example...
 
-[cols="<.^1,<.^1,<.^1", grid="none", frame="none"]
+[cols="<.^,<.^,<.^", grid="none", frame="none"]
 |===
-image:splash-view.png[splash view, width=300]
+image:splash-view.png[splash view]
 | Glancing at our prototype's map (image left; at the default zoom level),
 the seemingly disproportionate amount of _soils & stones_ coming into north west Scotland waste sites
 catches our attention. So we zoom in (right image) to find that almost all of it is accounted for
 by one landfill site on the the Isle of Lewis.
-| image:Bennadrove.png[Bennadrove landfill site, width=300]
+| image:Bennadrove.png[Bennadrove landfill site]
 |===
 
 Future work could increase the utility of this prototype webapp by:
