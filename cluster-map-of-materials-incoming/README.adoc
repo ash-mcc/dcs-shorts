@@ -57,7 +57,7 @@ image::cluster-map-animated-fuller.gif["our prototype webapp", align="center", w
 === UI & controls
 
 * Each pie chart depicts the amounts of materials incoming to a single waste site,
-or to the aggregation of waste sites within a map area.
+or the aggregation of waste sites within a map area.
 ** image:single-waste-site-pie.png[single waste site pie] Depicts a single waste site.
 ** image:multi-waste-sites-pie.png[multiple waste sites pie] Depicts an aggregation of 26 waste sites.
 
@@ -94,8 +94,9 @@ But what about for our prototype webapp solution?...
 
 We think that it could help pique interest in the differences in the
 amounts & types of waste materials that are being disposed in different areas of the country.
+For example...
 
-[cols="<.^,<.^,<.^", grid="none", frame="none"]
+[cols="<.^30%,<.^40%,<.^30%", grid="none", frame="none"]
 |===
 image:splash-view.png[splash view]
 | Glancing at our prototype's map (image left; at the default zoom level),
