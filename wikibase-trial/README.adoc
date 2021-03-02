@@ -121,7 +121,7 @@ is used only to describe the `household waste` dataset.
 
 === Loading the data
 
-I've hacked together a software script - https://github.com/data-commons-scotland/dcs-wdt[`dcs-wdt`] - which writes the datasets into our Wikibase.
+I've hacked together a software script - `dcs-wdt` - which writes the datasets into our Wikibase.
 It is very rough'n'ready
 (however, it might be the seed of something more generic for automatically re-loading our datasets of interest).
 Its outline is:
