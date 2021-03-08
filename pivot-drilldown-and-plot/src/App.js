@@ -114,7 +114,6 @@ class App extends React.Component {
       <React.Fragment>
 
         <div className="block title">
-            <h5>Waste Commons Scotland</h5>
             <h1>Household waste in Scotland</h1>
         </div>
         <center>{description}</center>
