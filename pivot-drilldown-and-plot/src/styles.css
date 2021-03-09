@@ -20,16 +20,20 @@
     color: #fff;
     background-color: #788585;
 }
-.banner-title h2 {
-    text-align: center;
-    align-items: center;
-}
-.banner-title h1 {
-    font-size: 26px;
-    font-family: 'Alegreya';
-}
 .banner-title img {
     max-height: 64px;
     width: auto;
     padding: 3px;
+    display: inline;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.navbar-brand {
+    font-size: 26px;
+    padding: 0px 15px;
+    font-family: 'Alegreya';
+    text-decoration: none;
+}
+.banner-title a {
+    color: #fff !important;
 }
