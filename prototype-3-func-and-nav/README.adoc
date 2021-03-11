@@ -14,9 +14,9 @@ for exploring ideas about functionality and navigation for our eventual website.
 . A http://datacommonsscot.uk.w3pcloud.com[look'n'feel mock-up]
 for exploring looks/visual aesthetics.
 
-This document concentrates on the functionality &amp; navigation mock-up...
+This document concentrates on the *functionality &amp; navigation* mock-up...
 
-image::splash-page.png[The splash page of the functionality &amp; navigation mock-up ,align="center", width="400px", link="https://data-commons-scotland.github.io/dcs-wcs-prototype-3/index.html"]
+image::splash-page.png[The splash page of the functionality &amp; navigation mock-up ,align="center", width="500px", link="https://data-commons-scotland.github.io/dcs-wcs-prototype-3/index.html"]
 
 === Functionality
 
@@ -29,7 +29,8 @@ This mock-up ties together a lot of the elements we've been working on:
 [navy]#*Data grids with graphs*#:: A tool for _slicing'n'dicing_ the datasets and visualising the result as a graph. +
 [gray]#To make this easier, this tool will provide useful _slicing'n'dicing_ presets: starting points from which users can explore.#
 [maroon]#*SPARQL*#:: A query interface to a semantic web representation of the datasets. +
-[gray]#This is unlikely to be of use to our target audience, so we'll probably remove it from the UI.#
+[gray]#This is unlikely to be of use to our target audience,
+so we'll probably remove it from the UI but may use its semantic graph internally.#
 [teal]#*Articles*#:: Themed articles and tutorials that are based on evidence from the datasets. +
 [gray]#Uses https://powerman.name/doc/asciidoc[Asciidoc] mark-up to make the articles easy to format. +
 The articles may incorporate data vizualisations that are backed by our datasets.#
@@ -44,7 +45,7 @@ The mock-up provides 3 routes to information:
 [maroon]#*Search*#:: [gray]#At present, this is a very basic text &amp; tag search.
 In the future, a predicative/auto-suggestion search based on a semantic graph of the contents, will be provided.#
 
-[gray]#Users navigation histories may help power a further-reading recommendation subsystem.#
+[gray]#Users navigation histories may help power a _further-reading recommender_ subsystem.#
 
 
 === Architecture
@@ -62,25 +63,29 @@ The server-side simply serves 'static content files'. +
 There are several good, free, open source 'static website generators/frameworks'. +
 Static websites can be served for free on hosting platforms such as GitHub
 (as used for this mock-up).
-*Cons*:: It can't support a whole class of functionality that
-includes user uploads, and _on-line_ content editing. +
+*Cons*:: It can't support a whole class of functionality,
+including user uploads, and _on-line_ content editing. +
 Computation is forced towards the client-side (i.e. into users' web browsers)
 which sometimes can have a negative impact on the speed of the UI.
 --
-[navy]#*Off-line updates*#:: The content of the website can be updated - just not _on-line_.
+[navy]#*Off-line updates*#:: The content of the website can be updated - just not updated _on-line_.
 The website maintainers can add new/edit existing datasets, articles, etc. via _off-line_ means. +
 [gray]#For off-line updates to this mock-up we use:
 (i) WDT - a rough'n'ready software script that helps us to curate the datasets that underlay this mock-up;
 (ii) Cryogen - a static website generator;
 (iii) Git - to upload updates to our GitHub hosting service.#
-[maroon]#*Client-side computation*#:: Page content is dynamically manipulated (e.g. datasets are _slice'n'diced_)
+[green]#*Client-side computation*#:: Page content is dynamically manipulated (e.g. datasets are _slice'n'diced_)
 on the client-side (in users' web browsers) using JavaScript.
 This enables, for example, the mock-up's web pages to take the static content
 that is served by the server-side, and manipulate it so that it can support
 interactive data visualisations. +
-[gray]#Modern client-side technology #
+[gray]#Progress in client-side technology even makes it possible to implement
+a semantic graph supporting _triple store_ in a web browser!#
 
 === Conclusion
 
-as something concrete to focus on and evolve.
-It has some of the branding & graphics we've been working on, but that really isn't its purpose.
+This mock-up website...
+
+* provides concrete test-bed
+* for evolving the *functionality &amp; navigation* aspects of our eventual website, and
+* forces us to think about architectural trade-offs.
