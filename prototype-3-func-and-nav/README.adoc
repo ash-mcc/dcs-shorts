@@ -86,6 +86,6 @@ a semantic graph supporting _triple store_ in a web browser!#
 
 This mock-up website...
 
-* provides concrete test-bed
-* for evolving the *functionality &amp; navigation* aspects of our eventual website, and
+* provides concrete test-bed for evolving the *functionality &amp; navigation* aspects
+of our eventual website, and
 * forces us to think about architectural trade-offs.
