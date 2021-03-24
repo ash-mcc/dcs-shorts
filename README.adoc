@@ -16,3 +16,4 @@ Short investigations, experiments, etc.
 1. link:longannet-found-in-the-data/[How I chanced upon Longannet in the data]
 1. link:cluster-map-of-materials-incoming/[Waste sites and the quantities of incoming materials]
 1. link:prototype-3-func-and-nav/[A mock-up website for functionality & navigation]
+1. link:regional-dashboard/["_How is waste_ in my area?" - a regional dashboard]
