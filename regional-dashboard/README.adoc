@@ -55,7 +55,7 @@ That said, it still has been generating an above the average amount of waste per
 image:fife-hw-positions.png["Fife's household waste positions", width="220px"]
 image:fife-hw-gen.png["Fife's household waste generation", width="242px"]
 
-The graphs for Fife business waste that there was an acute [green]#reduction#
+The graphs for Fife business waste show that there was an acute [green]#reduction#
 in combustion wastes in 2016.
 
 image:fife-bw.png["Fife's business waste", width="430px"]
@@ -63,7 +63,7 @@ image:fife-bw.png["Fife's business waste", width="430px"]
 We investigated this _anomaly_
 https://github.com/data-commons-scotland/dcs-shorts/tree/master/longannet-found-in-the-data[before]
 and discovered that it was caused by the closure of Fife's coal fired
-power station - Longannet - on 24th March 2016.
+power station (Longannet) on 24th March 2016.
 
 ==== Angus
 
@@ -73,7 +73,7 @@ image:angus-hw-mgnt.png["Angus' household waste management", width="256px"]
 
 During the same period, Angus has increased the amount household waste that it processes as 'other diversion'.
 
-[teal]#_...What underlies that difference in Angus' waste processing?#
+[teal]#_...What underlies that difference in Angus' waste processing?_#
 
 == Technologies
 
