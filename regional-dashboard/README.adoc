@@ -12,7 +12,7 @@ which is directly powered by our
 https://github.com/data-commons-scotland/dcs-easier-open-data['easier datasets']
 about waste.
 
-The prototype is a webapp and it can be accessed https://data-commons-scotland.github.io/regional-dashboards/[*here*].
+The prototype is a webapp and it can be accessed https://data-commons-scotland.github.io/regional-dashboards/#/dashboard[*here*].
 
 image:the-dashboard.png["our prototype regional dashboard", width="95%", link="https://data-commons-scotland.github.io/regional-dashboards/"]
 
