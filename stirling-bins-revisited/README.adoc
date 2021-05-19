@@ -1,0 +1,15 @@
+= Stirling's bin collection data - revisited
+
+Stirling Council set a precedent by being the first (and _still_ only)
+Scottish local authority to have published *open data* about their
+bin collection of household waste.
+
+The council are currently working on increasing the fidelity of this dataset,
+e.g. by adding spatial data to describe collection routes.
+However, we can still squeeze from its current version,
+several interesting pieces of information.
+For details, visit the
+https://data-commons-scotland.github.io/regional-dashboards/#/stirling-bin-collection[Stirling bin collection page]
+on our website mockup.
+
+image:Stirling-bin-collection-mockup-page-v3.png["The Stirling bin collection page on our website mockup", width="95%", link="https://data-commons-scotland.github.io/regional-dashboards/#/stirling-bin-collection"]
