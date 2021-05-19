@@ -1,7 +1,7 @@
 = The prototype's architecture - revised
 
 https://github.com/data-commons-scotland/dcs-shorts/blob/master/wikibase-trial/README.adoc[+"Trialling Wikibase for our data layer"+,window=_blank]
-decribed how we evaluated the use of Wikibase
+described how we evaluated the use of Wikibase
 as a key implementation component in our bi-layer architecture.
 The conclusion was that Wikibase, although a brilliant product,
 does not fit our immediate purpose.
