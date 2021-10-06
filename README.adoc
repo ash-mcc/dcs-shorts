@@ -19,3 +19,4 @@ Short investigations, experiments, etc.
 1. link:regional-dashboard/["_How is waste_ in my area?" - a regional dashboard]
 1. link:stirling-bins-revisited/[Stirling's bin collection data - revisited]
 1. link:architecture-revised/[The prototype's architecture - revised]
+1. link:carbon-savings/[Building linked open data about carbon savings]

@@ -1,0 +1,121 @@
+= Building linked open data about carbon savings
+:sectnums:
+
+////
+tags: 
+  LoD OD "linked open data" CSVW RDF 
+  charty "3rd sector" Scottish Scotland waste reuse recycle 
+  "carbon impact" "carbon saving" CO2e "carbon metric" COP26 
+  Swirrl Blazegraph Vega-lite Clojure
+////
+
+This is a _walk-through_ of how we can build *linked open data* (LoD) about *carbon savings* from dissimilar data sources.
+
+== Reference data
+
+The _carbon impact_ is a measure devised by 
+https://www.zerowastescotland.org.uk/[Zero Waste Scotland] (ZWS), 
+to convey the whole-life carbon impact of waste, from resource extraction and manufacturing emissions, right through to waste management emissions. 
+Its unit-of-measure is _tonnes of carbon dioxide equivalent_ (CO~2~eT).
+
+This is a reasonable basis for measuring carbon savings so we will use it as _reference data_.
+ 
+It is defined in
+https://www.zerowastescotland.org.uk/sites/default/files/The%20Scottish%20Carbon%20Metric.pdf[The Scottish Carbon Metric] document. 
+For our purpose, its key data is in table 6.2.
+This contains per-material weight-multipliers that can be used to calaculate CO~2~eT amounts. 
+
+Here's a snipped image of that table:
+
+image::carbon-metric-table-6_2-snippet.png["The key data in The Scottish Carbon Metric", width=50%]
+
+NOTE: This table's data has been published as linked open data by our project, in previous work.
+See the `co2e-multiplier` files in https://github.com/data-commons-scotland/dcs-easier-open-data[this repo]. But we will redo that work here so that that we can provide an explanatory walk-through.
+
+We copy the table's data from its original PDF format into a more tractable, 
+CSV file: link:carbon-metric.csv[carbon-metric.csv].
+Here's a snippet of data from that file:
+
+[format="csv",options="header",width=50%]
+|===================================================
+include::carbon-metric.csv[lines=1..8]
+|===================================================
+
+So, for our carbon savings data:
+
+* CO~2~eT will be used as the primary unit-of-measure
+* link:carbon-metric.csv[carbon-metric.csv] will be referenced as the basis for calculations.
++
+For example, consider 1 tonne of (used) shoes.
+If these were landfilled at a waste site then the _carbon impact_ would be: 1 x 31.17 CO2~e~T.
+Instead, if a reuse store sells them to its customers, it has made a _carbon saving_ of 31.17 CO2~e~T.
+
+CAUTION: The term _carbon saving_ is a little misleading. A better name for it might be _carbon impact deferrals_ since all objects are eventually disposed of. But we won't pursue that philosphical totality in this document.
+
+== Measurement data
+
+We take examples of meaurement data from 4 sources.
+
+Their data is dissimilar, for example:
+
+* emailed Excel files vs. CKAN hosted CSV files
+* kilograms vs. tonnes
+* various means of indicating a date
+* various ways of categorising the stuff that gets reused. 
+
+However, our end goal is to derive the same information from each of them, for example:
+
+[format="csv",options="header"]
+|===================================================
+occurrence-date,scottish-carbon-metric-material,tonnes-weight,enabler,enabler-specific-data
+2019-10-09,Wood,0.34,"Alloa Community Enterprises","2 large display cabinets"
+2019-10-09,"Food and Drink Waste (Composting)",0.34,"Stirling Community Food","Would-have-been waste food"
+2021-08-31,"Glass (colour separated)",53.6,Stirling council,"collection from household glass recycling bins"
+2019-10-09,Textiles,0.34,"The Fair Share","Sold 2nd-hand duvets"
+|===================================================
+
+
+=== Alloa Community Enterprises - reused furniture
+
+https://ace.scot/[Alloa Community Enterprises]' (ACE) 
+furniture reuse initiative has been running since 1984, helping prevent furniture from becoming waste.
+
+ACE is in the process of publishing its data as open data. 
+The following examples of measurement data have been taken from a draft of that work.
+
+
+=== Stirling Community Food - redistributed food
+
+https://www.transitionstirling.org.uk/community-food[Stirling Community Food]
+ is a project that helps to reduce food waste in Stirling by collecting (from supermarkets & aggregators) excess and near-sell-by-date food, routing it away from waste bins, and making it available (for free) to the community.
+
+Stirling Community Food is in the process of publishing its data as open data. 
+The following examples of measurement data have been taken from a draft of that work.
+
+=== Stirling Council - household recycling bins
+
+https://stirling.gov.uk/council-democracy/access-to-information/open-data/[Stirling Council] set a precedent by being the first (and still only) Scottish local authority to have published open data about their bin collection of household waste. 
+
+The following examples of measurement data have been taken from that published data.
+
+=== The Fair Share - reused student-oriented items
+
+https://www.stirlingstudentsunion.com/sustainability/fairshare/[The Fair Share] is a university based, reuse store. It accepts donations of second-hand books, clothes, kitchenware, electricals, etc. and sells these to students.
+
+The Fair Share is in the process of publishing its data as open data. 
+The following examples of measurement data have been taken from a draft of that work.
+
+
+== Converting it to linked data
+
+== Publishing it as open data
+
+== Using it
+
+== Next?
+
+* Add other dimensions such as geographic region (sourced from? given to?)
+* Adopt other vocabs? (statistical vocabs?)
+* Support upload by enablers (upload -> validate -> add to the published LoD)
+* Context: COP26 etc.
+
