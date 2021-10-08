@@ -1,5 +1,5 @@
 = Building linked open data about carbon savings
-Data Commons Scotland <dcs@stir.ac.uk>
+The Data Commons Scotland project; Greg Singh; Anna Wilson; Hannah Hamilton; Ashley McClenaghan
 October 2021
 :sectnums:
 :toc:
@@ -252,10 +252,21 @@ they are: *easy to use*, understand, consume and parse.
 Indeed, for many purposes and for use by non data experts, such CSVs will be good enough 
 for publication as *open data* without further augmentation. 
 
-===  Implicit → explicit linking
+===  Implicit → explicit 
 
 TODO
 
+we have rectify the inconsistenciess, mapped text values to cannocical (implicitly shared) code lists, standardised numeric and date values 
+
+we have impliclt meaning and implicit linking
+
+by aygmenting with std vocabs to provide extra semantics ...to tell you about how the data is linked and how to interprete it
+
+=== Describing the reference data using CSVVW
+
+=== Describing the reference data using CSVVW
+
+=== Generating RDF
 
 == Publishing it as open data
 
