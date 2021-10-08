@@ -240,6 +240,23 @@ include::carbon-savings.csv[lines="1..1,13..17"]
 
 == CSVs → linked data
 
+=== CSVs may be good enough
+
+In the previous sections we _re-worked_ the source data into
+https://vita.had.co.nz/papers/tidy-data.html[tidy] CSV files. 
+
+These resulting CSVs may not be as detailed or have all the nuances as their source data
+- but for the purpose of understanding _carbon savings_,
+they are: *easy to use*, understand, consume and parse.
+
+Indeed, for many purposes and for use by non data experts, such CSVs will be good enough 
+for publication as *open data* without further augmentation. 
+
+===  Implicit → explicit linking
+
+TODO
+
+
 == Publishing it as open data
 
 == Using it
