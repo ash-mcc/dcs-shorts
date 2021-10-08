@@ -1,5 +1,8 @@
 = Building linked open data about carbon savings
+Data Commons Scotland <dcs@stir.ac.uk>
+October 2021
 :sectnums:
+:toc:
 
 ////
 tags: 
@@ -11,7 +14,7 @@ tags:
 
 This is a _walk-through_ of how we can build *linked open data* (LoD) about *carbon savings* from dissimilar data sources.
 
-== Reference data
+== Reference data → CSV
 
 The _carbon impact_ is a measure devised by 
 https://www.zerowastescotland.org.uk/[Zero Waste Scotland] (ZWS), 
@@ -27,7 +30,7 @@ This contains per-material weight-multipliers that can be used to calaculate CO~
 
 Here's a snipped image of that table:
 
-image::carbon-metric-table-6_2-snippet.png["The key data in The Scottish Carbon Metric", width=50%]
+image::carbon-metric-table-6_2-snippet.png["A snippet of the key data in The Scottish Carbon Metric", width=50%]
 
 NOTE: This table's data has been published as linked open data by our project, in previous work.
 See the `co2e-multiplier` files in https://github.com/data-commons-scotland/dcs-easier-open-data[this repo]. But we will redo that work here so that that we can provide an explanatory walk-through.
@@ -52,14 +55,14 @@ Instead, if a reuse store sells them to its customers, it has made a _carbon sav
 
 CAUTION: The term _carbon saving_ is a little misleading. A better name for it might be _carbon impact deferrals_ since all objects are eventually disposed of. But we won't pursue that philosphical totality in this document.
 
-== Measurement data
+== Measurement data → CSV
 
 We take examples of meaurement data from 4 sources.
 
 Their data is dissimilar, for example:
 
-* emailed Excel files vs. CKAN hosted CSV files
-* kilograms vs. tonnes
+* emailed Excel files _vs._ CKAN hosted CSV files
+* kilograms _vs._ tonnes
 * various means of indicating a date
 * various ways of categorising the stuff that gets reused. 
 
@@ -67,46 +70,175 @@ However, our end goal is to derive the same information from each of them, for e
 
 [format="csv",options="header"]
 |===================================================
-occurrence-date,scottish-carbon-metric-material,tonnes-weight,enabler,enabler-specific-data
-2019-10-09,Wood,0.34,"Alloa Community Enterprises","2 large display cabinets"
-2019-10-09,"Food and Drink Waste (Composting)",0.34,"Stirling Community Food","Would-have-been waste food"
-2021-08-31,"Glass (colour separated)",53.6,Stirling council,"collection from household glass recycling bins"
-2019-10-09,Textiles,0.34,"The Fair Share","Sold 2nd-hand duvets"
+include::carbon-savings.csv[lines="1..2,8..8,10..10,13..13"]
 |===================================================
 
+So for each source, we:
+
+[loweralpha]
+. parse the essential values out of the source files
+. derive and standardise values 
+[lowerroman]
+.. mapping text values into canonical _code lists_
+.. appropriately scaling numbers
+.. applying a standard format to dates
+.. (encode source-specific data that would be useful to propogate, into the `enabler-specific` field)
+. output as CSV.
 
 === Alloa Community Enterprises - reused furniture
+
+image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/ace-furniture.png["Alloa Community Enterprises logo",width=60%,float=right]
 
 https://ace.scot/[Alloa Community Enterprises]' (ACE) 
 furniture reuse initiative has been running since 1984, helping prevent furniture from becoming waste.
 
 ACE is in the process of publishing its data as open data. 
-The following examples of measurement data have been taken from a draft of that work.
+The following examples of measurement data have been taken from a *draft* of that work.
 
+Here's a snipped image of ACE's measurement data:
+
+image::ace-raw-snippet.png["A snippet of the measurement data in the Alloa Community Enterprises supplied Excel spreadsheet"]
+
+The main steps in processing ACE's measurement data (the snippet shown above) are:
+
+[loweralpha]
+. Parse the essential values out of columns `A`-`D` & `F`
+. Derive and standardise values ...
+[lowerroman]
+.. We map each pair of `Category` & `Items` values, to a `scottish-carbon-metric-material` value. 
+We build this mapping table as a CSV file: link:ace-to-carbon-metric.csv[ace-to-carbon-metric.csv].
+Here's a snippet of data from that file:
++
+[format="csv",options="header"]
+|===================================================
+include::ace-to-carbon-metric.csv[lines="1..1,7..7,46..46"]
+|===================================================
+.. Multiple columns `D` & `F` by column `C` and divide by 1000, to calculate the `tonnes-weight` value.
+.. Map the headers of columns `D` & `F`, to establish the `occurrence-date` value.
+.. Capture furniture type & count information in the `enabler-specific` value.
++
+. Output the end result as the CSV rows: 
++
+[format="csv",options="header"]
+|===================================================
+include::carbon-savings.csv[lines="1..1,2..5"]
+|=================================================== 
 
 === Stirling Community Food - redistributed food
+
+image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/stirling-community-food.png["Stirling Community Food logo",width=60%,float=right]
 
 https://www.transitionstirling.org.uk/community-food[Stirling Community Food]
  is a project that helps to reduce food waste in Stirling by collecting (from supermarkets & aggregators) excess and near-sell-by-date food, routing it away from waste bins, and making it available (for free) to the community.
 
 Stirling Community Food is in the process of publishing its data as open data. 
-The following examples of measurement data have been taken from a draft of that work.
+The following examples of measurement data have been taken from a *draft* of that work. 
+
+Here's a snipped image of Stirling Community Food's measurement data:
+
+image::stirling-community-food-raw-snippet.png["A snippet of the measurement data in the Stirling Community Food supplied Excel spreadsheet"]
+
+The main steps in processing Stirling Community Food's measurement data (the snippet shown above) are:
+
+[loweralpha]
+. Parse the essential values out of columns `A`-`O`
+. Derive and standardise values ...
+[lowerroman]
+.. We map the 'outcomes' (i.e. how the food material got used) to a `scottish-carbon-metric-material` value. 
+We build this mapping table as a CSV file: link:stirling-community-food-to-carbon-metric.csv[stirling-community-food-to-carbon-metric.csv].
+Here's the data from that file:
++
+[format="csv",options="header"]
+|===================================================
+include::stirling-community-food-to-carbon-metric.csv[]
+|===================================================
++
+.. Calaculate the total amounts of food materials for each of the outcome (converting from kgs to tonnes), to calculate the `tonnes-weight` value.
+.. Interpret column `B` to establish the `occurrence-date` value.
+.. Capture outcome information in the `enabler-specific` value.
+. Output the end result as the CSV rows: 
++
+[format="csv",options="header"]
+|===================================================
+include::carbon-savings.csv[lines="1..1,6..9"]
+|=================================================== 
 
 === Stirling Council - household recycling bins
 
-https://stirling.gov.uk/council-democracy/access-to-information/open-data/[Stirling Council] set a precedent by being the first (and still only) Scottish local authority to have published open data about their bin collection of household waste. 
+image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/looking-at-bin-collections.jpeg["Stirling Council logo",width=60%,float=right]
+
+https://stirling.gov.uk/council-democracy/access-to-information/open-data/[Stirling Council] set a precedent by being the first (and still only) Scottish local authority to have published open data about their https://data.stirling.gov.uk/dataset/waste-management[bin collection of household waste]. 
 
 The following examples of measurement data have been taken from that published data.
 
+Here's a snipped image of Stirling Council's measurement data:
+
+image::stirling-council-raw-snippet.png["A snippet of the measurement data in the Stirling Council CKAN supplied CSV",width=70%]
+
+The main steps in processing Stirling Council's measurement data (the snippet shown above) are:
+
+[loweralpha]
+. Parse the essential values out of columns `B` - `C`, `E` - `F` & `H`
+. Derive and standardise values ...
+[lowerroman]
+.. We map column `E` to to a `scottish-carbon-metric-material` value. 
+We build this mapping table as a CSV file: link:stirling-council-to-carbon-metric.csv[stirling-council-to-carbon-metric.csv].
+Here's a snippet of data from that file:
++
+[format="csv",options="header"]
+|===================================================
+include::stirling-council-to-carbon-metric.csv[lines="1..1,4..5,8..8"]
+|===================================================
++
+.. Use column `F` as the `tonnes-weight` value.
+.. Interpret column `B` to establish the `occurrence-date` value.
+.. Note the `Route` information in the `enabler-specific` value.
+. Output the end result as the CSV rows: 
++
+[format="csv",options="header"]
+|===================================================
+include::carbon-savings.csv[lines="1..1,10..12"]
+|=================================================== 
+
 === The Fair Share - reused student-oriented items
+
+image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/fairshare.png["The Fair Share logo",width=60%,float=right]
 
 https://www.stirlingstudentsunion.com/sustainability/fairshare/[The Fair Share] is a university based, reuse store. It accepts donations of second-hand books, clothes, kitchenware, electricals, etc. and sells these to students.
 
 The Fair Share is in the process of publishing its data as open data. 
-The following examples of measurement data have been taken from a draft of that work.
+The following examples of measurement data have been taken from a *draft* of that work.
 
+Here's a snipped image of The fair Share's measurement data:
 
-== Converting it to linked data
+image::the-fair-share-raw-snippet.png["A snippet of the measurement data in The Fair Share supplied Excel spreadsheet",width=70%]
+
+The main steps in processing The Fair Share's measurement data (the snippet shown above) are:
+
+[loweralpha]
+. Parse the essential values out of columns `A` - `B`, & from the worksheet name
+. Derive and standardise values ...
+[lowerroman]
+.. We map column `B` to to a `scottish-carbon-metric-material` value. 
+We build this mapping table as a CSV file: link:the-fair-share-to-carbon-metric.csv[the-fair-share-to-carbon-metric.csv].
+Here's a snippet of data from that file:
++
+[format="csv",options="header"]
+|===================================================
+include::the-fair-share-to-carbon-metric.csv[]
+|===================================================
++
+.. Use column `B` divided by 1000, as the `tonnes-weight` value.
+.. Map the worksheet's name to establish the `occurrence-date` value.
+.. Note the university's semester in the `enabler-specific` value.
+. Output the end result as the CSV rows: 
++
+[format="csv",options="header"]
+|===================================================
+include::carbon-savings.csv[lines="1..1,13..17"]
+|===================================================
+
+== CSVs → linked data
 
 == Publishing it as open data
 
