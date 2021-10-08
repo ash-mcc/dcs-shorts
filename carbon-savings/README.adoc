@@ -38,10 +38,10 @@ See the `co2e-multiplier` files in https://github.com/data-commons-scotland/dcs-
 We copy the table's data from its original PDF format into a more tractable, 
 CSV file: link:carbon-metric.csv[carbon-metric.csv].
 Here's a snippet of data from that file:
-
+ 
 [format="csv",options="header",width=50%]
 |===================================================
-include::carbon-metric.csv[lines=1..8]
+include::carbon-metric.csv[lines="1..8"]
 |===================================================
 
 So, for our carbon savings data:
