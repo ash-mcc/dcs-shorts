@@ -1,0 +1,20 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "carbon-metric.csv",
+  "tableSchema": {
+    "columns": [{
+      "name": "material",
+      "titles": "material",
+      "datatype": "string",
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasMaterial"
+    }, {
+      "name": "multiplier",
+      "titles": "multiplier",
+      "datatype": "decimal",
+      "required": true,
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasMultiplier"
+    }],
+    "primaryKey": "material",
+    "aboutUrl": "http://datacommonsscotland.org/linked-data/entity/carbon-metric/{material}"
+  }
+}

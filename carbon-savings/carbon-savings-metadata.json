@@ -1,0 +1,42 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "carbon-savings.csv",
+  "tableSchema": {
+    "columns": [{
+      "name": "occurrenceDate",
+      "titles": "occurrence-date",
+      "datatype": "date",
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate"
+    }, {
+      "name": "material",
+      "titles": "scottish-carbon-metric-material",
+      "datatype": "string",
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasMaterial"
+    }, {
+      "name": "tonnesWeight",
+      "titles": "tonnes-weight",
+      "datatype": "decimal",
+      "required": true,
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasTonnesWeight"
+    }, {
+      "name": "enabler",
+      "titles": "enabler",
+      "datatype": "string",
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasEnabler"
+    }, {
+      "name": "enablerSpecific",
+      "titles": "enabler-specific",
+      "datatype": "string",
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific"
+    }],
+    "primaryKey": ["occurrenceDate", "material", "enabler", "enablerSpecific"], <1>
+    "foreignKeys": [{ <2>
+      "columnReference": "material",
+      "reference": {
+        "resource": "carbon-metric.csv",
+        "columnReference": "material"
+      }
+    }],
+    "aboutUrl": "http://datacommonsscotland.org/linked-data/entity/carbon-savings/{occurrenceDate}/{material}/{enabler}/{enablerSpecific}"
+  }
+}

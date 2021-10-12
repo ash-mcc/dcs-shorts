@@ -2,18 +2,17 @@
 The Data Commons Scotland project; Greg Singh; Anna Wilson; Hannah Hamilton; Ashley McClenaghan
 October 2021
 :sectnums:
-:toc:
-
-////
-tags: 
-  LoD OD "linked open data" CSVW RDF 
-  charty "3rd sector" Scottish Scotland waste reuse recycle 
-  "carbon impact" "carbon saving" CO2e "carbon metric" COP26 
-  Swirrl Blazegraph Vega-lite Clojure
-////
+:xrefstyle: short
+:section-refsig:
+:icons: font
+//:toc:
+:keywords: LoD, OD, linked open data, CSVW, RDF, charty, 3rd sector, Scottish, Scotland, \
+waste, reuse, recycle, carbon impact, carbon saving, CO2e, carbon metric, \
+COP26, Swirrl, Blazegraph, Vega-lite, Clojure
 
 This is a _walk-through_ of how we can build *linked open data* (LoD) about *carbon savings* from dissimilar data sources.
 
+[#r-data]
 == Reference data → CSV
 
 The _carbon impact_ is a measure devised by 
@@ -46,15 +45,24 @@ include::carbon-metric.csv[lines="1..8"]
 
 So, for our carbon savings data:
 
-* CO~2~eT will be used as the primary unit-of-measure
 * link:carbon-metric.csv[carbon-metric.csv] will be referenced as the basis for calculations.
+* CO~2~eT will be used as the primary unit-of-measure
+
+For example, consider 1 tonne of (used) shoes...
+[none]
+* If these were landfilled at a waste site then the _carbon impact_ would be:
 +
-For example, consider 1 tonne of (used) shoes.
-If these were landfilled at a waste site then the _carbon impact_ would be: 1 x 31.17 CO2~e~T.
-Instead, if a reuse store sells them to its customers, it has made a _carbon saving_ of 31.17 CO2~e~T.
+====
+  (1 tonne) x (the `multiplier` value for `Footwear` from `carbon-metric.csv`)
+= (1 tonne) x (31.17  CO2e) 
+= 31.17 CO2eT
+====
+
+* Instead, if a reuse store sells them to its customers, it has made a _carbon saving_ of 31.17 CO2~e~T.
 
 CAUTION: The term _carbon saving_ is a little misleading. A better name for it might be _carbon impact deferrals_ since all objects are eventually disposed of. But we won't pursue that philosphical totality in this document.
 
+[#m-data]
 == Measurement data → CSV
 
 We take examples of meaurement data from 4 sources.
@@ -66,14 +74,16 @@ Their data is dissimilar, for example:
 * various means of indicating a date
 * various ways of categorising the stuff that gets reused. 
 
-However, our end goal is to derive the same information from each of them, for example:
+...but our end goal is to derive the same information from each of them.
+This information can be seen in our target CSV file: link:carbon-savings.csv[carbon-savings.csv].
+Here's a snippet of data from that file:
 
 [format="csv",options="header"]
 |===================================================
 include::carbon-savings.csv[lines="1..2,8..8,10..10,13..13"]
 |===================================================
 
-So for each source, we:
+To derive that CSV file, we do the following for each source:
 
 [loweralpha]
 . parse the essential values out of the source files
@@ -84,6 +94,11 @@ So for each source, we:
 .. applying a standard format to dates
 .. (encode source-specific data that would be useful to propogate, into the `enabler-specific` field)
 . output as CSV.
+
+[#tidy]
+NOTE: Our process is basically: messy data → _tidy_ CSV data. +
+The https://vita.had.co.nz/papers/tidy-data.html[Tidy Data] paper provides 
+good rationale for and examples of this process, generalised.
 
 === Alloa Community Enterprises - reused furniture
 
@@ -242,29 +257,63 @@ include::carbon-savings.csv[lines="1..1,13..17"]
 
 === CSVs may be good enough
 
-In the previous sections we _re-worked_ the source data into
-https://vita.had.co.nz/papers/tidy-data.html[tidy] CSV files. 
-
-These resulting CSVs may not be as detailed or have all the nuances as their source data
+In sections <<r-data>> & <<m-data>> 
+we _re-worked_ the source data into CSV files 
+with inconsistences rectified, text values mapped to cannocical code lists, 
+and numeric & date values standardised.
+The resulting CSVs may not be as detailed or have all the nuances as their source data
 - but for the purpose of understanding _carbon savings_,
-they are: *easy to use*, understand, consume and parse.
-
+they are *easy to use*, understand, consume and parse.
 Indeed, for many purposes and for use by non data experts, such CSVs will be good enough 
 for publication as *open data* without further augmentation. 
 
-===  Implicit → explicit 
+===  Describing our data using linked data vocabularies 
 
-TODO...
+Our CSVs have _implicit_ meaning and linking. E.g. 
 
-we have rectify the inconsistenciess, mapped text values to cannocical (implicitly shared) code lists, standardised numeric and date values 
+* an `occurrence-date` value, _implicity_ has the semantics of being a _date_
+* a `carbon-metric-material` value in the measurements CSV, _implicity_ is linked to the same `material` value in the reference data CSV.
 
-we have impliclt meaning and implicit linking
+For a standalone case study, this may be good enough
+but, for our data to become part of the global linked data graph,
+we need to define its semantics _explicitly_, in standardised way.
+I.e. we need to describe our data using standard _linked data vocabularies_,
+to explain to everyone how to interpret our data and how it is linked to other data.
 
-by aygmenting with std vocabs to provide extra semantics ...to tell you about how the data is linked and how to interprete it
+=== Using CSVW
 
-=== Describing the reference data using CSVVW
+http://www.w3.org/TR/tabular-data-primer/[CSV on the Web] (CSVW)
+is a standardised mechanism for associating linked data semantics/_metadata_ with CSV files.
 
-=== Describing the reference data using CSVVW
+It is nice because it allows us to keep our existing CSVs simple: unadulterated by
+linked data complications. (Although the CSVs must be of the <<tidy,tidy>> kind,
+as output from sections <<r-data>> & <<m-data>>.)
+
+Let's create CSVW files to give our CSVs linked data semantics.
+
+==== CSVW for our reference data
+
+link:carbon-metric-metadata.json[carbon-metric-metadata.json]
+contains the CSVW that gives linked data semantics to our reference data CSV.
+
+Its feature of interest are described below.
+
+[source,json]
+----
+include::carbon-metric-metadata.json[]
+----
+
+==== CSVW for our measurement data
+
+link:carbon-savings-metadata.json[carbon-savings-metadata.json]
+contains the CSVW that gives linked data semantics to our measurement data CSV.
+
+Its feature of interest are described below.
+
+[source,json]
+----
+include::carbon-savings-metadata.json[]
+----
 
 === Generating RDF
 
