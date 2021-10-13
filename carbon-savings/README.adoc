@@ -5,77 +5,40 @@ October 2021
 :xrefstyle: short
 :section-refsig:
 :icons: font
-//:toc:
+:toc:
 :keywords: LoD, OD, linked open data, CSVW, RDF, charty, 3rd sector, Scottish, Scotland, \
 waste, reuse, recycle, carbon impact, carbon saving, CO2e, carbon metric, \
 COP26, Swirrl, Blazegraph, Vega-lite, Clojure
 
 This is a _walk-through_ of how we can build *linked open data* (LoD) about *carbon savings* from dissimilar data sources.
 
-[#r-data]
-== Reference data → CSV
-
-The _carbon impact_ is a measure devised by 
-https://www.zerowastescotland.org.uk/[Zero Waste Scotland] (ZWS), 
-to convey the whole-life carbon impact of waste, from resource extraction and manufacturing emissions, right through to waste management emissions. 
-Its unit-of-measure is _tonnes of carbon dioxide equivalent_ (CO~2~eT).
-
-This is a reasonable basis for measuring carbon savings so we will use it as _reference data_.
- 
-It is defined in
-https://www.zerowastescotland.org.uk/sites/default/files/The%20Scottish%20Carbon%20Metric.pdf[The Scottish Carbon Metric] document. 
-For our purpose, its key data is in table 6.2.
-This contains per-material weight-multipliers that can be used to calaculate CO~2~eT amounts. 
-
-Here's a snipped image of that table:
-
-image::carbon-metric-table-6_2-snippet.png["A snippet of the key data in The Scottish Carbon Metric", width=50%]
-
-NOTE: This table's data has been published as linked open data by our project, in previous work.
-See the `co2e-multiplier` files in https://github.com/data-commons-scotland/dcs-easier-open-data[this repo]. But we will redo that work here so that that we can provide an explanatory walk-through.
-
-We copy the table's data from its original PDF format into a more tractable, 
-CSV file: link:carbon-metric.csv[carbon-metric.csv].
-Here's a snippet of data from that file:
- 
-[format="csv",options="header",width=50%]
-|===================================================
-include::carbon-metric.csv[lines="1..8"]
-|===================================================
-
-So, for our carbon savings data:
-
-* link:carbon-metric.csv[carbon-metric.csv] will be referenced as the basis for calculations.
-* CO~2~eT will be used as the primary unit-of-measure
-
-For example, consider 1 tonne of (used) shoes...
-[none]
-* If these were landfilled at a waste site then the _carbon impact_ would be:
-+
-====
-  (1 tonne) x (the `multiplier` value for `Footwear` from `carbon-metric.csv`)
-= (1 tonne) x (31.17  CO2e) 
-= 31.17 CO2eT
-====
-
-* Instead, if a reuse store sells them to its customers, it has made a _carbon saving_ of 31.17 CO2~e~T.
-
-CAUTION: The term _carbon saving_ is a little misleading. A better name for it might be _carbon impact deferrals_ since all objects are eventually disposed of. But we won't pursue that philosphical totality in this document.
 
 [#m-data]
 == Measurement data → CSV
 
-We take examples of meaurement data from 4 sources.
+=== Sources
+
+We take examples of meaurement data from 4 sources:
+
+[square]
+- Alloa Community Enterprises - reused furniture
+- Stirling Community Food - redistributed food
+- Stirling Council - household recycling bins
+- The Fair Share - reused, student-oriented items.
+
+=== Deriving the same information from the dissimilar sources
 
 Their data is dissimilar, for example:
 
+* 3rd sector reporting _vs._ local government reporting
 * emailed Excel files _vs._ CKAN hosted CSV files
 * kilograms _vs._ tonnes
-* various means of indicating a date
+* various means of indicating dates
 * various ways of categorising the stuff that gets reused. 
 
 ...but our end goal is to derive the same information from each of them.
-This information can be seen in our target CSV file: link:carbon-savings.csv[carbon-savings.csv].
+This information can be seen in the CSV file that contains the results of our efforts
+in this section: link:carbon-savings.csv[carbon-savings.csv].
 Here's a snippet of data from that file:
 
 [format="csv",options="header"]
@@ -83,22 +46,38 @@ Here's a snippet of data from that file:
 include::carbon-savings.csv[lines="1..2,8..8,10..10,13..13"]
 |===================================================
 
+==== The process
+
 To derive that CSV file, we do the following for each source:
 
 [loweralpha]
 . parse the essential values out of the source files
 . derive and standardise values 
 [lowerroman]
-.. mapping text values into canonical _code lists_
-.. appropriately scaling numbers
+.. mapping text values into controlled, canonical _code lists_ (e.g. the Scottish Carbon Metric's list of `materials`; our list of carbon-savings `enabler` organisations)
+.. appropriately scaling numbers (e.g. weight amounts to `tonnes`)
 .. applying a standard format to dates
-.. (encode source-specific data that would be useful to propogate, into the `enabler-specific` field)
+.. encode source-specific data that would be useful to propogate, into the `enabler-specific` field
 . output as CSV.
 
 [#tidy]
 NOTE: Our process is basically: messy data → _tidy_ CSV data. +
 The https://vita.had.co.nz/papers/tidy-data.html[Tidy Data] paper provides 
 good rationale for and examples of this process, generalised.
+
+==== Design decisions
+
+* To use The Scottish Carbon Metric as the basis for measuring carbon savings.
+This is refered to via the `scottish-carbon-metric-material` column; and we will discuss it
+further in section <<r-data>>. 
+* Accounting & reporting procedures usually batch into a single carbon-savings record: the
+occurrences within an interval of time of _same material-class_ reuse/recycling.
+The intervals of time are represented by the (inclusive) dates in the
+`occurred-from` and `occurred-to` columns.
+* Reduce "double accounting" by trying to ensure that:
+the data contains no records where
+one carbon savings enabler 'feeds' the same reuse/recycling item to another enabler, 
+within some (significant-for-use) duration.
 
 === Alloa Community Enterprises - reused furniture
 
@@ -215,7 +194,7 @@ include::stirling-council-to-carbon-metric.csv[lines="1..1,4..5,8..8"]
 include::carbon-savings.csv[lines="1..1,10..12"]
 |=================================================== 
 
-=== The Fair Share - reused student-oriented items
+=== The Fair Share - reused, student-oriented items
 
 image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/fairshare.png["The Fair Share logo",width=60%,float=right]
 
@@ -252,6 +231,58 @@ include::the-fair-share-to-carbon-metric.csv[]
 |===================================================
 include::carbon-savings.csv[lines="1..1,13..17"]
 |===================================================
+
+
+[#r-data]
+== Reference data → CSV
+
+The _carbon impact_ is a measure devised by 
+https://www.zerowastescotland.org.uk/[Zero Waste Scotland] (ZWS), 
+to convey the whole-life carbon impact of waste, from resource extraction and manufacturing emissions, right through to waste management emissions. 
+Its unit-of-measure is _tonnes of carbon dioxide equivalent_ (CO~2~eT).
+
+This is a reasonable basis for measuring carbon savings so we will use it as _reference data_.
+ 
+It is defined in
+https://www.zerowastescotland.org.uk/sites/default/files/The%20Scottish%20Carbon%20Metric.pdf[The Scottish Carbon Metric] document. 
+For our purpose, its key data is in table 6.2.
+This contains per-material weight-multipliers that can be used to calaculate CO~2~eT amounts. 
+
+Here's a snipped image of that table:
+
+image::carbon-metric-table-6_2-snippet.png["A snippet of the key data in The Scottish Carbon Metric", width=50%]
+
+NOTE: This table's data has been published as linked open data by our project, in previous work.
+See the `co2e-multiplier` files in https://github.com/data-commons-scotland/dcs-easier-open-data[this repo]. But we will redo that work here so that that we can provide an explanatory walk-through.
+
+We copy the table's data from its original PDF format into a more tractable, 
+CSV file: link:carbon-metric.csv[carbon-metric.csv].
+Here's a snippet of data from that file:
+ 
+[format="csv",options="header",width=50%]
+|===================================================
+include::carbon-metric.csv[lines="1..8"]
+|===================================================
+
+So, for our carbon savings data:
+
+* link:carbon-metric.csv[carbon-metric.csv] will be referenced as the basis for calculations.
+* CO~2~eT will be used as the primary unit-of-measure
+
+For example, consider 1 tonne of (used) shoes...
+[none]
+* If these were landfilled at a waste site then the _carbon impact_ would be:
++
+====
+  (1 tonne) x (the `multiplier` value for `Footwear` from `carbon-metric.csv`)
+= (1 tonne) x (31.17  CO2e) 
+= 31.17 CO2eT
+====
+
+* Instead, if a reuse store sells them to its customers, it has made a _carbon saving_ of 31.17 CO2~e~T.
+
+CAUTION: The term _carbon saving_ is a little misleading. A better name for it might be _carbon impact deferrals_ since all objects are eventually disposed of. But we won't pursue that philosphical totality in this document.
+
 
 == CSVs → linked data
 
@@ -296,24 +327,40 @@ Let's create CSVW files to give our CSVs linked data semantics.
 link:carbon-metric-metadata.json[carbon-metric-metadata.json]
 contains the CSVW that gives linked data semantics to our reference data CSV.
 
-Its feature of interest are described below.
+Its features of interest are described below.
 
 [source,json]
 ----
-include::carbon-metric-metadata.json[]
+include::carbon-metric-metadata.annotated-json[]
 ----
+
+<1> Explicitly associate this CSVW with our reference data file.
+<2> The `material` value has the type https://www.w3.org/2001/XMLSchema#string[xsd:string].
+<3> The `multiplier` value has the type https://www.w3.org/2001/XMLSchema#decimal[xsd:decimal].
+<4> The `multiplier` value is mandatory. 
+<5> The `material` value is the primary key (and is mandatory).
+<6> How to construct the URI (unique identifier) for each reference record. 
 
 ==== CSVW for our measurement data
 
 link:carbon-savings-metadata.json[carbon-savings-metadata.json]
 contains the CSVW that gives linked data semantics to our measurement data CSV.
 
-Its feature of interest are described below.
+Its features of interest are described below.
 
 [source,json]
 ----
-include::carbon-savings-metadata.json[]
+include::carbon-savings-metadata.annotated-json[]
 ----
+
+<1> Explicitly associate this CSVW with our measurement data file.
+<2> TODO cardinality
+<3> The primary key is a composite.
+Including `enablerSpecific` as a component of the primary key, 
+allows the possibility for the `enabler` to report measurements at an
+additional level of granularity. 
+<4> The `material` value is, in essence, a link into our `carbon-metric` reference data. 
+<5> How to construct the URI (unique identifier) for each measurement record. 
 
 === Generating RDF
 
@@ -325,6 +372,15 @@ include::carbon-savings-metadata.json[]
 
 * Add other dimensions such as geographic region (sourced from? given to?)
 * Adopt other vocabs? (statistical vocabs?)
+
+	
+* this is allows us to very-roughly compare the carbon-saving aspect of the responsible-entities
+	* hmmm, like any tool, it can be/drive/build good and bad. Hopefully good in today's context. But for now, this is just an academic exercise.
+
+* data revision?
+  fact retraction and upsert
+
 * Support upload by enablers (upload -> validate -> add to the published LoD)
 * Context: COP26 etc.
 
+* Have a proper bibliography
