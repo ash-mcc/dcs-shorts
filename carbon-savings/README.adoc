@@ -6,11 +6,20 @@ October 2021
 :section-refsig:
 :icons: font
 :toc:
+:toclevels: 3
 :keywords: LoD, OD, linked open data, CSVW, RDF, charty, 3rd sector, Scottish, Scotland, \
 waste, reuse, recycle, carbon impact, carbon saving, CO2e, carbon metric, \
 COP26, Swirrl, Blazegraph, Vega-lite, Clojure
 
+[.float-group]
+--
+image::lod-for-carbon-savings.png["Building linked open data about carbon savings - logo",width=40%,float=right,align=center]
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
 This is a _walk-through_ of how we can build *linked open data* (LoD) about *carbon savings* from dissimilar data sources.
+--
 
 
 [#m-data]
@@ -46,7 +55,7 @@ Here's a snippet of data from that file:
 include::carbon-savings.csv[lines="1..2,8..8,10..10,13..13"]
 |===================================================
 
-==== The process
+=== The process
 
 To derive that CSV file, we do the following for each source:
 
@@ -65,7 +74,7 @@ NOTE: Our process is basically: messy data → _tidy_ CSV data. +
 The https://vita.had.co.nz/papers/tidy-data.html[Tidy Data] paper provides 
 good rationale for and examples of this process, generalised.
 
-==== Design decisions
+=== Design decisions
 
 * To use The Scottish Carbon Metric as the basis for measuring carbon savings.
 This is refered to via the `scottish-carbon-metric-material` column; and we will discuss it
@@ -74,14 +83,22 @@ further in section <<r-data>>.
 occurrences within an interval of time of _same material-class_ reuse/recycling.
 The intervals of time are represented by the (inclusive) dates in the
 `occurred-from` and `occurred-to` columns.
+* Include the `enabler-specific` column to allow ``enabler``s to:
+propogate additional information; and to report 
+measurements at an additional level of granularity (see the <<additional-granularity,primary key>> explanation, later).
 * Reduce "double accounting" by trying to ensure that:
 the data contains no records where
-one carbon savings enabler 'feeds' the same reuse/recycling item to another enabler, 
+one carbon savings `enabler` 'feeds' the same reuse/recycling item to another `enabler`, 
 within some (significant-for-use) duration.
 
-=== Alloa Community Enterprises - reused furniture
+=== Per-source _walk-throughs_
 
-image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/ace-furniture.png["Alloa Community Enterprises logo",width=60%,float=right]
+In this section we _walk-through_ the _measurement → CSV_ process, for each source; 
+outlining some per-source specifics. 
+
+==== Alloa Community Enterprises - reused furniture
+
+image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/ace-furniture.png["Alloa Community Enterprises logo",width=60%,float=right,align=center]
 
 https://ace.scot/[Alloa Community Enterprises]' (ACE) 
 furniture reuse initiative has been running since 1984, helping prevent furniture from becoming waste.
@@ -118,9 +135,9 @@ include::ace-to-carbon-metric.csv[lines="1..1,7..7,46..46"]
 include::carbon-savings.csv[lines="1..1,2..5"]
 |=================================================== 
 
-=== Stirling Community Food - redistributed food
+==== Stirling Community Food - redistributed food
 
-image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/stirling-community-food.png["Stirling Community Food logo",width=60%,float=right]
+image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/stirling-community-food.png["Stirling Community Food logo",width=60%,float=right,align=center]
 
 https://www.transitionstirling.org.uk/community-food[Stirling Community Food]
  is a project that helps to reduce food waste in Stirling by collecting (from supermarkets & aggregators) excess and near-sell-by-date food, routing it away from waste bins, and making it available (for free) to the community.
@@ -157,9 +174,9 @@ include::stirling-community-food-to-carbon-metric.csv[]
 include::carbon-savings.csv[lines="1..1,6..9"]
 |=================================================== 
 
-=== Stirling Council - household recycling bins
+==== Stirling Council - household recycling bins
 
-image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/looking-at-bin-collections.jpeg["Stirling Council logo",width=60%,float=right]
+image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/looking-at-bin-collections.jpeg["Stirling Council logo",width=60%,float=right,align=center]
 
 https://stirling.gov.uk/council-democracy/access-to-information/open-data/[Stirling Council] set a precedent by being the first (and still only) Scottish local authority to have published open data about their https://data.stirling.gov.uk/dataset/waste-management[bin collection of household waste]. 
 
@@ -194,9 +211,9 @@ include::stirling-council-to-carbon-metric.csv[lines="1..1,4..5,8..8"]
 include::carbon-savings.csv[lines="1..1,10..12"]
 |=================================================== 
 
-=== The Fair Share - reused, student-oriented items
+==== The Fair Share - reused, student-oriented items
 
-image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/fairshare.png["The Fair Share logo",width=60%,float=right]
+image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/fairshare.png["The Fair Share logo",width=60%,float=right,align=center]
 
 https://www.stirlingstudentsunion.com/sustainability/fairshare/[The Fair Share] is a university based, reuse store. It accepts donations of second-hand books, clothes, kitchenware, electricals, etc. and sells these to students.
 
@@ -355,7 +372,7 @@ include::carbon-savings-metadata.annotated-json[]
 
 <1> Explicitly associate this CSVW with our measurement data file.
 <2> TODO cardinality
-<3> The primary key is a composite.
+<3> [[additional-granularity]] The primary key is a composite.
 Including `enablerSpecific` as a component of the primary key, 
 allows the possibility for the `enabler` to report measurements at an
 additional level of granularity. 
