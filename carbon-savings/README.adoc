@@ -63,7 +63,9 @@ To derive that CSV file, we do the following for each source:
 . parse the essential values out of the source files
 . derive and standardise values 
 [lowerroman]
-.. mapping text values into controlled, canonical _code lists_ (e.g. the Scottish Carbon Metric's list of `materials`; our list of carbon-savings `enabler` organisations)
+.. mapping text values into controlled, canonical _code lists_
+(e.g. the Scottish Carbon Metric's list of `materials`;
+and our list of carbon-savings `enabler` organisations)
 .. appropriately scaling numbers (e.g. weight amounts to `tonnes`)
 .. applying a standard format to dates
 .. encode source-specific data that would be useful to propogate, into the `enabler-specific` field
@@ -76,13 +78,13 @@ good rationale for and examples of this process, generalised.
 
 === Design decisions
 
-* To use The Scottish Carbon Metric as the basis for measuring carbon savings.
+* Use The Scottish Carbon Metric as the basis for measuring carbon savings.
 This is refered to via the `scottish-carbon-metric-material` column; and we will discuss it
 further in section <<r-data>>. 
-* Accounting & reporting procedures usually batch into a single carbon-savings record: the
-occurrences within an interval of time of _same material-class_ reuse/recycling.
-The intervals of time are represented by the (inclusive) dates in the
-`occurred-from` and `occurred-to` columns.
+* Accounting & reporting procedures often batch into a single carbon-savings record, 
+all of the instances of _same material-class_ reuse/recycling that have
+occurred within an interval of time.
+The `occurrence-date` column captures the end date of those intervals.
 * Include the `enabler-specific` column to allow ``enabler``s to:
 propogate additional information; and to report 
 measurements at an additional level of granularity (see the <<additional-granularity,primary key>> explanation, later).
@@ -93,8 +95,8 @@ within some (significant-for-use) duration.
 
 === Per-source _walk-throughs_
 
-In this section we _walk-through_ the _measurement → CSV_ process, for each source; 
-outlining some per-source specifics. 
+In this section we walk-through the _measurement data → CSV_ process, for each source; 
+outlining some per-source specifics.
 
 ==== Alloa Community Enterprises - reused furniture
 
@@ -251,7 +253,11 @@ include::carbon-savings.csv[lines="1..1,13..17"]
 
 
 [#r-data]
-== Reference data → CSV
+== Reference data → CSVs
+
+In this section we walk-through building our two reference data CSVs.
+
+=== Carbon metric
 
 The _carbon impact_ is a measure devised by 
 https://www.zerowastescotland.org.uk/[Zero Waste Scotland] (ZWS), 
@@ -261,7 +267,7 @@ Its unit-of-measure is _tonnes of carbon dioxide equivalent_ (CO~2~eT).
 This is a reasonable basis for measuring carbon savings so we will use it as _reference data_.
  
 It is defined in
-https://www.zerowastescotland.org.uk/sites/default/files/The%20Scottish%20Carbon%20Metric.pdf[The Scottish Carbon Metric] document. 
+https://www.zerowastescotland.org.uk/sites/default/files/The%20Scottish%20Carbon%20Metric.pdf[The Scottish Carbon Metric,window=_blank] document. 
 For our purpose, its key data is in table 6.2.
 This contains per-material weight-multipliers that can be used to calaculate CO~2~eT amounts. 
 
@@ -299,6 +305,16 @@ For example, consider 1 tonne of (used) shoes...
 * Instead, if a reuse store sells them to its customers, it has made a _carbon saving_ of 31.17 CO2~e~T.
 
 CAUTION: The term _carbon saving_ is a little misleading. A better name for it might be _carbon impact deferrals_ since all objects are eventually disposed of. But we won't pursue that philosphical totality in this document.
+
+=== Enabler organisations
+
+We describe the `enabler` organisations in link:enablers.csv[enablers.csv].
+Here's the data from that file:
+
+[format="csv",options="header",width=75%]
+|===================================================
+include::enablers.csv[]
+|===================================================
 
 
 == CSVs → linked data
@@ -396,8 +412,14 @@ additional level of granularity.
 
 * data revision?
   fact retraction and upsert
+  
+* cardinality, extra granularity, appending to amounts as the data comes in
+
+* be careful to calculate comparable (say, per-day) amounts from records that report on 
+different time intervals.
 
 * Support upload by enablers (upload -> validate -> add to the published LoD)
 * Context: COP26 etc.
 
-* Have a proper bibliography
+* a "proper" bibliography?
+
