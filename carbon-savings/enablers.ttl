@@ -1,0 +1,24 @@
+
+<http://datacommonsscotland.org/linked-data/entity/enablers/Alloa%20Community%20Enterprises>
+  a <http://datacommonsscotland.org/linked-data/class/enablers>;
+  <http://datacommonsscotland.org/linked-data/property/hasLatitude> 56.122913;
+  <http://datacommonsscotland.org/linked-data/property/hasLongitude> -3.781621;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Alloa Community Enterprises" .
+
+<http://datacommonsscotland.org/linked-data/entity/enablers/Stirling%20Comunity%20Food>
+  a <http://datacommonsscotland.org/linked-data/class/enablers>;
+  <http://datacommonsscotland.org/linked-data/property/hasLatitude> 56.115672;
+  <http://datacommonsscotland.org/linked-data/property/hasLongitude> -3.936217;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Stirling Comunity Food" .
+
+<http://datacommonsscotland.org/linked-data/entity/enablers/Stirling%20Council> a
+    <http://datacommonsscotland.org/linked-data/class/enablers>;
+  <http://datacommonsscotland.org/linked-data/property/hasLatitude> 56.113345;
+  <http://datacommonsscotland.org/linked-data/property/hasLongitude> -3.936807;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Stirling Council" .
+
+<http://datacommonsscotland.org/linked-data/entity/enablers/The%20Fair%20Share> a
+    <http://datacommonsscotland.org/linked-data/class/enablers>;
+  <http://datacommonsscotland.org/linked-data/property/hasLatitude> 56.146389;
+  <http://datacommonsscotland.org/linked-data/property/hasLongitude> -3.919833;
+  <http://www.w3.org/2000/01/rdf-schema#label> "The Fair Share" .

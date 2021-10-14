@@ -1,0 +1,128 @@
+
+<http://datacommonsscotland.org/linked-data/entity/carbon-savings/2018-02-28/Wood/Alloa%20Community%20Enterprises/55%20items%20of%20Furniture%20%28Chair%2C%20Kitchen%2C%20Dining%20or%20Wooden%29>
+  a <http://datacommonsscotland.org/linked-data/class/carbon-savings>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnabler> <http://datacommonsscotland.org/linked-data/entity/enablers/Alloa%20Community%20Enterprises>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific> "55 items of Furniture (Chair, Kitchen, Dining or Wooden)";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Wood>;
+  <http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate> "2018-02-28"^^<http://www.w3.org/2001/XMLSchema#date>;
+  <http://datacommonsscotland.org/linked-data/property/hasTonnesWeight> 0.385 .
+
+<http://datacommonsscotland.org/linked-data/entity/carbon-savings/2018-02-28/Wood/Alloa%20Community%20Enterprises/82%20items%20of%20Furniture%20%28Chair%2C%20Kitchen%2C%20Dining%20or%20Wooden%29>
+  a <http://datacommonsscotland.org/linked-data/class/carbon-savings>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnabler> <http://datacommonsscotland.org/linked-data/entity/enablers/Alloa%20Community%20Enterprises>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific> "82 items of Furniture (Chair, Kitchen, Dining or Wooden)";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Wood>;
+  <http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate> "2018-02-28"^^<http://www.w3.org/2001/XMLSchema#date>;
+  <http://datacommonsscotland.org/linked-data/property/hasTonnesWeight> 0.574 .
+
+<http://datacommonsscotland.org/linked-data/entity/carbon-savings/2019-02-28/Textiles%20and%20Footwear/Alloa%20Community%20Enterprises/7%20items%20of%20Soft%20Furniture%20%28Mattress%2C%20single%29>
+  a <http://datacommonsscotland.org/linked-data/class/carbon-savings>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnabler> <http://datacommonsscotland.org/linked-data/entity/enablers/Alloa%20Community%20Enterprises>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific> "7 items of Soft Furniture (Mattress, single)";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Textiles%20and%20Footwear>;
+  <http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate> "2019-02-28"^^<http://www.w3.org/2001/XMLSchema#date>;
+  <http://datacommonsscotland.org/linked-data/property/hasTonnesWeight> 0.147 .
+
+<http://datacommonsscotland.org/linked-data/entity/carbon-savings/2019-02-28/Textiles%20and%20Footwear/Alloa%20Community%20Enterprises/8%20items%20of%20Soft%20Furniture%20%28Mattress%2C%20single%29>
+  a <http://datacommonsscotland.org/linked-data/class/carbon-savings>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnabler> <http://datacommonsscotland.org/linked-data/entity/enablers/Alloa%20Community%20Enterprises>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific> "8 items of Soft Furniture (Mattress, single)";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Textiles%20and%20Footwear>;
+  <http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate> "2019-02-28"^^<http://www.w3.org/2001/XMLSchema#date>;
+  <http://datacommonsscotland.org/linked-data/property/hasTonnesWeight> 0.168 .
+
+<http://datacommonsscotland.org/linked-data/entity/carbon-savings/2021-01-28/Food%20and%20Drink%20Waste%20%28wet%20AD%29/Stirling%20Comunity%20Food/Used%20for%20human-food%2C%20bio-etc%20%26%20sanctuary>
+  a <http://datacommonsscotland.org/linked-data/class/carbon-savings>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnabler> <http://datacommonsscotland.org/linked-data/entity/enablers/Stirling%20Comunity%20Food>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific> "Used for human-food, bio-etc & sanctuary";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Food%20and%20Drink%20Waste%20%28wet%20AD%29>;
+  <http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate> "2021-01-28"^^<http://www.w3.org/2001/XMLSchema#date>;
+  <http://datacommonsscotland.org/linked-data/property/hasTonnesWeight> 0.08761 .
+
+<http://datacommonsscotland.org/linked-data/entity/carbon-savings/2021-01-28/Food%20and%20Drink%20Waste%20%28Composting%29/Stirling%20Comunity%20Food/Used%20for%20compost-indiv>
+  a <http://datacommonsscotland.org/linked-data/class/carbon-savings>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnabler> <http://datacommonsscotland.org/linked-data/entity/enablers/Stirling%20Comunity%20Food>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific> "Used for compost-indiv";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Food%20and%20Drink%20Waste%20%28Composting%29>;
+  <http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate> "2021-01-28"^^<http://www.w3.org/2001/XMLSchema#date>;
+  <http://datacommonsscotland.org/linked-data/property/hasTonnesWeight> 0.00048 .
+
+<http://datacommonsscotland.org/linked-data/entity/carbon-savings/2021-01-29/Food%20and%20Drink%20Waste%20%28wet%20AD%29/Stirling%20Comunity%20Food/Used%20for%20human-food%2C%20bio-etc%20%26%20sanctuary>
+  a <http://datacommonsscotland.org/linked-data/class/carbon-savings>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnabler> <http://datacommonsscotland.org/linked-data/entity/enablers/Stirling%20Comunity%20Food>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific> "Used for human-food, bio-etc & sanctuary";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Food%20and%20Drink%20Waste%20%28wet%20AD%29>;
+  <http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate> "2021-01-29"^^<http://www.w3.org/2001/XMLSchema#date>;
+  <http://datacommonsscotland.org/linked-data/property/hasTonnesWeight> 0.28012 .
+
+<http://datacommonsscotland.org/linked-data/entity/carbon-savings/2021-01-29/Food%20and%20Drink%20Waste%20%28Composting%29/Stirling%20Comunity%20Food/Used%20for%20compost-indiv>
+  a <http://datacommonsscotland.org/linked-data/class/carbon-savings>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnabler> <http://datacommonsscotland.org/linked-data/entity/enablers/Stirling%20Comunity%20Food>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific> "Used for compost-indiv";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Food%20and%20Drink%20Waste%20%28Composting%29>;
+  <http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate> "2021-01-29"^^<http://www.w3.org/2001/XMLSchema#date>;
+  <http://datacommonsscotland.org/linked-data/property/hasTonnesWeight> 0.008 .
+
+<http://datacommonsscotland.org/linked-data/entity/carbon-savings/2021-01-03/Glass%20%28mixed%20colours%29/Stirling%20Council/Balfron>
+  a <http://datacommonsscotland.org/linked-data/class/carbon-savings>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnabler> <http://datacommonsscotland.org/linked-data/entity/enablers/Stirling%20Council>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific> "Balfron";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Glass%20%28mixed%20colours%29>;
+  <http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate> "2021-01-03"^^<http://www.w3.org/2001/XMLSchema#date>;
+  <http://datacommonsscotland.org/linked-data/property/hasTonnesWeight> 3.5 .
+
+<http://datacommonsscotland.org/linked-data/entity/carbon-savings/2021-01-04/Average%20Plastics/Stirling%20Council/Bridge%20of%20Allan>
+  a <http://datacommonsscotland.org/linked-data/class/carbon-savings>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnabler> <http://datacommonsscotland.org/linked-data/entity/enablers/Stirling%20Council>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific> "Bridge of Allan";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Average%20Plastics>;
+  <http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate> "2021-01-04"^^<http://www.w3.org/2001/XMLSchema#date>;
+  <http://datacommonsscotland.org/linked-data/property/hasTonnesWeight> 1.86 .
+
+<http://datacommonsscotland.org/linked-data/entity/carbon-savings/2021-01-10/Mixed%20paper%20and%20board/Stirling%20Council/Killearn>
+  a <http://datacommonsscotland.org/linked-data/class/carbon-savings>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnabler> <http://datacommonsscotland.org/linked-data/entity/enablers/Stirling%20Council>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific> "Killearn";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Mixed%20paper%20and%20board>;
+  <http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate> "2021-01-10"^^<http://www.w3.org/2001/XMLSchema#date>;
+  <http://datacommonsscotland.org/linked-data/property/hasTonnesWeight> 0.24 .
+
+<http://datacommonsscotland.org/linked-data/entity/carbon-savings/2019-12-31/Textiles%20%26%20Footwear/The%20Fair%20Share/autumn%20semester>
+  a <http://datacommonsscotland.org/linked-data/class/carbon-savings>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnabler> <http://datacommonsscotland.org/linked-data/entity/enablers/The%20Fair%20Share>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific> "autumn semester";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Textiles%20%26%20Footwear>;
+  <http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate> "2019-12-31"^^<http://www.w3.org/2001/XMLSchema#date>;
+  <http://datacommonsscotland.org/linked-data/property/hasTonnesWeight> 0.57644 .
+
+<http://datacommonsscotland.org/linked-data/entity/carbon-savings/2019-12-31/Books/The%20Fair%20Share/autumn%20semester>
+  a <http://datacommonsscotland.org/linked-data/class/carbon-savings>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnabler> <http://datacommonsscotland.org/linked-data/entity/enablers/The%20Fair%20Share>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific> "autumn semester";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Books>;
+  <http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate> "2019-12-31"^^<http://www.w3.org/2001/XMLSchema#date>;
+  <http://datacommonsscotland.org/linked-data/property/hasTonnesWeight> 0.12203 .
+
+<http://datacommonsscotland.org/linked-data/entity/carbon-savings/2019-12-31/Aggregates%20%28Rubble%29/The%20Fair%20Share/autumn%20semester>
+  a <http://datacommonsscotland.org/linked-data/class/carbon-savings>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnabler> <http://datacommonsscotland.org/linked-data/entity/enablers/The%20Fair%20Share>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific> "autumn semester";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Aggregates%20%28Rubble%29>;
+  <http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate> "2019-12-31"^^<http://www.w3.org/2001/XMLSchema#date>;
+  <http://datacommonsscotland.org/linked-data/property/hasTonnesWeight> 0.05345 .
+
+<http://datacommonsscotland.org/linked-data/entity/carbon-savings/2019-12-31/Glass%20%28mixed%20colours%29/The%20Fair%20Share/autumn%20semester>
+  a <http://datacommonsscotland.org/linked-data/class/carbon-savings>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnabler> <http://datacommonsscotland.org/linked-data/entity/enablers/The%20Fair%20Share>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific> "autumn semester";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Glass%20%28mixed%20colours%29>;
+  <http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate> "2019-12-31"^^<http://www.w3.org/2001/XMLSchema#date>;
+  <http://datacommonsscotland.org/linked-data/property/hasTonnesWeight> 0.02328 .
+
+<http://datacommonsscotland.org/linked-data/entity/carbon-savings/2019-12-31/Food%20and%20Drink%20Waste%20%28wet%20AD%29/The%20Fair%20Share/autumn%20semester>
+  a <http://datacommonsscotland.org/linked-data/class/carbon-savings>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnabler> <http://datacommonsscotland.org/linked-data/entity/enablers/The%20Fair%20Share>;
+  <http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific> "autumn semester";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Food%20and%20Drink%20Waste%20%28wet%20AD%29>;
+  <http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate> "2019-12-31"^^<http://www.w3.org/2001/XMLSchema#date>;
+  <http://datacommonsscotland.org/linked-data/property/hasTonnesWeight> 0.0187 .

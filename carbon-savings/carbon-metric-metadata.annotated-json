@@ -6,15 +6,19 @@
       "name": "material",
       "titles": "material",
       "datatype": "string", <2>
-      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasMaterial"
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasMaterial" <3>
     }, {
       "name": "multiplier",
       "titles": "multiplier",
-      "datatype": "decimal", <3>
+      "datatype": "decimal", <2>
       "required": true, <4>
-      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasMultiplier"
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasMultiplier" <3>
+    }, {
+      "virtual": true, <5>
+      "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "valueUrl": "http://datacommonsscotland.org/linked-data/class/carbon-metric"
     }],
-    "primaryKey": "material", <5>
-    "aboutUrl": "http://datacommonsscotland.org/linked-data/entity/carbon-metric/{material}" <6>
+    "primaryKey": "material", <6>
+    "aboutUrl": "http://datacommonsscotland.org/linked-data/entity/carbon-metric/{material}" <7>
   }
 }

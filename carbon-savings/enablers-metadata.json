@@ -1,0 +1,28 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "enablers.csv",
+  "tableSchema": {
+    "columns": [{
+      "name": "name",
+      "titles": "name",
+      "datatype": "string",
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasName"
+    }, {
+      "name": "latitude",
+      "titles": "latitude",
+      "datatype": "decimal",
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasLatitude"
+    }, {
+      "name": "longitude",
+      "titles": "longitude",
+      "datatype": "decimal",
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasLongitude"
+    }, {
+      "virtual": true,
+      "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "valueUrl": "http://datacommonsscotland.org/linked-data/class/enablers"
+    }],
+    "primaryKey": "name",
+    "aboutUrl": "http://datacommonsscotland.org/linked-data/entity/enablers/{name}"
+  }
+}

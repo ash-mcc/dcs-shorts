@@ -1,28 +1,38 @@
 # carbon-metric essentials (resolved to basic values)
+prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix class:<http://datacommonsscotland.org/linked-data/class/>
 prefix p:<http://datacommonsscotland.org/linked-data/property/>
 select ?material ?multiplier
 where {
-	?uri p:hasMaterial ?material;
+	?uri rdf:type class:carbon-metric;
+       p:hasMaterial ?material;
        p:hasMultiplier ?multiplier.
 }
 
 
 # enablers essentials (resolved to basic values)
-prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix class:<http://datacommonsscotland.org/linked-data/class/>
 prefix p:<http://datacommonsscotland.org/linked-data/property/>
 select ?name ?latitude ?longitude
 where {
-	?uri rdfs:label ?name;
-       p:hasLatitude ?latitude;
-       p:hasLongitude ?longitude.
+  ?uri rdf:type class:enablers;
+       p:hasName ?name.
+  optional {
+    ?uri p:hasLatitude ?latitude;
+         p:hasLongitude ?longitude.
+  }
 }
 
 
 # carbon-savings essentials (resolved to basic values)
+prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix class:<http://datacommonsscotland.org/linked-data/class/>
 prefix p:<http://datacommonsscotland.org/linked-data/property/>
 select ?occurrenceDate ?material ?tonnesWeight ?enabler ?enablerSpecific
 where {
-	?uri p:hasOccurrenceDate ?occurrenceDate;
+	?uri rdf:type class:carbon-savings;
+       p:hasOccurrenceDate ?occurrenceDate;
        p:hasMaterial ?material;
        p:hasTonnesWeight ?tonnesWeight;
        p:hasEnabler ?enabler;

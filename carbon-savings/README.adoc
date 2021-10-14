@@ -1,6 +1,7 @@
 = Building linked open data about carbon savings
 The Data Commons Scotland project; Greg Singh; Anna Wilson; Hannah Hamilton; Ashley McClenaghan
 October 2021
+:docinfo: shared
 :sectnums:
 :xrefstyle: short
 :section-refsig:
@@ -11,10 +12,17 @@ October 2021
 waste, reuse, recycle, carbon impact, carbon saving, CO2e, carbon metric, \
 COP26, Swirrl, Blazegraph, Vega-lite, Clojure
 
+.DRAFT
+****
+[.text-center]
+An early draft - still lots of TODOs.
+****
+
 [.float-group]
 --
-image::lod-for-carbon-savings.png["Building linked open data about carbon savings - logo",width=40%,float=right,align=center]
+image::lod-for-carbon-savings.png["Building linked open data about carbon savings - logo",width=40%,float=right]
 
+[.indent]
 {nbsp} +
 {nbsp} +
 {nbsp} +
@@ -355,10 +363,11 @@ as output from sections <<r-data>> & <<m-data>>.)
 
 Let's create CSVW files to give our CSVs linked data semantics.
 
-==== CSVW for our reference data
+==== CSVW for the `carbon-metric` reference data
 
 link:carbon-metric-metadata.json[carbon-metric-metadata.json]
-contains the CSVW that gives linked data semantics to our reference data CSV.
+contains the CSVW that gives linked data semantics to the 
+link:carbon-metric.csv[carbon-metric.csv] reference data.
 
 Its features of interest are described below.
 
@@ -367,33 +376,48 @@ Its features of interest are described below.
 include::carbon-metric-metadata.annotated-json[]
 ----
 
-<1> Explicitly associate this CSVW with our reference data file.
-<2> The `material` value has the type https://www.w3.org/2001/XMLSchema#string[xsd:string].
-<3> The `multiplier` value has the type https://www.w3.org/2001/XMLSchema#decimal[xsd:decimal].
-<4> The `multiplier` value is mandatory. 
-<5> The `material` value is the primary key (and is mandatory).
-<6> How to construct the URI (unique identifier) for each reference record. 
+<1> Explicitly associate this CSVW specification with the data file.
+<2> Assign standard (https://www.w3.org/2001/XMLSchema[XMLSchema]) data types to each of the CSV's columns.
+<3> Define a new RDF https://www.w3.org/TR/rdf11-concepts/#dfn-predicate[predicate] for each of the CSV's columns.
+<4> Declare the `multiplier` value to be mandatory. 
+<5> Define the _virtual_, standard predicate https://www.w3.org/TR/rdf-schema/#ch_type[rdf:type] to say what _class_ these rows are. 
+<6> Declare the `material` value to be the primary key (and to be mandatory).
+<7> Define how to construct the https://www.w3.org/TR/rdf-concepts/#section-Graph-URIref[URI] (unique identifier) for each of the CSV's rows. 
 
-==== CSVW for our measurement data
+==== CSVW for the `enablers` reference data
+
+link:enablers-metadata.json[enablers-metadata.json]
+contains the CSVW that gives linked data semantics to the 
+link:enablers.csv[enablers.csv] reference data.
+
+Its new (not previously discussed) features of interest are described below.
+
+[source,json]
+----
+include::enablers-metadata.annotated-json[]
+----
+
+<1> The `latitude` and `longitude` values are optional, by CSVW default.  
+
+==== CSVW for the `carbon-savings` measurement data
 
 link:carbon-savings-metadata.json[carbon-savings-metadata.json]
-contains the CSVW that gives linked data semantics to our measurement data CSV.
+contains the CSVW that gives linked data semantics to the 
+link:carbon-savings.csv[carbon-savings.csv] measurement data.
 
-Its features of interest are described below.
+Its new (not previously discussed) features of interest are described below.
 
 [source,json]
 ----
 include::carbon-savings-metadata.annotated-json[]
 ----
 
-<1> Explicitly associate this CSVW with our measurement data file.
-<2> TODO cardinality
-<3> [[additional-granularity]] The primary key is a composite.
+<1> Declare the `material` & `enabler` values to be, in essence, links into the  
+the `carbon-metric` & `enablers` data.
+<2> [[additional-granularity]] The primary key is a composite.
 Including `enablerSpecific` as a component of the primary key, 
 allows the possibility for the `enabler` to report measurements at an
-additional level of granularity. 
-<4> The `material` value is, in essence, a link into our `carbon-metric` reference data. 
-<5> How to construct the URI (unique identifier) for each measurement record. 
+additional level of granularity.
 
 === Generating RDF
 
@@ -403,12 +427,17 @@ additional level of granularity.
 
 == Next?
 
+===== TODOs
+
 * Add other dimensions such as geographic region (sourced from? given to?)
 * Adopt other vocabs? (statistical vocabs?)
 
+* say something about naming and structure... important. 
+    Should carbon-metric have been co2e-multipler
+    with its hasMaterial property being rdfs:label ? 
 	
 * this is allows us to very-roughly compare the carbon-saving aspect of the responsible-entities
-	* hmmm, like any tool, it can be/drive/build good and bad. Hopefully good in today's context. But for now, this is just an academic exercise.
+	* hmmm, like any tool, it can be/drive/build good and bad. Hopefully good in today's context. But for now, this is just an exploratory exercise.
 
 * data revision?
   fact retraction and upsert
@@ -419,6 +448,10 @@ additional level of granularity.
 different time intervals.
 
 * Support upload by enablers (upload -> validate -> add to the published LoD)
+
+* some aspects of 'provenance' - storer id and timestamps - might be best left to the 
+  comms & storage environment (e.g. Git, Fluree, etc.).
+
 * Context: COP26 etc.
 
 * a "proper" bibliography?
