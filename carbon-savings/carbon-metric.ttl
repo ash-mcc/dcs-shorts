@@ -1,213 +1,176 @@
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Textiles> a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Textiles";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Textiles";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 100.0 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Textiles%20and%20Footwear>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Textiles and Footwear";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Textiles and Footwear";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 84.7 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Aluminium%20cans%20and%20foil>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Aluminium cans and foil";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Aluminium cans and foil";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 65.87 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Footwear> a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Footwear";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Footwear";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 31.17 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Mixed%20Cans> a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Mixed Cans";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Mixed Cans";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 27.8 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Scrap%20Metal> a
     <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Scrap Metal";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Scrap Metal";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 16.07 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Steel%20Cans> a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Steel Cans";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Steel Cans";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 12.25 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/PET%20%28including%20forming%29>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "PET (including forming)";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "PET (including forming)";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 12.12 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/WEEE%20-%20Small>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "WEEE - Small";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "WEEE - Small";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 10.54 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/WEEE%20-%20Mixed>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "WEEE - Mixed";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "WEEE - Mixed";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 9.77 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/WEEE%20-%20Large>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "WEEE - Large";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "WEEE - Large";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 9.0 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/PS%20%28including%20forming%29>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "PS (including forming)";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "PS (including forming)";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 8.81 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Wood> a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Wood";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Wood";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 8.7 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Average%20Plastics>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Average Plastics";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Average Plastics";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 8.57 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Average%20plastic%20rigid%20%28including%20bottles%29>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Average plastic rigid (including bottles)";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Average plastic rigid (including bottles)";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 8.56 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/HDPE%20%28including%20forming%29>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "HDPE (including forming)";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "HDPE (including forming)";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 8.25 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/LDPE%20and%20LLDPE%20%28including%20forming%29>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "LDPE and LLDPE (including forming)";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "LDPE and LLDPE (including forming)";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 7.8 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Average%20plastic%20film%20%28including%20bags%29>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Average plastic film (including bags)";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Average plastic film (including bags)";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 7.65 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/PP%20%28including%20forming%29>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "PP (including forming)";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "PP (including forming)";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 6.74 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/PVC%20%28including%20forming%29>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "PVC (including forming)";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "PVC (including forming)";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 6.31 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Board> a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Board";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Board";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 5.83 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Mixed%20paper%20and%20board>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Mixed paper and board";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Mixed paper and board";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 5.68 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Paper> a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Paper";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Paper";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 5.23 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Books> a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Books";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Books";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 5.23 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Mineral%20Oil> a
     <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Mineral Oil";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Mineral Oil";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 5.15 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/WEEE%20-%20Fridges%20and%20Freezers>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "WEEE - Fridges and Freezers";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "WEEE - Fridges and Freezers";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 4.66 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Food%20and%20Drink%20Waste%20%28wet%20AD%29>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Food and Drink Waste (wet AD)";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Food and Drink Waste (wet AD)";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 4.35 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Food%20and%20Drink%20Waste%20%28Composting%29>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Food and Drink Waste (Composting)";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Food and Drink Waste (Composting)";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 3.48 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Batteries%20%28Post%20Consumer%20Non%20Automotive%29>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Batteries (Post Consumer Non Automotive)";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Batteries (Post Consumer Non Automotive)";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 3.46 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Glass%20%28colour%20separated%29>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Glass (colour separated)";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Glass (colour separated)";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 2.78 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Mixed%20Food%20and%20Garden%20Waste%20%28dry%20AD%29>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Mixed Food and Garden Waste (dry AD)";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Mixed Food and Garden Waste (dry AD)";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 2.7 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Garden%20Waste%20%28dry%20AD%29>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Garden Waste (dry AD)";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Garden Waste (dry AD)";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 2.35 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Mixed%20Food%20and%20Garden%20Waste%20%28Composting%29>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Mixed Food and Garden Waste (Composting)";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Mixed Food and Garden Waste (Composting)";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 2.1 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Garden%20Waste%20Composting>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Garden Waste Composting";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Garden Waste Composting";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 1.81 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Glass%20%28mixed%20colours%29>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Glass (mixed colours)";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Glass (mixed colours)";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 1.58 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Plasterboard> a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Plasterboard";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Plasterboard";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 0.99 .
 
 <http://datacommonsscotland.org/linked-data/entity/carbon-metric/Aggregates%20%28Rubble%29>
   a <http://datacommonsscotland.org/linked-data/class/carbon-metric>;
-  <file:/Users/amc/workspace/data-commons-scotland/dcs-shorts/carbon-savings/carbon-metric.csv>
-    "Aggregates (Rubble)";
+  <http://datacommonsscotland.org/linked-data/property/hasMaterial> "Aggregates (Rubble)";
   <http://datacommonsscotland.org/linked-data/property/hasMultiplier> 0.03 .

@@ -421,6 +421,8 @@ additional level of granularity.
 
 === Generating RDF
 
+
+
 == Publishing it as open data
 
 == Using it
@@ -431,6 +433,7 @@ additional level of granularity.
 
 * Add other dimensions such as geographic region (sourced from? given to?)
 * Adopt other vocabs? (statistical vocabs?)
+* Annotations like dc:title ?
 
 * say something about naming and structure... important. 
     Should carbon-metric have been co2e-multipler

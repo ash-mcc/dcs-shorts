@@ -1,14 +1,13 @@
 {
   "@context": "http://www.w3.org/ns/csvw",
   "url": "carbon-metric.csv",
+  "dc:title": "TEST",
   "tableSchema": {
     "columns": [{
       "name": "material",
       "titles": "material",
       "datatype": "string",
-      "propertyUrl": [
-        "http://datacommonsscotland.org/linked-data/property/hasMaterial",
-        "http://www.w3.org/2000/01/rdf-schema#label"]
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasMaterial"
     }, {
       "name": "multiplier",
       "titles": "multiplier",
