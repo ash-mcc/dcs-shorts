@@ -1,6 +1,5 @@
 {
   "@context": "http://www.w3.org/ns/csvw",
-  "url": "enablers.csv",
   "tableSchema": {
     "columns": [{
       "name": "name",
@@ -8,12 +7,12 @@
       "datatype": "string",
       "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasName"
     }, {
-      "name": "latitude",
+      "name": "latitude", <1>
       "titles": "latitude",
       "datatype": "decimal",
       "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasLatitude"
     }, {
-      "name": "longitude",
+      "name": "longitude", <1>
       "titles": "longitude",
       "datatype": "decimal",
       "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasLongitude"

@@ -1,6 +1,5 @@
 {
   "@context": "http://www.w3.org/ns/csvw",
-  "url": "carbon-savings.csv",
   "tableSchema": {
     "columns": [{
       "name": "occurrenceDate",
@@ -12,7 +11,7 @@
       "titles": "scottish-carbon-metric-material",
       "datatype": "string",
       "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasMaterial",
-      "valueUrl": "http://datacommonsscotland.org/linked-data/entity/carbon-metric/{material}" <1>
+      "valueUrl": "http://datacommonsscotland.org/linked-data/entity/carbon-metric/{material}"
     }, {
       "name": "tonnesWeight",
       "titles": "tonnes-weight",
@@ -24,7 +23,7 @@
       "titles": "enabler",
       "datatype": "string",
       "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasEnabler",
-      "valueUrl": "http://datacommonsscotland.org/linked-data/entity/enablers/{enabler}" <1>
+      "valueUrl": "http://datacommonsscotland.org/linked-data/entity/enablers/{enabler}"
     }, {
       "name": "enablerSpecific",
       "titles": "enabler-specific",
@@ -35,17 +34,17 @@
       "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
       "valueUrl": "http://datacommonsscotland.org/linked-data/class/carbon-savings"
     }],
-    "primaryKey": ["occurrenceDate", "material", "enabler", "enablerSpecific"], <2>
+    "primaryKey": ["occurrenceDate", "material", "enabler", "enablerSpecific"],
     "foreignKeys": [{
       "columnReference": "material",
       "reference": {
-        "resource": "carbon-metric.csv", <1>
+        "resource": "carbon-metric.csv",
         "columnReference": "material"
       }
     }, {
       "columnReference": "enabler",
       "reference": {
-        "resource": "enablers.csv", <1>
+        "resource": "enablers.csv",
         "columnReference": "name"
       }
     }],

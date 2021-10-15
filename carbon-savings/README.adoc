@@ -2,6 +2,8 @@
 The Data Commons Scotland project; Greg Singh; Anna Wilson; Hannah Hamilton; Ashley McClenaghan
 October 2021
 :docinfo: shared
+:source-highlighter: highlight.js
+:highlightjs-theme: default
 :sectnums:
 :xrefstyle: short
 :section-refsig:
@@ -20,7 +22,7 @@ An early draft - still lots of TODOs.
 
 [.float-group]
 --
-image::lod-for-carbon-savings.png["Building linked open data about carbon savings - logo",width=40%,float=right]
+image::img/lod-for-carbon-savings.png["Building linked open data about carbon savings - logo",width=40%,float=right]
 
 [.indent]
 {nbsp} +
@@ -55,12 +57,12 @@ Their data is dissimilar, for example:
 
 ...but our end goal is to derive the same information from each of them.
 This information can be seen in the CSV file that contains the results of our efforts
-in this section: link:carbon-savings.csv[carbon-savings.csv].
+in this section: link:data/carbon-savings.csv[carbon-savings.csv].
 Here's a snippet of data from that file:
 
 [format="csv",options="header"]
 |===================================================
-include::carbon-savings.csv[lines="1..2,8..8,10..10,13..13"]
+include::data/carbon-savings.csv[lines="1..2,8..8,10..10,13..13"]
 |===================================================
 
 === The process
@@ -118,7 +120,7 @@ The following examples of measurement data have been taken from a *draft* of tha
 
 Here's a snipped image of ACE's measurement data:
 
-image::ace-raw-snippet.png["A snippet of the measurement data in the Alloa Community Enterprises supplied Excel spreadsheet"]
+image::img/ace-raw-snippet.png["A snippet of the measurement data in the Alloa Community Enterprises supplied Excel spreadsheet"]
 
 The main steps in processing ACE's measurement data (the snippet shown above) are:
 
@@ -127,12 +129,12 @@ The main steps in processing ACE's measurement data (the snippet shown above) ar
 . Derive and standardise values ...
 [lowerroman]
 .. We map each pair of `Category` & `Items` values, to a `scottish-carbon-metric-material` value. 
-We build this mapping table as a CSV file: link:ace-to-carbon-metric.csv[ace-to-carbon-metric.csv].
+We build this mapping table as a CSV file: link:mapping/ace-to-carbon-metric.csv[ace-to-carbon-metric.csv].
 Here's a snippet of data from that file:
 +
 [format="csv",options="header"]
 |===================================================
-include::ace-to-carbon-metric.csv[lines="1..1,7..7,46..46"]
+include::mapping/ace-to-carbon-metric.csv[lines="1..1,7..7,46..46"]
 |===================================================
 .. Multiple columns `D` & `F` by column `C` and divide by 1000, to calculate the `tonnes-weight` value.
 .. Map the headers of columns `D` & `F`, to establish the `occurrence-date` value.
@@ -142,7 +144,7 @@ include::ace-to-carbon-metric.csv[lines="1..1,7..7,46..46"]
 +
 [format="csv",options="header"]
 |===================================================
-include::carbon-savings.csv[lines="1..1,2..5"]
+include::data/carbon-savings.csv[lines="1..1,2..5"]
 |=================================================== 
 
 ==== Stirling Community Food - redistributed food
@@ -157,7 +159,7 @@ The following examples of measurement data have been taken from a *draft* of tha
 
 Here's a snipped image of Stirling Community Food's measurement data:
 
-image::stirling-community-food-raw-snippet.png["A snippet of the measurement data in the Stirling Community Food supplied Excel spreadsheet"]
+image::img/stirling-community-food-raw-snippet.png["A snippet of the measurement data in the Stirling Community Food supplied Excel spreadsheet"]
 
 The main steps in processing Stirling Community Food's measurement data (the snippet shown above) are:
 
@@ -166,12 +168,12 @@ The main steps in processing Stirling Community Food's measurement data (the sni
 . Derive and standardise values ...
 [lowerroman]
 .. We map the 'outcomes' (i.e. how the food material got used) to a `scottish-carbon-metric-material` value. 
-We build this mapping table as a CSV file: link:stirling-community-food-to-carbon-metric.csv[stirling-community-food-to-carbon-metric.csv].
+We build this mapping table as a CSV file: link:mapping/stirling-community-food-to-carbon-metric.csv[stirling-community-food-to-carbon-metric.csv].
 Here's the data from that file:
 +
 [format="csv",options="header"]
 |===================================================
-include::stirling-community-food-to-carbon-metric.csv[]
+include::mapping/stirling-community-food-to-carbon-metric.csv[]
 |===================================================
 +
 .. Calaculate the total amounts of food materials for each of the outcome (converting from kgs to tonnes), to calculate the `tonnes-weight` value.
@@ -181,7 +183,7 @@ include::stirling-community-food-to-carbon-metric.csv[]
 +
 [format="csv",options="header"]
 |===================================================
-include::carbon-savings.csv[lines="1..1,6..9"]
+include::data/carbon-savings.csv[lines="1..1,6..9"]
 |=================================================== 
 
 ==== Stirling Council - household recycling bins
@@ -194,7 +196,7 @@ The following examples of measurement data have been taken from that published d
 
 Here's a snipped image of Stirling Council's measurement data:
 
-image::stirling-council-raw-snippet.png["A snippet of the measurement data in the Stirling Council CKAN supplied CSV",width=70%]
+image::img/stirling-council-raw-snippet.png["A snippet of the measurement data in the Stirling Council CKAN supplied CSV",width=70%]
 
 The main steps in processing Stirling Council's measurement data (the snippet shown above) are:
 
@@ -203,12 +205,12 @@ The main steps in processing Stirling Council's measurement data (the snippet sh
 . Derive and standardise values ...
 [lowerroman]
 .. We map column `E` to to a `scottish-carbon-metric-material` value. 
-We build this mapping table as a CSV file: link:stirling-council-to-carbon-metric.csv[stirling-council-to-carbon-metric.csv].
+We build this mapping table as a CSV file: link:mapping/stirling-council-to-carbon-metric.csv[stirling-council-to-carbon-metric.csv].
 Here's a snippet of data from that file:
 +
 [format="csv",options="header"]
 |===================================================
-include::stirling-council-to-carbon-metric.csv[lines="1..1,4..5,8..8"]
+include::mapping/stirling-council-to-carbon-metric.csv[lines="1..1,4..5,8..8"]
 |===================================================
 +
 .. Use column `F` as the `tonnes-weight` value.
@@ -218,7 +220,7 @@ include::stirling-council-to-carbon-metric.csv[lines="1..1,4..5,8..8"]
 +
 [format="csv",options="header"]
 |===================================================
-include::carbon-savings.csv[lines="1..1,10..12"]
+include::data/carbon-savings.csv[lines="1..1,10..12"]
 |=================================================== 
 
 ==== The Fair Share - reused, student-oriented items
@@ -232,7 +234,7 @@ The following examples of measurement data have been taken from a *draft* of tha
 
 Here's a snipped image of The fair Share's measurement data:
 
-image::the-fair-share-raw-snippet.png["A snippet of the measurement data in The Fair Share supplied Excel spreadsheet",width=70%]
+image::img/the-fair-share-raw-snippet.png["A snippet of the measurement data in The Fair Share supplied Excel spreadsheet",width=70%]
 
 The main steps in processing The Fair Share's measurement data (the snippet shown above) are:
 
@@ -241,12 +243,12 @@ The main steps in processing The Fair Share's measurement data (the snippet show
 . Derive and standardise values ...
 [lowerroman]
 .. We map column `B` to to a `scottish-carbon-metric-material` value. 
-We build this mapping table as a CSV file: link:the-fair-share-to-carbon-metric.csv[the-fair-share-to-carbon-metric.csv].
+We build this mapping table as a CSV file: link:mapping/the-fair-share-to-carbon-metric.csv[the-fair-share-to-carbon-metric.csv].
 Here's a snippet of data from that file:
 +
 [format="csv",options="header"]
 |===================================================
-include::the-fair-share-to-carbon-metric.csv[]
+include::mapping/the-fair-share-to-carbon-metric.csv[]
 |===================================================
 +
 .. Use column `B` divided by 1000, as the `tonnes-weight` value.
@@ -256,7 +258,7 @@ include::the-fair-share-to-carbon-metric.csv[]
 +
 [format="csv",options="header"]
 |===================================================
-include::carbon-savings.csv[lines="1..1,13..17"]
+include::data/carbon-savings.csv[lines="1..1,13..17"]
 |===================================================
 
 
@@ -281,23 +283,23 @@ This contains per-material weight-multipliers that can be used to calaculate CO~
 
 Here's a snipped image of that table:
 
-image::carbon-metric-table-6_2-snippet.png["A snippet of the key data in The Scottish Carbon Metric", width=50%]
+image::img/carbon-metric-table-6_2-snippet.png["A snippet of the key data in The Scottish Carbon Metric", width=50%]
 
 NOTE: This table's data has been published as linked open data by our project, in previous work.
 See the `co2e-multiplier` files in https://github.com/data-commons-scotland/dcs-easier-open-data[this repo]. But we will redo that work here so that that we can provide an explanatory walk-through.
 
 We copy the table's data from its original PDF format into a more tractable, 
-CSV file: link:carbon-metric.csv[carbon-metric.csv].
+CSV file: link:data/carbon-metric.csv[carbon-metric.csv].
 Here's a snippet of data from that file:
  
 [format="csv",options="header",width=50%]
 |===================================================
-include::carbon-metric.csv[lines="1..8"]
+include::data/carbon-metric.csv[lines="1..8"]
 |===================================================
 
 So, for our carbon savings data:
 
-* link:carbon-metric.csv[carbon-metric.csv] will be referenced as the basis for calculations.
+* link:data/carbon-metric.csv[carbon-metric.csv] will be referenced as the basis for calculations.
 * CO~2~eT will be used as the primary unit-of-measure
 
 For example, consider 1 tonne of (used) shoes...
@@ -316,12 +318,12 @@ CAUTION: The term _carbon saving_ is a little misleading. A better name for it m
 
 === Enabler organisations
 
-We describe the `enabler` organisations in link:enablers.csv[enablers.csv].
+We describe the `enabler` organisations in link:data/enablers.csv[enablers.csv].
 Here's the data from that file:
 
 [format="csv",options="header",width=75%]
 |===================================================
-include::enablers.csv[]
+include::data/enablers.csv[]
 |===================================================
 
 
@@ -365,51 +367,50 @@ Let's create CSVW files to give our CSVs linked data semantics.
 
 ==== CSVW for the `carbon-metric` reference data
 
-link:carbon-metric-metadata.json[carbon-metric-metadata.json]
+link:csvw/carbon-metric-metadata.json[carbon-metric-metadata.json]
 contains the CSVW that gives linked data semantics to the 
-link:carbon-metric.csv[carbon-metric.csv] reference data.
+link:data/carbon-metric.csv[carbon-metric.csv] reference data.
 
 Its features of interest are described below.
 
 [source,json]
 ----
-include::carbon-metric-metadata.annotated-json[]
+include::csvw-annotated/carbon-metric-metadata.annotated-json[]
 ----
 
-<1> Explicitly associate this CSVW specification with the data file.
-<2> Assign standard (https://www.w3.org/2001/XMLSchema[XMLSchema]) data types to each of the CSV's columns.
-<3> Define a new RDF https://www.w3.org/TR/rdf11-concepts/#dfn-predicate[predicate] for each of the CSV's columns.
-<4> Declare the `multiplier` value to be mandatory. 
-<5> Define the _virtual_, standard predicate https://www.w3.org/TR/rdf-schema/#ch_type[rdf:type] to say what _class_ these rows are. 
-<6> Declare the `material` value to be the primary key (and to be mandatory).
-<7> Define how to construct the https://www.w3.org/TR/rdf-concepts/#section-Graph-URIref[URI] (unique identifier) for each of the CSV's rows. 
+<1> Assign standard (https://www.w3.org/2001/XMLSchema[XMLSchema]) data types to each of the CSV's columns.
+<2> Define a new RDF https://www.w3.org/TR/rdf11-concepts/#dfn-predicate[predicate] for each of the CSV's columns.
+<3> Declare the `multiplier` value to be mandatory. 
+<4> Define the _virtual_, standard predicate https://www.w3.org/TR/rdf-schema/#ch_type[rdf:type] to say what _class_ these rows are. 
+<5> Declare the `material` value to be the primary key (and to be mandatory).
+<6> Define how to construct the https://www.w3.org/TR/rdf-concepts/#section-Graph-URIref[URI] (unique identifier) for each of the CSV's rows. 
 
 ==== CSVW for the `enablers` reference data
 
-link:enablers-metadata.json[enablers-metadata.json]
+link:csvw/enablers-metadata.json[enablers-metadata.json]
 contains the CSVW that gives linked data semantics to the 
-link:enablers.csv[enablers.csv] reference data.
+link:data/enablers.csv[enablers.csv] reference data.
 
 Its new (not previously discussed) features of interest are described below.
 
 [source,json]
 ----
-include::enablers-metadata.annotated-json[]
+include::csvw-annotated/enablers-metadata.annotated-json[]
 ----
 
 <1> The `latitude` and `longitude` values are optional, by CSVW default.  
 
 ==== CSVW for the `carbon-savings` measurement data
 
-link:carbon-savings-metadata.json[carbon-savings-metadata.json]
+link:csvw/carbon-savings-metadata.json[carbon-savings-metadata.json]
 contains the CSVW that gives linked data semantics to the 
-link:carbon-savings.csv[carbon-savings.csv] measurement data.
+link:data/arbon-savings.csv[carbon-savings.csv] measurement data.
 
 Its new (not previously discussed) features of interest are described below.
 
 [source,json]
 ----
-include::carbon-savings-metadata.annotated-json[]
+include::csvw-annotated/carbon-savings-metadata.annotated-json[]
 ----
 
 <1> Declare the `material` & `enabler` values to be, in essence, links into the  
@@ -419,7 +420,34 @@ Including `enablerSpecific` as a component of the primary key,
 allows the possibility for the `enabler` to report measurements at an
 additional level of granularity.
 
-=== Generating RDF
+=== Generating an RDF graph
+
+We use https://www.swirrl.com[Swirrl]'s useful
+https://github.com/Swirrl/csv2rdf[csv2rdf] tool to generate an RDF graph of our data...
+
+[source,shell]
+----
+$ ls data/
+carbon-metric.csv	carbon-savings.csv	enablers.csv <1>
+
+$ ls csvw/
+carbon-metric-metadata.json	carbon-savings-metadata.json	enablers-metadata.json <1>
+
+$ ./csv2rdf-0.4.6 -m minimal -t data/carbon-savings.csv -u csvw/carbon-savings-metadata.json -o rdf/carbon-savings.ttl <2>
+$ ./csv2rdf-0.4.6 -m minimal -t data/carbon-metric.csv -u csvw/carbon-metric-metadata.json -o rdf/carbon-metric.ttl <2>
+$ ./csv2rdf-0.4.6 -m minimal -t data/enablers.csv -u csvw/enablers-metadata.json -o rdf/enablers.ttl <2>
+
+$ ls rdf/
+carbon-metric.ttl	carbon-savings.ttl	enablers.ttl <3>
+----
+
+<1> The inputs: +
+{nbsp}{nbsp}{nbsp}{nbsp} the CSV files containing the actual data, and +
+{nbsp}{nbsp}{nbsp}{nbsp} the CSVW files providing the linked data semantics/_metadata_. 
+<2> Run the `csv2rdf` tool against each CSV+CSVW pair.
+<3> The output: Turtle (`.ttl`) files which define an RDF graph of our data.
+
+=== Using the RDF graph
 
 
 

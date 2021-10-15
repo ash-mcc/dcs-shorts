@@ -1,7 +1,5 @@
 {
   "@context": "http://www.w3.org/ns/csvw",
-  "url": "carbon-metric.csv",
-  "dc:title": "TEST",
   "tableSchema": {
     "columns": [{
       "name": "material",
