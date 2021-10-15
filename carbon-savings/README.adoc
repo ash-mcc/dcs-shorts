@@ -2,8 +2,10 @@
 The Data Commons Scotland project; Greg Singh; Anna Wilson; Hannah Hamilton; Ashley McClenaghan
 October 2021
 :docinfo: shared
+:favicon: ./img/favicon.ico
 :source-highlighter: highlight.js
 :highlightjs-theme: default
+:highlightjs-languages: json, shell, sparql
 :sectnums:
 :xrefstyle: short
 :section-refsig:
@@ -17,7 +19,7 @@ COP26, Swirrl, Blazegraph, Vega-lite, Clojure
 .DRAFT
 ****
 [.text-center]
-An early draft - still lots of TODOs.
+An incomplete, early draft - still lots of TODOs.
 ****
 
 [.float-group]
@@ -420,10 +422,11 @@ Including `enablerSpecific` as a component of the primary key,
 allows the possibility for the `enabler` to report measurements at an
 additional level of granularity.
 
+[#gen]
 === Generating an RDF graph
 
 We use https://www.swirrl.com[Swirrl]'s useful
-https://github.com/Swirrl/csv2rdf[csv2rdf] tool to generate an RDF graph of our data...
+https://github.com/Swirrl/csv2rdf[csv2rdf] tool to generate a linked data/RDF graph of our data:
 
 [source,shell]
 ----
@@ -444,16 +447,50 @@ carbon-metric.ttl	carbon-savings.ttl	enablers.ttl <3>
 <1> The inputs: +
 {nbsp}{nbsp}{nbsp}{nbsp} the CSV files containing the actual data, and +
 {nbsp}{nbsp}{nbsp}{nbsp} the CSVW files providing the linked data semantics/_metadata_. 
-<2> Run the `csv2rdf` tool against each CSV+CSVW pair.
-<3> The output: Turtle (`.ttl`) files which define an RDF graph of our data.
+<2> Run the `csv2rdf` tool against each CSV+CSVW input pairing.
+<3> The output: Turtle (`.ttl`) files which define an RDF graph of our data: +
+{nbsp}{nbsp}{nbsp}{nbsp} link:rdf/carbon-savings.ttl[carbon-savings.ttl] +
+{nbsp}{nbsp}{nbsp}{nbsp} link:rdf/carbon-metric.ttl[carbon-metric.ttl] +
+{nbsp}{nbsp}{nbsp}{nbsp} link:rdf/enablers.ttl[enablers.ttl]
 
-=== Using the RDF graph
+== Using the linked data
+ 
+The linked data/RDF graph is defined by the Turtle files that we generated in section <<gen>>.
+To help us examine and query the RDF graph, we use the
+https://github.com/blazegraph/database[Blazegraph] tool.
 
+First we load our Turtle files into Blazegraph's data store:
 
+[source,shell]
+----
+$ java -cp blazegraph.jar com.bigdata.rdf.store.DataLoader journal.properties rdfdir/*.ttl
+...
+Reading properties: journal.properties
+Will load from: rdf/carbon-metric.ttl
+Will load from: rdf/carbon-savings.ttl
+Will load from: rdf/enablers.ttl
+...
+Load: 223 stmts added in 0.251 secs, rate= 888, commitLatency=0ms, {failSet=0,goodSet=3}
+----
 
-== Publishing it as open data
+Then we run Blazegraph's graph engine and SPARQL query service:
 
-== Using it
+[source,shell]
+----
+$ java -server -Xmx4g -jar blazegraph.jar
+...
+Welcome to the Blazegraph(tm) Database.
+
+Go to http://192.168.1.106:9999/blazegraph/ to get started.
+----
+
+Opening that URL in a web browser, gives us a UI allowing us to exaime and query our RDF graph:
+
+image::img/blazegraph-ui.png["Blazegraph's web UI"]
+
+<1> Enter a SPARQL query. This example finds `carbon-savings` records then returns the specified field values.
+<2> See the results of that query.
+
 
 == Next?
 
@@ -469,6 +506,8 @@ carbon-metric.ttl	carbon-savings.ttl	enablers.ttl <3>
 	
 * this is allows us to very-roughly compare the carbon-saving aspect of the responsible-entities
 	* hmmm, like any tool, it can be/drive/build good and bad. Hopefully good in today's context. But for now, this is just an exploratory exercise.
+
+* publishing it as open data (e.g. on GitHub)
 
 * data revision?
   fact retraction and upsert
@@ -487,3 +526,11 @@ different time intervals.
 
 * a "proper" bibliography?
 
+
+[bibliography]
+== References
+
+* [[[carbon-metric]]] Zero Waste Scotland.
+https://www.zerowastescotland.org.uk/sites/default/files/The%20Scottish%20Carbon%20Metric.pdf[The Scottish Carbon Metric]. 2011.
+* [[[linked-data]]] W3C. https://www.w3.org/TR/REC-rdf-syntax/[RDF/XML Syntax Specification]. 2004.
+* [[[CSVW]]] W3C. https://www.w3.org/TR/tabular-data-primer[CSV on the Web: A Primer]. 2016. 

@@ -38,3 +38,20 @@ where {
        p:hasEnabler ?enabler;
        p:hasEnablerSpecific ?enablerSpecific.
 }
+
+
+
+# Get the carbon-savings records (resolving fields to basic values)
+prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix class:<http://datacommonsscotland.org/linked-data/class/>
+prefix p:<http://datacommonsscotland.org/linked-data/property/>
+select ?occurrenceDate ?material ?tonnesWeight ?enabler ?enablerSpecific
+where {
+  ?uri rdf:type class:carbon-savings;
+       p:hasOccurrenceDate ?occurrenceDate;
+       p:hasMaterial/p:hasMaterial ?material;
+       p:hasTonnesWeight ?tonnesWeight;
+       p:hasEnabler/p:hasName ?enabler;
+       p:hasEnablerSpecific ?enablerSpecific.
+}
+order by ?enabler ?occurrenceDate
