@@ -533,4 +533,5 @@ different time intervals.
 * [[[carbon-metric]]] Zero Waste Scotland.
 https://www.zerowastescotland.org.uk/sites/default/files/The%20Scottish%20Carbon%20Metric.pdf[The Scottish Carbon Metric]. 2011.
 * [[[linked-data]]] W3C. https://www.w3.org/TR/REC-rdf-syntax/[RDF/XML Syntax Specification]. 2004.
+* [[[tidy-data]]] Hadley Wickham. https://vita.had.co.nz/papers/tidy-data.html[Tidy data]. 2014.
 * [[[CSVW]]] W3C. https://www.w3.org/TR/tabular-data-primer[CSV on the Web: A Primer]. 2016. 
