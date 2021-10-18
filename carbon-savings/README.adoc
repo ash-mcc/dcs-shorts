@@ -76,7 +76,7 @@ To derive that CSV file, we do the following for each source:
 . derive and standardise values 
 [lowerroman]
 .. mapping text values into controlled, canonical _code lists_
-(e.g. the Scottish Carbon Metric's list of `materials`;
+(e.g. the Scottish Carbon Metric's <<carbon-metric>> list of `materials`;
 and our list of carbon-savings `enabler` organisations)
 .. appropriately scaling numbers (e.g. weight amounts to `tonnes`)
 .. applying a standard format to dates
@@ -85,12 +85,12 @@ and our list of carbon-savings `enabler` organisations)
 
 [#tidy]
 NOTE: Our process is basically: messy data → _tidy_ CSV data. +
-The https://vita.had.co.nz/papers/tidy-data.html[Tidy Data] paper provides 
+The Tidy Data paper <<tidy-data>> provides 
 good rationale for and examples of this process, generalised.
 
 === Design decisions
 
-* Use The Scottish Carbon Metric as the basis for measuring carbon savings.
+* Use The Scottish Carbon Metric <<carbon-metric>> as the basis for measuring carbon savings.
 This is refered to via the `scottish-carbon-metric-material` column; and we will discuss it
 further in section <<r-data>>. 
 * Accounting & reporting procedures often batch into a single carbon-savings record, 
@@ -114,11 +114,11 @@ outlining some per-source specifics.
 
 image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/ace-furniture.png["Alloa Community Enterprises logo",width=60%,float=right,align=center]
 
-https://ace.scot/[Alloa Community Enterprises]' (ACE) 
+https://ace.scot/[Alloa Community Enterprises^]' (ACE) 
 furniture reuse initiative has been running since 1984, helping prevent furniture from becoming waste.
 
 ACE is in the process of publishing its data as open data. 
-The following examples of measurement data have been taken from a *draft* of that work.
+The following *samples* of measurement data have been taken from a draft of that work.
 
 Here's a snipped image of ACE's measurement data:
 
@@ -153,11 +153,11 @@ include::data/carbon-savings.csv[lines="1..1,2..5"]
 
 image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/stirling-community-food.png["Stirling Community Food logo",width=60%,float=right,align=center]
 
-https://www.transitionstirling.org.uk/community-food[Stirling Community Food]
+https://www.transitionstirling.org.uk/community-food[Stirling Community Food^]
  is a project that helps to reduce food waste in Stirling by collecting (from supermarkets & aggregators) excess and near-sell-by-date food, routing it away from waste bins, and making it available (for free) to the community.
 
 Stirling Community Food is in the process of publishing its data as open data. 
-The following examples of measurement data have been taken from a *draft* of that work. 
+The following *samples* of measurement data have been taken from a draft of that work. 
 
 Here's a snipped image of Stirling Community Food's measurement data:
 
@@ -192,9 +192,9 @@ include::data/carbon-savings.csv[lines="1..1,6..9"]
 
 image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/looking-at-bin-collections.jpeg["Stirling Council logo",width=60%,float=right,align=center]
 
-https://stirling.gov.uk/council-democracy/access-to-information/open-data/[Stirling Council] set a precedent by being the first (and still only) Scottish local authority to have published open data about their https://data.stirling.gov.uk/dataset/waste-management[bin collection of household waste]. 
+https://stirling.gov.uk/council-democracy/access-to-information/open-data/[Stirling Council^] set a precedent by being the first (and still only) Scottish local authority to have published open data about their https://data.stirling.gov.uk/dataset/waste-management[bin collection of household waste^]. 
 
-The following examples of measurement data have been taken from that published data.
+The following *samples* of measurement data have been taken from that published data.
 
 Here's a snipped image of Stirling Council's measurement data:
 
@@ -229,10 +229,10 @@ include::data/carbon-savings.csv[lines="1..1,10..12"]
 
 image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/fairshare.png["The Fair Share logo",width=60%,float=right,align=center]
 
-https://www.stirlingstudentsunion.com/sustainability/fairshare/[The Fair Share] is a university based, reuse store. It accepts donations of second-hand books, clothes, kitchenware, electricals, etc. and sells these to students.
+https://www.stirlingstudentsunion.com/sustainability/fairshare/[The Fair Share^] is a university based, reuse store. It accepts donations of second-hand books, clothes, kitchenware, electricals, etc. and sells these to students.
 
 The Fair Share is in the process of publishing its data as open data. 
-The following examples of measurement data have been taken from a *draft* of that work.
+The following *samples* of measurement data have been taken from a draft of that work.
 
 Here's a snipped image of The fair Share's measurement data:
 
@@ -267,19 +267,19 @@ include::data/carbon-savings.csv[lines="1..1,13..17"]
 [#r-data]
 == Reference data → CSVs
 
-In this section we walk-through building our two reference data CSVs.
+In this section we walk-through building our two reference (_axiomatic_) data CSVs.
 
 === Carbon metric
 
 The _carbon impact_ is a measure devised by 
-https://www.zerowastescotland.org.uk/[Zero Waste Scotland] (ZWS), 
+https://www.zerowastescotland.org.uk/[Zero Waste Scotland^] (ZWS), 
 to convey the whole-life carbon impact of waste, from resource extraction and manufacturing emissions, right through to waste management emissions. 
 Its unit-of-measure is _tonnes of carbon dioxide equivalent_ (CO~2~eT).
 
 This is a reasonable basis for measuring carbon savings so we will use it as _reference data_.
  
 It is defined in
-https://www.zerowastescotland.org.uk/sites/default/files/The%20Scottish%20Carbon%20Metric.pdf[The Scottish Carbon Metric,window=_blank] document. 
+The Scottish Carbon Metric document <<carbon-metric>>. 
 For our purpose, its key data is in table 6.2.
 This contains per-material weight-multipliers that can be used to calaculate CO~2~eT amounts. 
 
@@ -288,7 +288,7 @@ Here's a snipped image of that table:
 image::img/carbon-metric-table-6_2-snippet.png["A snippet of the key data in The Scottish Carbon Metric", width=50%]
 
 NOTE: This table's data has been published as linked open data by our project, in previous work.
-See the `co2e-multiplier` files in https://github.com/data-commons-scotland/dcs-easier-open-data[this repo]. But we will redo that work here so that that we can provide an explanatory walk-through.
+See the `co2e-multiplier` files in https://github.com/data-commons-scotland/dcs-easier-open-data[this Git repo^]. But we will redo that work here so that that we can provide an explanatory walk-through.
 
 We copy the table's data from its original PDF format into a more tractable, 
 CSV file: link:data/carbon-metric.csv[carbon-metric.csv].
@@ -351,18 +351,18 @@ Our CSVs have _implicit_ meaning and linking. E.g.
 * a `carbon-metric-material` value in the measurements CSV, _implicity_ is linked to the same `material` value in the reference data CSV.
 
 For a standalone case study, this may be good enough
-but, for our data to become part of the global linked data graph,
+but, for our data to become part of the global linked data graph <<linked-data>>,
 we need to define its semantics _explicitly_, in standardised way.
 I.e. we need to describe our data using standard _linked data vocabularies_,
 to explain to everyone how to interpret our data and how it is linked to other data.
 
 === Using CSVW
 
-http://www.w3.org/TR/tabular-data-primer/[CSV on the Web] (CSVW)
+CSV on the Web (CSVW) <<CSVW>>
 is a standardised mechanism for associating linked data semantics/_metadata_ with CSV files.
 
 It is nice because it allows us to keep our existing CSVs simple: unadulterated by
-linked data complications. (Although the CSVs must be of the <<tidy,tidy>> kind,
+linked data complications. (Although the CSVs must be of the _tidy_ kind <<tidy-data>>,
 as output from sections <<r-data>> & <<m-data>>.)
 
 Let's create CSVW files to give our CSVs linked data semantics.
@@ -380,12 +380,12 @@ Its features of interest are described below.
 include::csvw-annotated/carbon-metric-metadata.annotated-json[]
 ----
 
-<1> Assign standard (https://www.w3.org/2001/XMLSchema[XMLSchema]) data types to each of the CSV's columns.
-<2> Define a new RDF https://www.w3.org/TR/rdf11-concepts/#dfn-predicate[predicate] for each of the CSV's columns.
+<1> Assign standard (https://www.w3.org/2001/XMLSchema[XMLSchema^]) data types to each of the CSV's columns.
+<2> Define a new RDF https://www.w3.org/TR/rdf11-concepts/#dfn-predicate[predicate^] for each of the CSV's columns.
 <3> Declare the `multiplier` value to be mandatory. 
-<4> Define the _virtual_, standard predicate https://www.w3.org/TR/rdf-schema/#ch_type[rdf:type] to say what _class_ these rows are. 
+<4> Define the _virtual_, standard predicate https://www.w3.org/TR/rdf-schema/#ch_type[rdf:type^] to say what _class_ these rows are. 
 <5> Declare the `material` value to be the primary key (and to be mandatory).
-<6> Define how to construct the https://www.w3.org/TR/rdf-concepts/#section-Graph-URIref[URI] (unique identifier) for each of the CSV's rows. 
+<6> Define how to construct the https://www.w3.org/TR/rdf-concepts/#section-Graph-URIref[URI^] (unique identifier) for each of the CSV's rows. 
 
 ==== CSVW for the `enablers` reference data
 
@@ -425,8 +425,8 @@ additional level of granularity.
 [#gen]
 === Generating an RDF graph
 
-We use https://www.swirrl.com[Swirrl]'s useful
-https://github.com/Swirrl/csv2rdf[csv2rdf] tool to generate a linked data/RDF graph of our data:
+We use https://www.swirrl.com[Swirrl^]'s useful
+https://github.com/Swirrl/csv2rdf[csv2rdf^] tool to generate a linked data/RDF graph of our data:
 
 [source,shell]
 ----
@@ -457,7 +457,7 @@ carbon-metric.ttl	carbon-savings.ttl	enablers.ttl <3>
  
 The linked data/RDF graph is defined by the Turtle files that we generated in section <<gen>>.
 To help us examine and query the RDF graph, we use the
-https://github.com/blazegraph/database[Blazegraph] tool.
+https://github.com/blazegraph/database[Blazegraph^] tool.
 
 First we load our Turtle files into Blazegraph's data store:
 
@@ -491,47 +491,98 @@ image::img/blazegraph-ui.png["Blazegraph's web UI"]
 <1> Enter a SPARQL query. This example finds `carbon-savings` records then returns the specified field values.
 <2> See the results of that query.
 
+=== TODO
 
-== Next?
+Provide 2 usage examples that are based on larger samples of our datasets:
 
-===== TODOs
+* A SPARQL inference example
+* A graph for each source, depicting carbon savings in terms of cars/planes journeys/etc.
++
+image::img/usage-placeholder-fairshare.png["A placeholder graph for how the carbon savings information can be used", width=50%]
 
-* Add other dimensions such as geographic region (sourced from? given to?)
-* Adopt other vocabs? (statistical vocabs?)
-* Annotations like dc:title ?
+== Concluding remarks
 
-* say something about naming and structure... important. 
-    Should carbon-metric have been co2e-multipler
-    with its hasMaterial property being rdfs:label ? 
-	
-* this is allows us to very-roughly compare the carbon-saving aspect of the responsible-entities
-	* hmmm, like any tool, it can be/drive/build good and bad. Hopefully good in today's context. But for now, this is just an exploratory exercise.
+We finish with some open questions, points of interest arising, and ideas for future development.
 
-* publishing it as open data (e.g. on GitHub)
+=== Vocabularies, naming and structuring
 
-* data revision?
-  fact retraction and upsert
-  
-* cardinality, extra granularity, appending to amounts as the data comes in
+Since we're dealing with measurement data, should we adopt _statistical_ RDF vocabularities 
+such as https://www.w3.org/TR/vocab-data-cube/[Data Cube^] 
+and https://sdmx.org/?page_id=2555/[SDMX^]? We could use these to descibe additonal aspects 
+of our data (e.g. to assocate `material` with the exact concept of SDMX's code list; to explicitly differentiate between identification and measurement dimension; to say more about our unit of measure). However, these would complicate the data model
+and, for our purpose, be more of a hinderance than a help.
 
-* be careful to calculate comparable (say, per-day) amounts from records that report on 
-different time intervals.
+CSVW _bakes in_ support for vocabularies such as 
+http://dublincore.org/documents/dcmi-terms/[Dublin Core^]
+and http://schema.org/[schema.org^].
+This makes it convenient to add
+`dc:description` and `schema:latitude` annotations/explanations to the data but, 
+we haven't made use of this.
+
+Should the class `carbon-metric` have been named `co2e-multipler`
+to reflect the more specific purpose of its data?
+And then, its `hasMaterial` property be redefined as `rdfs:label`? 
+Naming and structuring the data is very important but,
+it isn't the focus of this piece of work, 
+so we didn't _go all round the houses_ to get it right here.
+
+=== Be careful when comparing
+
+This work is exploratory and uses small, non-comparable samples of data. 
+If it were to be put into practice and based on fuller operational data
+then this approach could be used both to highlight and, to very roughly compare the 
+carbon savings aspect of the `enabler` organisations.
+When used of the latter purpose - comparison - care should be exercised
+because of the dissimilar sizes of the `enabler` organisations and, 
+dissimilar types of reuse materials. 
+(Remember the laudable intent of the `enabler` organisations in their reuse work!)
+
+On a more specific note about comparing:
+The `carbon-savings` records report on different time intervals
+so be careful to calculate comparable (say, per-day) amounts from the records. 
+
+=== Support needed for composition, revision and provenance
+
+As data becomes available, it should be possible to _compose_ it into an 
+_accumulation_ of open linked data about carbon savings.
+
+_Compose_ scenarios include:
+
+* New data becoming available out-of-order.
+* New data revising old data.
+* New data conflicting with old data, where new and old have different provenances.  
+
+There are many approaches (temporal databases, distributed ledgers, linked data event streams) and interesting solutions 
+(https://flur.ee[Fluree^];
+https://tree.linkeddatafragments.org[TREE^];
+even https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F[Git^] to some extent), 
+that claim to support those _compose_ scenarios and their related concerns (including ordering, durability, availablity, identity, consensus, and branching).
+
+However, using any of them would be future work.
+
+=== Possible development
+
+Would it be useful to build on this?
+
+Basis for an _app_?
+
+If we develop a prototype _app_ for collecting and publishing carbon savings data
+(along the lines of this exploratory walk through) 
+then...
+
+* publishing it as open data (e.g. on GitHub) - dump vs API
 
 * Support upload by enablers (upload -> validate -> add to the published LoD)
 
-* some aspects of 'provenance' - storer id and timestamps - might be best left to the 
-  comms & storage environment (e.g. Git, Fluree, etc.).
-
-* Context: COP26 etc.
-
-* a "proper" bibliography?
+* Of interest to people given this century's environmental concerns
+and the COP26 climate conference in Scotland?
 
 
 [bibliography]
 == References
 
 * [[[carbon-metric]]] Zero Waste Scotland.
-https://www.zerowastescotland.org.uk/sites/default/files/The%20Scottish%20Carbon%20Metric.pdf[The Scottish Carbon Metric]. 2011.
-* [[[linked-data]]] W3C. https://www.w3.org/TR/REC-rdf-syntax/[RDF/XML Syntax Specification]. 2004.
-* [[[tidy-data]]] Hadley Wickham. https://vita.had.co.nz/papers/tidy-data.html[Tidy data]. 2014.
-* [[[CSVW]]] W3C. https://www.w3.org/TR/tabular-data-primer[CSV on the Web: A Primer]. 2016. 
+https://www.zerowastescotland.org.uk/sites/default/files/The%20Scottish%20Carbon%20Metric.pdf[The Scottish Carbon Metric^]. 2011.
+* [[[tidy-data]]] Hadley Wickham. https://vita.had.co.nz/papers/tidy-data.html[Tidy data^]. 2014.
+* [[[linked-data]]] Tim Berners-Lee. https://www.w3.org/DesignIssues/LinkedData.html/[Linked Data^]. 2006.
+* [[[CSVW]]] W3C. https://www.w3.org/TR/tabular-data-primer[CSV on the Web: A Primer^]. 2016. 
