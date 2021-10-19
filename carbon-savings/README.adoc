@@ -12,9 +12,10 @@ October 2021
 :icons: font
 :toc:
 :toclevels: 3
-:keywords: LoD, OD, linked open data, CSVW, RDF, charty, 3rd sector, Scottish, Scotland, \
-waste, reuse, recycle, carbon impact, carbon saving, CO2e, carbon metric, \
-COP26, Swirrl, Blazegraph, Vega-lite, Clojure
+:keywords: waste, reuse, recycle, carbon impact, carbon saving, CO2e, carbon metric, \
+3rd sector, Scottish, Scotland, \
+linked data, open data, CSVW, RDF, \
+Swirrl, Vega, Clojure
 
 .DRAFT
 ****
@@ -51,7 +52,7 @@ We take examples of meaurement data from 4 sources:
 
 Their data is dissimilar, for example:
 
-* 3rd sector reporting _vs._ local government reporting
+* 3^rd^ sector reporting _vs._ local government reporting
 * emailed Excel files _vs._ CKAN hosted CSV files
 * kilograms _vs._ tonnes
 * various means of indicating dates
@@ -454,6 +455,8 @@ carbon-metric.ttl	carbon-savings.ttl	enablers.ttl <3>
 {nbsp}{nbsp}{nbsp}{nbsp} link:rdf/enablers.ttl[enablers.ttl]
 
 == Using the linked data
+
+=== A straightforward query
  
 The linked data/RDF graph is defined by the Turtle files that we generated in section <<gen>>.
 To help us examine and query the RDF graph, we use the
@@ -491,14 +494,23 @@ image::img/blazegraph-ui.png["Blazegraph's web UI"]
 <1> Enter a SPARQL query. This example finds `carbon-savings` records then returns the specified field values.
 <2> See the results of that query.
 
-=== TODO
+=== Inferenced information
 
-Provide 2 usage examples that are based on larger samples of our datasets:
+TODO: an example that is based on larger samples of our datasets.
+A SPARQL inference example
 
-* A SPARQL inference example
-* A graph for each source, depicting carbon savings in terms of cars/planes journeys/etc.
-+
-image::img/usage-placeholder-fairshare.png["A placeholder graph for how the carbon savings information can be used", width=50%]
+=== Generating graphs
+
+TODO: an example that is based on larger samples of our datasets.
+A graph for each source, depicting carbon savings in terms of cars/planes journeys/etc.
+
+[frame=none,grid=none,cols="1,1"]
+|===
+a|.The amounts of CO2e that has been avoided in terms of cars
+image:img/usage-placeholder-fairshare.png["A placeholder graph (The Fair Share) for how the carbon savings information can be used"]
+a|.The amounts of CO2e that has been avoided in terms of flights
+image:img/usage-placeholder-ace.png["A placeholder graph (ACE )for how the carbon savings information can be used"]
+|===
 
 == Concluding remarks
 
@@ -535,7 +547,11 @@ carbon savings aspect of the `enabler` organisations.
 When used of the latter purpose - comparison - care should be exercised
 because of the dissimilar sizes of the `enabler` organisations and, 
 dissimilar types of reuse materials. 
-(Remember the laudable intent of the `enabler` organisations in their reuse work!)
+
+Remember too that the 3^rd^ sector `enabler` organisations are not working 
+towards the single contractual objective of reuse
+but have additional laudable social objectives such as
+supportive employment, alleviating poverty, and promoting the local community.
 
 On a more specific note about comparing:
 The `carbon-savings` records report on different time intervals
@@ -560,23 +576,22 @@ that claim to support those _compose_ scenarios and their related concerns (incl
 
 However, using any of them would be future work.
 
-=== Possible development
+=== Future development?
 
-Would it be useful to build on this?
+Would it be useful to develop the ideas from this exploratory walk through, 
+into a prototype _app_ for collecting and publishing carbon savings data?
+Maybe ...if the focus were to be on 3^rd^ sector and other non-government organisations
+- since government organisations already have outlets which publish their reuse data, such as 
+https://www.environment.gov.scot/data/data-analysis/household-waste[SEPA^], 
+http://statistics.gov.scot/data/household-waste[statistics.gov.scot^] 
+and council websites.
 
-Basis for an _app_?
-
-If we develop a prototype _app_ for collecting and publishing carbon savings data
-(along the lines of this exploratory walk through) 
-then...
-
-* publishing it as open data (e.g. on GitHub) - dump vs API
-
-* Support upload by enablers (upload -> validate -> add to the published LoD)
-
-* Of interest to people given this century's environmental concerns
-and the COP26 climate conference in Scotland?
-
+We might build a (prototype) _app_ which will allow organisations to: 
+upload their carbon savings data; validate it; _compose_ and _accumulate_ it; 
+and publish it as open linked data. 
+The drivers of this work would be two-fold:
+Firstly, to highlight the carbon savings achievements (and other facets) of 3^rd^ sector reuse orgs. Secondly (and more academically), to explore how linked open data concepts 
+and technology can be practically applied to a (worthy) case-study.
 
 [bibliography]
 == References
