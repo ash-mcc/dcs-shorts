@@ -5,12 +5,12 @@
 :highlightjs-languages: json, shell, sparql
 :sectnums:
 :xrefstyle: short
-:section-refsig:
 :icons: font
 :toc: macro
 :toclevels: 3
 :doctype: article
 :title-logo-image: img/dcs.png
+:description: This is a walk-through of how we can build linked open data about carbon savings from dissimilar data sources.
 :keywords: waste, reuse, recycle, carbon impact, carbon saving, CO2e, carbon metric, \
 3rd sector, Scottish, Scotland, \
 linked data, open data, CSVW, RDF, \
@@ -20,10 +20,9 @@ Swirrl, Vega, Clojure
 ifdef::backend-pdf[:notitle:]
 ifdef::backend-pdf[[discrete]]
 = {doctitle}
-The Data Commons Scotland project; Greg Singh; Anna Wilson; Hannah Hamilton; Ashley McClenaghan
-October 2021
+The Data Commons Scotland project | Greg Singh; Anna Wilson; Hannah Hamilton; Ashley McClenaghan | October 2021
 
-[frame=none,grid=none,cols=".^1,.^1"]
+[frame=none,grid=none,cols=".^1,.^1"]   
 |===
 a|This is a _walk-through_ of how we can build *linked open data* (LoD) about *carbon savings* from dissimilar data sources.
 a|image::img/lod-for-carbon-savings.png["Building linked open data about carbon savings - logo",width=60%]
@@ -55,9 +54,7 @@ Their data is dissimilar, for example:
 * various ways of categorising the stuff that gets reused. 
 
 ...but our end goal is to derive the same information from each of them.
-This information can be seen in the CSV file that contains the results of our efforts
-in this section: link:data/carbon-savings.csv[carbon-savings.csv].
-Here's a snippet of data from that file:
+This information can be seen in the <<carbon-savings-csv>> CSV file that contains the results of our efforts. Here's a snippet of data from that file:
 
 [format="csv",options="header"]
 |===================================================
@@ -89,7 +86,7 @@ good rationale for and examples of this process, generalised.
 
 * Use The Scottish Carbon Metric <<carbon-metric>> as the basis for measuring carbon savings.
 This is refered to via the `scottish-carbon-metric-material` column; and we will discuss it
-further in section <<r-data>>. 
+further in <<r-data>>. 
 * Accounting & reporting procedures often batch into a single carbon-savings record, 
 all of the instances of _same material-class_ reuse/recycling that have
 occurred within an interval of time.
@@ -107,6 +104,7 @@ within some (significant-for-use) duration.
 In this section we walk-through the _measurement data → CSV_ process, for each source; 
 outlining some per-source specifics.
 
+[#m-data-ace]
 ==== Alloa Community Enterprises - reused furniture
 
 [frame=none,grid=none,cols=".^1,.^1"]
@@ -130,7 +128,7 @@ The main steps in processing ACE's measurement data (the snippet shown above) ar
 . Derive and standardise values ...
 [lowerroman]
 .. We map each pair of `Category` & `Items` values, to a `scottish-carbon-metric-material` value. 
-We build this mapping table as a CSV file: link:mapping/ace-to-carbon-metric.csv[ace-to-carbon-metric.csv].
+We build this mapping table as the <<ace-to-carbon-metric-csv>> CSV file.
 Here's a snippet of data from that file:
 +
 [format="csv",options="header"]
@@ -171,7 +169,7 @@ The main steps in processing Stirling Community Food's measurement data (the sni
 . Derive and standardise values ...
 [lowerroman]
 .. We map the 'outcomes' (i.e. how the food material got used) to a `scottish-carbon-metric-material` value. 
-We build this mapping table as a CSV file: link:mapping/stirling-community-food-to-carbon-metric.csv[stirling-community-food-to-carbon-metric.csv].
+We build this mapping table as the <<stirling-community-food-to-carbon-metric-csv>> CSV file.
 Here's the data from that file:
 +
 [format="csv",options="header"]
@@ -210,7 +208,7 @@ The main steps in processing Stirling Council's measurement data (the snippet sh
 . Derive and standardise values ...
 [lowerroman]
 .. We map column `E` to to a `scottish-carbon-metric-material` value. 
-We build this mapping table as a CSV file: link:mapping/stirling-council-to-carbon-metric.csv[stirling-council-to-carbon-metric.csv].
+We build this mapping table as the <<stirling-council-to-carbon-metric-csv>> CSV file.
 Here's a snippet of data from that file:
 +
 [format="csv",options="header"]
@@ -250,7 +248,7 @@ The main steps in processing The Fair Share's measurement data (the snippet show
 . Derive and standardise values ...
 [lowerroman]
 .. We map column `B` to to a `scottish-carbon-metric-material` value. 
-We build this mapping table as a CSV file: link:mapping/the-fair-share-to-carbon-metric.csv[the-fair-share-to-carbon-metric.csv].
+We build this mapping table as the <<the-fair-share-to-carbon-metric-csv>> CSV file.
 Here's a snippet of data from that file:
 +
 [format="csv",options="header"]
@@ -295,8 +293,8 @@ image::img/carbon-metric-table-6_2-snippet.png["A snippet of the key data in The
 NOTE: This table's data has been published as linked open data by our project, in previous work.
 See the `co2e-multiplier` files in https://github.com/data-commons-scotland/dcs-easier-open-data[this Git repo^]. But we will redo that work here so that that we can provide an explanatory walk-through.
 
-We copy the table's data from its original PDF format into a more tractable, 
-CSV file: link:data/carbon-metric.csv[carbon-metric.csv].
+We copy the table's data from its original PDF format into the more 
+tractable <<carbon-metric-csv>> CSV file.
 Here's a snippet of data from that file:
  
 [format="csv",options="header",width=50%]
@@ -306,7 +304,7 @@ include::data/carbon-metric.csv[lines="1..8"]
 
 So, for our carbon savings data:
 
-* link:data/carbon-metric.csv[carbon-metric.csv] will be referenced as the basis for calculations.
+* <<carbon-metric-csv>> will be referenced as the basis for calculations.
 * CO~2~eT will be used as the primary unit-of-measure
 
 For example, consider 1 tonne of (used) shoes...
@@ -325,7 +323,7 @@ CAUTION: The term _carbon saving_ is a little misleading. A better name for it m
 
 === Enabler organisations
 
-We describe the `enabler` organisations in link:data/enablers.csv[enablers.csv].
+We describe the `enabler` organisations in <<enablers-csv>>.
 Here's the data from that file:
 
 [format="csv",options="header",width=75%]
@@ -338,7 +336,7 @@ include::data/enablers.csv[]
 
 === CSVs may be good enough
 
-In sections <<r-data>> & <<m-data>> 
+In <<m-data>> and <<r-data>>
 we _re-worked_ the source data into CSV files 
 with inconsistences rectified, text values mapped to cannocical code lists, 
 and numeric & date values standardised.
@@ -368,15 +366,15 @@ is a standardised mechanism for associating linked data semantics/_metadata_ wit
 
 It is nice because it allows us to keep our existing CSVs simple: unadulterated by
 linked data complications. (Although the CSVs must be of the _tidy_ kind <<tidy-data>>,
-as output from sections <<r-data>> & <<m-data>>.)
+as output from <<m-data>> and <<r-data>>.)
 
 Let's create CSVW files to give our CSVs linked data semantics.
 
 ==== CSVW for the `carbon-metric` reference data
 
-link:csvw/carbon-metric-metadata.json[carbon-metric-metadata.json]
+<<carbon-metric-metadata-json>>
 contains the CSVW that gives linked data semantics to the 
-link:data/carbon-metric.csv[carbon-metric.csv] reference data.
+<<carbon-metric-csv>> reference data.
 
 Its features of interest are described below.
 
@@ -394,9 +392,9 @@ include::csvw-annotated/carbon-metric-metadata.annotated-json[]
 
 ==== CSVW for the `enablers` reference data
 
-link:csvw/enablers-metadata.json[enablers-metadata.json]
+<<enablers-metadata-json>>
 contains the CSVW that gives linked data semantics to the 
-link:data/enablers.csv[enablers.csv] reference data.
+<<enablers-csv>> reference data.
 
 Its new (not previously discussed) features of interest are described below.
 
@@ -409,9 +407,9 @@ include::csvw-annotated/enablers-metadata.annotated-json[]
 
 ==== CSVW for the `carbon-savings` measurement data
 
-link:csvw/carbon-savings-metadata.json[carbon-savings-metadata.json]
+<<carbon-savings-metadata-json>>
 contains the CSVW that gives linked data semantics to the 
-link:data/arbon-savings.csv[carbon-savings.csv] measurement data.
+<<carbon-savings-csv>> measurement data.
 
 Its new (not previously discussed) features of interest are described below.
 
@@ -454,28 +452,29 @@ carbon-metric.ttl	carbon-savings.ttl	enablers.ttl <3>
 {nbsp}{nbsp}{nbsp}{nbsp} the CSVW files providing the linked data semantics/_metadata_. 
 <2> Run the `csv2rdf` tool against each CSV+CSVW input pairing.
 <3> The output: Turtle (`.ttl`) files which define an RDF graph of our data: +
-{nbsp}{nbsp}{nbsp}{nbsp} link:rdf/carbon-savings.ttl[carbon-savings.ttl] +
-{nbsp}{nbsp}{nbsp}{nbsp} link:rdf/carbon-metric.ttl[carbon-metric.ttl] +
-{nbsp}{nbsp}{nbsp}{nbsp} link:rdf/enablers.ttl[enablers.ttl]
+{nbsp}{nbsp}{nbsp}{nbsp} <<carbon-savings-ttl>> +
+{nbsp}{nbsp}{nbsp}{nbsp} <<carbon-metric-ttl>> +
+{nbsp}{nbsp}{nbsp}{nbsp} <<enablers-ttl>>
 
 == Using the linked data
 
-=== A straightforward query
+=== Running a straightforward (SPARQL) query against the linked data
  
-The linked data/RDF graph is defined by the Turtle files that we generated in section <<gen>>.
-To help us examine and query the RDF graph, we use the
-https://github.com/blazegraph/database[Blazegraph^] tool.
+The linked data/RDF graph is defined by the Turtle files that we generated in <<gen>>.
+To help us examine and query that RDF graph, 
+we load it into a _graph engine_ (https://github.com/blazegraph/database[Blazegraph^]) 
+that supports https://www.w3.org/TR/rdf-sparql-query/[SPARQL] queries. 
 
 First we load our Turtle files into Blazegraph's data store:
 
 [source,shell]
 ----
-$ java -cp blazegraph.jar com.bigdata.rdf.store.DataLoader journal.properties rdfdir/*.ttl
+$ java -cp blazegraph.jar com.bigdata.rdf.store.DataLoader journal.properties *.ttl
 ...
 Reading properties: journal.properties
-Will load from: rdf/carbon-metric.ttl
-Will load from: rdf/carbon-savings.ttl
-Will load from: rdf/enablers.ttl
+Will load from: carbon-metric.ttl
+Will load from: carbon-savings.ttl
+Will load from: enablers.ttl
 ...
 Load: 223 stmts added in 0.251 secs, rate= 888, commitLatency=0ms, {failSet=0,goodSet=3}
 ----
@@ -498,22 +497,62 @@ image::img/blazegraph-ui.png["Blazegraph's web UI"]
 <1> Enter a SPARQL query. This example finds `carbon-savings` records then returns the specified field values.
 <2> See the results of that query.
 
-=== Inferenced information
+=== Powering graphs with the linked data
 
-TODO: an example that is based on larger samples of our datasets.
-A SPARQL inference example
+Our https://data-commons-scotland.github.io/prototype-6/#/fairshare[prototype-6] 
+Waste Matters Scotland webapp
+is powered by linked open data which was generated from 
+larger samples of the datasets that were described in <<m-data>>.
 
-=== Generating graphs
+Let's take a look at two of its graphs 
+to see the kind of data-backed stories about carbon savings,
+that can be told. 
 
-TODO: an example that is based on larger samples of our datasets.
-A graph for each source, depicting carbon savings in terms of cars/planes journeys/etc.
+==== The Fair Share - its carbon savings in terms of cars 
 
 [frame=none,grid=none,cols="1,1"]
 |===
-a|.The amounts of CO2e that has been avoided in terms of cars
-image:img/usage-placeholder-fairshare.png["A placeholder graph (The Fair Share) for how the carbon savings information can be used"]
-a|.The amounts of CO2e that has been avoided in terms of flights
+a|image:img/usage-placeholder-fairshare.png["A placeholder graph (The Fair Share) for how the carbon savings information can be used"]
+a|Each book, plate, duvet, etc. reused through 
+https://www.stirlingstudentsunion.com/sustainability/fairshare/[The Fair Share], 
+is an item that has avoided becoming waste/pollution, and this is often estimated 
+in terms of CO~2~e (the carbon savings unit-of-measure).
+
+But by themselves, CO~2~e values can be difficult to relate to so we convert them into in a more relatable measure: cars worth of CO~2~e.
+
+The average cost of using one car for one year is 4.1 tonnes of CO~2~e. This incorporates as exhaust emissions, fuel supply chain and amortised car material for the average UK car.
+(This is a rough approximation based on figures from 
+https://www.brusselsblog.co.uk/carbon-emissions-in-the-lifetimes-of-cars/[Carbon emissions in the lifetimes of cars] 
+and https://www.ovoenergy.com/ovo-newsroom/press-releases/2019/november/think-before-you-thank-if-every-brit-sent-one-less-thank-you-email-a-day-we-would-save-16433-tonnes-of-carbon-a-year-the-same-as-81152-flights-to-madrid.html[OVO Energy].)
+
+So, we divide The Fair Share's carbon savings values by 4.1 to yield our cars worth of CO~2~e values then use these to plot this graph.
+
+*This small store has enabled an impressive amount of carbon savings.*
+
+(The 2014 spike was caused by an unusually large donation of textiles (duvet covers, sheets, pillowcases) from the student halls of residence.)
+|===
+
+==== Alloa Community Enterprises - its carbon savings in terms of plane flights
+
+[frame=none,grid=none,cols="2,1"]
+|===
+a|.The amounts of CO2e that has been avoided in terms of flights. The total CO2e (in terms of flights) of the items of furniture sold (Mar 2017-Aug 2019) in each category.
 image:img/usage-placeholder-ace.png["A placeholder graph (ACE )for how the carbon savings information can be used"]
+a|Each piece of furniture that is reused through the 
+https://ace.scot/[ACE] initative,
+is an item that has avoided becoming waste/pollution.
+This is often estimated 
+in terms of CO~2~e (the carbon savings unit-of-measure).
+
+In <<m-data-ace>> we 
+described how to estimate the CO~2~e values for ACE by multipling the total weight of the items in each category furniture by an appropriate multiplier. These multipliers can be found in our The Scottish Carbon Metric multiplier table. Also, we have to map ACE's item categories to records in that table, and this is done via this mapping table.
+
+But by themselves, CO~2~e values can be difficult to relate to so we convert them into in a more relatable measure: flights worth of CO2e... The average cost of taking a one-way flight from Glasgow to Berlin is 202.5 kgs of CO~2~e. (This was derived from these 
+https://www.ovoenergy.com/ovo-newsroom/press-releases/2019/november/think-before-you-thank-if-every-brit-sent-one-less-thank-you-email-a-day-we-would-save-16433-tonnes-of-carbon-a-year-the-same-as-81152-flights-to-madrid.html[OVO Energy estimations] 
+which incorporate a plane's fuel use but not its build material.) We divide ACE's CO~2~e values by 202.5 to yield our flights worth of CO~2~e values then use these to plot this graph.
+
+*The ACE furniture reuse initiative has been running since 1984(!), 
+helping prevent furniture from becoming waste.*
 |===
 
 == Concluding remarks
@@ -605,3 +644,133 @@ https://www.zerowastescotland.org.uk/sites/default/files/The%20Scottish%20Carbon
 * [[[tidy-data]]] Hadley Wickham. https://vita.had.co.nz/papers/tidy-data.html[Tidy data^]. 2014.
 * [[[linked-data]]] Tim Berners-Lee. https://www.w3.org/DesignIssues/LinkedData.html/[Linked Data^]. 2006.
 * [[[CSVW]]] W3C. https://www.w3.org/TR/tabular-data-primer[CSV on the Web: A Primer^]. 2016. 
+
+
+[appendix]
+== Tidy CSV files
+
+[#carbon-savings-csv]
+[discrete]
+=== `carbon-savings.csv`
+
+[source,csv]
+----
+include::data/carbon-savings.csv[]
+----
+
+[#carbon-metric-csv]
+[discrete]
+=== `carbon-metric.csv`
+
+[source,csv]
+----
+include::data/carbon-metric.csv[]
+----
+
+[#enablers-csv]
+[discrete]
+=== `enablers.csv`
+
+[source,csv]
+----
+include::data/enablers.csv[]
+----
+
+[appendix]
+== Mapping files
+
+[#ace-to-carbon-metric-csv]
+[discrete]
+=== `ace-to-carbon-metric.csv`
+
+[source,csv]
+----
+include::mapping/ace-to-carbon-metric.csv[]
+----
+
+[#stirling-community-food-to-carbon-metric-csv]
+[discrete]
+=== `stirling-community-food-to-carbon-metric.csv`
+
+[source,csv]
+----
+include::mapping/stirling-community-food-to-carbon-metric.csv[]
+----
+
+[#stirling-council-to-carbon-metric-csv]
+[discrete]
+=== `stirling-council-to-carbon-metric.csv`
+
+[source,csv]
+----
+include::mapping/stirling-council-to-carbon-metric.csv[]
+----
+
+[#the-fair-share-to-carbon-metric-csv]
+[discrete]
+=== `the-fair-share-to-carbon-metric.csv`
+
+[source,csv]
+----
+include::mapping/the-fair-share-to-carbon-metric.csv[]
+----
+
+[appendix]
+== CSVW files
+
+[#carbon-savings-metadata-json]
+[discrete]
+=== `carbon-savings-metadata.json`
+
+[source,json]
+----
+include::csvw/carbon-savings-metadata.json[]
+----
+
+[#carbon-metric-metadata-json]
+[discrete]
+=== `carbon-metric-metadata.json`
+
+[source,json]
+----
+include::csvw/carbon-metric-metadata.json[]
+----
+
+[#enablers-metadata-json]
+[discrete]
+=== `enablers-metadata.json`
+
+[source,json]
+----
+include::csvw/enablers-metadata.json[]
+----
+
+[appendix]
+== RDF files
+
+[#carbon-savings-ttl]
+[discrete]
+=== `carbon-savings.ttl`
+
+[source,turtle]
+----
+include::rdf/carbon-savings.ttl[]
+----
+
+[#carbon-metric-ttl]
+[discrete]
+=== `carbon-metric.ttl`
+
+[source,turtle]
+----
+include::rdf/carbon-metric.ttl[]
+----
+
+[#enablers-ttl]
+[discrete]
+=== `enablers.ttl`
+
+[source,turtle]
+----
+include::rdf/enablers.ttl[]
+----
