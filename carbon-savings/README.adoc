@@ -1,6 +1,3 @@
-= Building linked open data about carbon savings
-The Data Commons Scotland project; Greg Singh; Anna Wilson; Hannah Hamilton; Ashley McClenaghan
-October 2021
 :docinfo: shared
 :favicon: ./img/favicon.ico
 :source-highlighter: highlight.js
@@ -10,30 +7,29 @@ October 2021
 :xrefstyle: short
 :section-refsig:
 :icons: font
-:toc:
+:toc: macro
 :toclevels: 3
+:doctype: article
+:title-logo-image: img/dcs.png
 :keywords: waste, reuse, recycle, carbon impact, carbon saving, CO2e, carbon metric, \
 3rd sector, Scottish, Scotland, \
 linked data, open data, CSVW, RDF, \
 Swirrl, Vega, Clojure
+:doctitle: Building linked open data about carbon savings
+// other header attributes
+ifdef::backend-pdf[:notitle:]
+ifdef::backend-pdf[[discrete]]
+= {doctitle}
+The Data Commons Scotland project; Greg Singh; Anna Wilson; Hannah Hamilton; Ashley McClenaghan
+October 2021
 
-.DRAFT
-****
-[.text-center]
-An incomplete, early draft - still lots of TODOs.
-****
+[frame=none,grid=none,cols=".^1,.^1"]
+|===
+a|This is a _walk-through_ of how we can build *linked open data* (LoD) about *carbon savings* from dissimilar data sources.
+a|image::img/lod-for-carbon-savings.png["Building linked open data about carbon savings - logo",width=60%]
+|===
 
-[.float-group]
---
-image::img/lod-for-carbon-savings.png["Building linked open data about carbon savings - logo",width=40%,float=right]
-
-[.indent]
-{nbsp} +
-{nbsp} +
-{nbsp} +
-This is a _walk-through_ of how we can build *linked open data* (LoD) about *carbon savings* from dissimilar data sources.
---
-
+toc::[]
 
 [#m-data]
 == Measurement data → CSV
@@ -113,10 +109,12 @@ outlining some per-source specifics.
 
 ==== Alloa Community Enterprises - reused furniture
 
-image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/ace-furniture.png["Alloa Community Enterprises logo",width=60%,float=right,align=center]
-
-https://ace.scot/[Alloa Community Enterprises^]' (ACE) 
+[frame=none,grid=none,cols=".^1,.^1"]
+|===
+a|https://ace.scot/[Alloa Community Enterprises^]' (ACE) 
 furniture reuse initiative has been running since 1984, helping prevent furniture from becoming waste.
+a|image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/ace-furniture.png["Alloa Community Enterprises logo",width=60%]
+|===
 
 ACE is in the process of publishing its data as open data. 
 The following *samples* of measurement data have been taken from a draft of that work.
@@ -152,10 +150,12 @@ include::data/carbon-savings.csv[lines="1..1,2..5"]
 
 ==== Stirling Community Food - redistributed food
 
-image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/stirling-community-food.png["Stirling Community Food logo",width=60%,float=right,align=center]
-
-https://www.transitionstirling.org.uk/community-food[Stirling Community Food^]
+[frame=none,grid=none,cols=".^1,.^1"]
+|===
+a|https://www.transitionstirling.org.uk/community-food[Stirling Community Food^]
  is a project that helps to reduce food waste in Stirling by collecting (from supermarkets & aggregators) excess and near-sell-by-date food, routing it away from waste bins, and making it available (for free) to the community.
+a|image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/stirling-community-food.png["Stirling Community Food logo",width=60%]
+|===
 
 Stirling Community Food is in the process of publishing its data as open data. 
 The following *samples* of measurement data have been taken from a draft of that work. 
@@ -191,9 +191,11 @@ include::data/carbon-savings.csv[lines="1..1,6..9"]
 
 ==== Stirling Council - household recycling bins
 
-image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/looking-at-bin-collections.jpeg["Stirling Council logo",width=60%,float=right,align=center]
-
-https://stirling.gov.uk/council-democracy/access-to-information/open-data/[Stirling Council^] set a precedent by being the first (and still only) Scottish local authority to have published open data about their https://data.stirling.gov.uk/dataset/waste-management[bin collection of household waste^]. 
+[frame=none,grid=none,cols=".^1,.^1"]
+|===
+a|https://stirling.gov.uk/council-democracy/access-to-information/open-data/[Stirling Council^] set a precedent by being the first (and still only) Scottish local authority to have published open data about their https://data.stirling.gov.uk/dataset/waste-management[bin collection of household waste^]. 
+a|image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/looking-at-bin-collections.jpeg["Stirling Council logo",width=60%]
+|===
 
 The following *samples* of measurement data have been taken from that published data.
 
@@ -228,9 +230,11 @@ include::data/carbon-savings.csv[lines="1..1,10..12"]
 
 ==== The Fair Share - reused, student-oriented items
 
-image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/fairshare.png["The Fair Share logo",width=60%,float=right,align=center]
-
-https://www.stirlingstudentsunion.com/sustainability/fairshare/[The Fair Share^] is a university based, reuse store. It accepts donations of second-hand books, clothes, kitchenware, electricals, etc. and sells these to students.
+[frame=none,grid=none,cols=".^1,.^1"]
+|===
+a|https://www.stirlingstudentsunion.com/sustainability/fairshare/[The Fair Share^] is a university based, reuse store. It accepts donations of second-hand books, clothes, kitchenware, electricals, etc. and sells these to students.
+a|image::https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/fairshare.png["The Fair Share logo",width=60%]
+|===
 
 The Fair Share is in the process of publishing its data as open data. 
 The following *samples* of measurement data have been taken from a draft of that work.
