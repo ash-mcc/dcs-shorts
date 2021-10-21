@@ -1,3 +1,7 @@
+// title:   Building linked open data about carbon savings
+// status:  research report
+// date:    October 2021
+// project: Data Commons Scotland
 :docinfo: shared
 :favicon: ./img/favicon.ico
 :source-highlighter: highlight.js
@@ -11,12 +15,11 @@
 :doctype: article
 :title-logo-image: img/dcs.png
 :description: This is a walk-through of how we can build linked open data about carbon savings from dissimilar data sources.
-:keywords: waste, reuse, recycle, carbon impact, carbon saving, CO2e, carbon metric, \
+:keywords: open data, linked data, carbon savings, waste, reuse, recycling, \
+carbon impact, CO2e, carbon metric, \
 3rd sector, Scottish, Scotland, \
-linked data, open data, CSVW, RDF, \
-Swirrl, Vega, Clojure
+CSVW, RDF, Swirrl
 :doctitle: Building linked open data about carbon savings
-// other header attributes
 ifdef::backend-pdf[:notitle:]
 ifdef::backend-pdf[[discrete]]
 = {doctitle}
@@ -504,9 +507,7 @@ Waste Matters Scotland webapp
 is powered by linked open data which was generated from 
 larger samples of the datasets that were described in <<m-data>>.
 
-Let's take a look at two of its graphs 
-to see the kind of data-backed stories about carbon savings,
-that can be told. 
+Let's take a look at two of the its linked data backed graphs about carbon savings.
 
 ==== The Fair Share - its carbon savings in terms of cars 
 
@@ -527,8 +528,6 @@ and https://www.ovoenergy.com/ovo-newsroom/press-releases/2019/november/think-be
 
 So, we divide The Fair Share's carbon savings values by 4.1 to yield our cars worth of CO~2~e values then use these to plot this graph.
 
-*This small store has enabled an impressive amount of carbon savings.*
-
 (The 2014 spike was caused by an unusually large donation of textiles (duvet covers, sheets, pillowcases) from the student halls of residence.)
 |===
 
@@ -545,14 +544,11 @@ This is often estimated
 in terms of CO~2~e (the carbon savings unit-of-measure).
 
 In <<m-data-ace>> we 
-described how to estimate the CO~2~e values for ACE by multipling the total weight of the items in each category furniture by an appropriate multiplier. These multipliers can be found in our The Scottish Carbon Metric multiplier table. Also, we have to map ACE's item categories to records in that table, and this is done via this mapping table.
+described how to estimate the CO~2~e values for ACE by multipling the total weight of the items in each furniture category by an appropriate multiplier. These multipliers can be found in the <<carbon-metric-csv>> data file. Also, we have to map ACE's furniture categories to those multiplier records, and this is done via the <<ace-to-carbon-metric-csv>> mapping file.
 
-But by themselves, CO~2~e values can be difficult to relate to so we convert them into in a more relatable measure: flights worth of CO2e... The average cost of taking a one-way flight from Glasgow to Berlin is 202.5 kgs of CO~2~e. (This was derived from these 
+But by themselves, CO~2~e values can be difficult to relate to so we convert them into in a more relatable measure: flights worth of CO2e. The average cost of taking a one-way flight from Glasgow to Berlin is 202.5 kgs of CO~2~e. (This was derived from these 
 https://www.ovoenergy.com/ovo-newsroom/press-releases/2019/november/think-before-you-thank-if-every-brit-sent-one-less-thank-you-email-a-day-we-would-save-16433-tonnes-of-carbon-a-year-the-same-as-81152-flights-to-madrid.html[OVO Energy estimations] 
 which incorporate a plane's fuel use but not its build material.) We divide ACE's CO~2~e values by 202.5 to yield our flights worth of CO~2~e values then use these to plot this graph.
-
-*The ACE furniture reuse initiative has been running since 1984(!), 
-helping prevent furniture from becoming waste.*
 |===
 
 == Concluding remarks
