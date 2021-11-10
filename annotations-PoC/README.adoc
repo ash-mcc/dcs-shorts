@@ -7,7 +7,7 @@ And feedback from the recent http://sodu.live/[SODU 2021] conference, affirmed t
 
 In an exploratory step towards fulfilling that _requirement_,
 we have annotated some data points with explanations/narrative.
-The idea is that that these annotations could become waymarks in a navigation maps,
+The idea is that that these annotations could become waymarks in navigation maps,
 to guide users between the datapoints which underpin data-based stories.
 We might even imagine how clicking a 'next' button on a waymark
 would visually 'fly' the user to the next datapoint in the story
