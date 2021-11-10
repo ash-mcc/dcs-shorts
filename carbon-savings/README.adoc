@@ -25,6 +25,13 @@ ifdef::backend-pdf[[discrete]]
 = {doctitle}
 The Data Commons Scotland project | Greg Singh; Anna Wilson; Hannah Hamilton; Ashley McClenaghan | October 2021
 
+// manually comment-out the next 5 lines before generating the PDF version
+[.float-group]
+--
+[.right]
+link:building-lod-about-carbon-savings.pdf[PDF version]
+--
+
 [frame=none,grid=none,cols=".^1,.^1"]   
 |===
 a|This is a _walk-through_ of how we can build *linked open data* (LoD) about *carbon savings* from dissimilar data sources.
@@ -513,8 +520,10 @@ Let's take a look at two of the its linked data backed graphs about carbon savin
 
 [frame=none,grid=none,cols="1,1"]
 |===
-a|image:img/usage-placeholder-fairshare.png["A placeholder graph (The Fair Share) for how the carbon savings information can be used"]
-a|Each book, plate, duvet, etc. reused through 
+a|image:img/the-fair-share-graph.png["Carbon savings by The Fair Share"]
+
+*The reuse work by this small store has yielded impressive carbon savings.*
+a|Each book, bowl, duvet, etc. reused through 
 https://www.stirlingstudentsunion.com/sustainability/fairshare/[The Fair Share], 
 is an item that has avoided becoming waste/pollution, and this is often estimated 
 in terms of CO~2~e (the carbon savings unit-of-measure).
@@ -535,8 +544,12 @@ So, we divide The Fair Share's carbon savings values by 4.1 to yield our cars wo
 
 [frame=none,grid=none,cols="2,1"]
 |===
-a|.The amounts of CO2e that has been avoided in terms of flights. The total CO2e (in terms of flights) of the items of furniture sold (Mar 2017-Aug 2019) in each category.
-image:img/usage-placeholder-ace.png["A placeholder graph (ACE )for how the carbon savings information can be used"]
+a|image:img/ace-graph.png["Carbon savings (Mar 2017 - Aug 2019) by Alloa Community Enterprises"] 
+
+*The reuse of soft furniture (sofas, armchairs, matresses, etc.) alone 
+(and during the short period sampled)
+has resulted in carbon savings 
+equivalent to almost 5000 flights.*
 a|Each piece of furniture that is reused through the 
 https://ace.scot/[ACE] initative,
 is an item that has avoided becoming waste/pollution.
@@ -544,7 +557,7 @@ This is often estimated
 in terms of CO~2~e (the carbon savings unit-of-measure).
 
 In <<m-data-ace>> we 
-described how to estimate the CO~2~e values for ACE by multipling the total weight of the items in each furniture category by an appropriate multiplier. These multipliers can be found in the <<carbon-metric-csv>> data file. Also, we have to map ACE's furniture categories to those multiplier records, and this is done via the <<ace-to-carbon-metric-csv>> mapping file.
+described how to estimate the CO~2~e values for ACE by multipling the total weight of the items in each furniture category by an appropriate multiplier. These multipliers can be found in the <<carbon-metric-csv>> reference data file. Also, we have to map ACE's furniture categories to those multiplier records, and this is done via the <<ace-to-carbon-metric-csv>> mapping file.
 
 But by themselves, CO~2~e values can be difficult to relate to so we convert them into in a more relatable measure: flights worth of CO2e. The average cost of taking a one-way flight from Glasgow to Berlin is 202.5 kgs of CO~2~e. (This was derived from these 
 https://www.ovoenergy.com/ovo-newsroom/press-releases/2019/november/think-before-you-thank-if-every-brit-sent-one-less-thank-you-email-a-day-we-would-save-16433-tonnes-of-carbon-a-year-the-same-as-81152-flights-to-madrid.html[OVO Energy estimations] 
