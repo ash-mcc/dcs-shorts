@@ -82,7 +82,7 @@ and queried using https://www.w3.org/TR/rdf-sparql-query/[SPARQL].
 
 Here is how a _query_ operation to return all `StcmfRedistributedFood` records, is defined in GraphQL (on JUXT Site): 
 
-[source,json]
+[source,graphql]
 ----
 type Query {
 
@@ -98,7 +98,7 @@ type Query {
 Here is how a _mutation_ operation to create or update a `StcmfRedistributedFood` record, is defined in GraphQL (on JUXT Site): 
 
 
-[source,json]
+[source,graphql]
 ----
 type Mutation {
 
@@ -157,7 +157,7 @@ We will query not only for our `StcmfRedistributedFood` records but also for the
 
 The query:
 
-[source,json]
+[source,graphql]
 ----
 query PASI {
   stcmfRedistributedFood {
