@@ -38,7 +38,7 @@ A `StcmfRedistributedFood` _record_ says that a batch (weight `batchKg`) of food
 
 Here is how a `StcmfRedistributedFood` record _type_, is defined in GraphQL (on JUXT Site): 
 
-[source,json]
+[source,graphql]
 ----
 """ A batch of redistributed food material """
 type StcmfRedistributedFood {
