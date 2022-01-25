@@ -21,3 +21,4 @@ Short investigations, experiments, etc.
 1. link:architecture-revised/[The prototype's architecture - revised]
 1. link:carbon-savings/[Building linked open data about carbon savings]
 1. link:annotations-PoC/[Annotating data points on our prototype website]
+1. link:lod-using-graphql/[Linked Open Data using a low-code, GraphQL based approach]
