@@ -1,6 +1,6 @@
 = Linked Open Data using a low-code, GraphQL based approach
 
-> Might https://graphql.org[GraphQL] be an easy means to query https://en.wikipedia.org/wiki/Linked_data[Linked Open Data] (LoD)? +
+> Might https://graphql.org[GraphQL] be an easy means to query https://en.wikipedia.org/wiki/Linked_data[Linked Open Data]? +
 Moreover, might it even be a handy means for building it?
 
 We use a product called JUXT Site, in exploring these questions. 
@@ -23,7 +23,7 @@ Here's a diagram which summaries these components:
 
 image::JUXT-Site-relevant-components.png["The relevant components of JUXT Site",align=center,width=80%]
 
-(We made a tiny modification (`site-mod-sparql`) to JUXT Site, to surface XTDB's SPARQL support.)
+(We made a small modification `site-mod-sparql` to JUXT Site, to surface XTDB's SPARQL support.)
 
 Next, we use JUXT Site's GraphQL to build then query our linked data model.
 
@@ -34,7 +34,7 @@ https://data-commons-scotland.github.io/carbon-savings/doc/building-lod-about-ca
 
 === Defining a record _type_ 
 
-A `StcmfRedistributedFood` _record_ says that a batch (weight `batchKg`) of food material was (time period `from` -> `to`) _redistributed_ to a `destination`. (In our linked data model, further information about this - e.g. how the `destination` _repurposes_ the food material, lookup tables to calculate carbon savings, etc. - may be found by following links to other nodes in the data graph.) 
+A `StcmfRedistributedFood` _record_ says that a batch (weight `batchKg`) of food material was (time period `from` -> `to`) _redistributed_ to a `destination`. In our linked data model, further information about this - such as how the food material gets _repurposed_ at the `destination`, and the lookup tables to calculate carbon savings - may be found by following links to other nodes in the data graph.
 
 Here is how a `StcmfRedistributedFood` record _type_, is defined in GraphQL (on JUXT Site): 
 
@@ -140,7 +140,7 @@ type Mutation {
 
 <1> We specify that a `StcmfRedistributedFood` record is identified by an IRI-compliant,
 https://en.wikipedia.org/wiki/Natural_key[natural key], composed from the `from`, `to` and `destination` values.
-Uniqueness is enforced over `ID` values so, that combination of  `from`, `to` and `destination` values will
+Uniqueness is enforced over `ID` values therefore that combination of  `from`, `to` and `destination` values will
 identity one or zero existing record(s).
 <2> On invocation, this mutation will be supplied with a String value for the `destination` parameter.
 The `destination` String value is used to construct the `ID` of the targeted `StcmfDestination` record, 
@@ -151,7 +151,7 @@ and this `ID` is stored in a field named `pasi:pred/destination` in the underlyi
 We used JUXT Site's GraphQL to build our linked data model (in terms of data structures and operations).
 Now let's see what querying our data model looks like - firstly using GraphQL, then using SPARQL.
 
-We will query not only for our `StcmfRedistributedFood` records but also for the associated information that we would need to create a _waste reduction_ report which includes estimates of carbon savings. (Although we haven't discussed this associated information in this article, querying for it will make this exploration more informative.)
+We will query not only for our `StcmfRedistributedFood` records but also for the associated information that we would need to create a _waste reduction_ report which includes estimates of carbon savings. (Although we haven't discussed this associated information in this article, showing the queries for it will make this exploration more informative.)
 
 === Querying using GraphQL
 
@@ -184,7 +184,7 @@ query PASI {
 }
 ----
 
-<1> We haven't discuessed it in this article but we introduced an _artificial_ direct connection,
+<1> We haven't discussed it in this article but we introduced an _artificial_ direct connection,
 called `refDataConnectors`,  into our data model to allow a query _to walk_ easily to the _reference data_ 
 records that are needed to report on carbon savings.
 
@@ -321,8 +321,8 @@ so we won't bother (re)displaying that tabular report here.
 linked data systems.
 It's a _pre-alpha_. 
 Its sweet spot will probably be to back websites where humans drive query and transaction volumes.
-* With is ability to support RDF data models and SPARQL, it is a promising platform for Open Data.
-Currently it supports only a subset of SPARQL but (again) it is _only_ a pre-alpha.
+* With its ability to support RDF data models and SPARQL, it is a promising platform for Open Data.
+Currently, it supports only a subset of SPARQL but (again) it is _only_ a pre-alpha.
 * So, "might GraphQL be an easy means to query Linked Open Data?". +
 +
 Well, GraphQL was designed to describe the services that apps use.
