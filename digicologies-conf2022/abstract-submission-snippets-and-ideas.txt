@@ -1,0 +1,79 @@
+
+how we might build linked open data about carbon savings from dissimilar data sources 
+(with 3rd sector reuse and recycling organisations, particularly in mind).
+
+--
+
+Proposing [later, say that we have worked with a few local reuse orgs to proof-of-concepted aspects of this]
+
+A platform supporting the participatory accounting of waste reduction (and other social impacts) (in Scotland)?
+We might build a prototype app which will allow organisations to: 
+upload their waste reduction data; validate it; 
+assure security and track provenance; compose and accumulate it; 
+and publish it as open linked data. 
+The drivers of this work would be two-fold: 
+Firstly, to highlight the waste reduction achievements (and other facets - social and environmental impacts) of 3rd sector waste reducing organisations. 
+Secondly (and more academically), to explore how linked open data concepts and technology can be practically applied to a (worthy) case-study.
+
+--
+
+thrusts
+
+making data accessible/open to all
+data about waste in Scotland
+promoting less published/3rd Sector data
+
+--
+
+title breakdown
+
+Participatory ⇒ 🌍 anyone can contribute (potentially)
+
+Accounting ⇒ 📰 make public the evidence-backed data, digitise it, should be useful/tractible but doesn't have to be numbers
+
+Social impacts ⇒ ✨ Third Sector (less published) data (lots of gov & council data but few 3rd Sector Orgs report their outcomes)
+
+--
+
+design a system to help
+digitise (record and report) the waste reduction contributions of 3rd sector organisations,
+which will promote their work, inform for policy making, 
+and open up future opportunities as participantion, data volumes and fidelity all increase.
+
+--
+
+eco focus?
+
+We consider the broad spectrum of 'Social impact': social, economic, environmental
+and focus on waste reduction
+
+--
+ 
+Participatory is stronger, more engaging than just informing, consulting, even involving
+
+Participants can play many roles: be a designer/evolver of the digital system, data contributer, information consumer,  
+
+--
+
+for our datasets to become part of the global linked data graph, 
+we need to define their semantics explicitly, in standardised way. 
+I.e. we need to describe our datasets as an RDF graph, using standard linked data vocabularies, 
+to explain to everyone how to interpret our data and how it is linked to other data.
+To achieve this, we use...
+
+--
+
+The digital system to support not only this multi role participation but also geographically distribution
+
+Take the  from private Excel spreadsheets,
+  provide non-intrusive means  to publish to public islands of standarised forms (RDF graph, common vocabs)
+  join-up using federated SPARQL → extract knowledge, global insights
+  apps which make data and knowledge accessible to non-expert users
+
+--
+
+
+
+
+
+

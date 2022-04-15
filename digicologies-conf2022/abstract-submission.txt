@@ -1,0 +1,40 @@
+Title: 
+  The Participatory Accounting of Social Impacts
+
+Submitters:
+  Dr Greg Singh (Associate Professor in Media and Communications at the Uni. of Stirling, Scotland)
+  Dr Ashley McClenaghan (Postdoctoral Research Fellow at the Uni. of Stirling, Scotland)
+
+Presentation format: 
+  A 5 minute lightning talk
+
+Attendance intent: 
+  Online only; day two only; funding is not required
+
+Abstract: 
+
+   We propose a platform which will support the participatory accounting of waste reduction 
+(and other social impacts) by Scotland's Third Sector reuse/recycling organisations.
+
+   The digitisation of Third Sector outcomes into tractable forms and publication as Open Data, 
+is almost zero. This contrasts with data publication by government agencies and local authorities.
+We want to address this imbalance by using our proposed platform to highlight and promote 
+the waste reduction achievements, and environmental and societal outcomes of 
+Third Sector organisations (TSOs). Their published data could feed into policy making and,
+in general, open future data-backed possibilities as participation, data volumes and fidelity 
+on the platform, all increase.
+
+  We are working with three local TSOs plus our local authority, to co-develop a proof-of-concept 
+of our platform. We are all participants: evolving the design of the platform; 
+contributing measurement data (quantities, times and descriptions of reused/recycled material); 
+providing reference metrics (categorisation standards); and contributing secondary data (joining data, 
+downstream calculations).
+
+  Our platform aims to support not only this multi-role participation, but also 
+to scale to potentially all TSOs in the nation while allowing for their diversity. 
+At a basic operational level, our digital system considers the private Excel spreadsheets 
+of participating TSOs, provides non-intrusive means to publish these to public 
+islands of Open Data (shared vocabularies, RDF graphs), provides the means to join-up those 
+islands using standard tools (federated SPARQL) for the extraction of knowledge and global insights. 
+Finally, our platform provides apps to make the data and knowledge accessible to non-expert users.
+
